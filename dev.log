@@ -1,0 +1,68 @@
+[33m[nodemon] 3.1.10[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching path(s): server.ts src/**/*[39m
+[33m[nodemon] watching extensions: ts,tsx,js,jsx[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+> Ready on http://0.0.0.0:3000
+> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 96.9s (1820 modules)
+ GET / 200 in 16161ms
+ GET / 200 in 650ms
+ GET / 200 in 7109ms
+ GET /?reload=1765210532383 200 in 1033ms
+ GET / 200 in 3359ms
+ GET /?reload=1765210532383 200 in 491ms
+ GET / 200 in 1119ms
+ GET / 200 in 397ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 76ms
+ GET / 200 in 72ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 10.5s (1955 modules)
+ GET /projects 200 in 13004ms
+ GET / 200 in 8549ms
+ GET / 200 in 880ms
+ GET / 200 in 97ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 530ms (1982 modules)
+ GET /about 200 in 593ms
+ GET / 200 in 255ms
+ GET / 200 in 85ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 5.1s (2039 modules)
+ GET /contact 200 in 7048ms
+ GET / 200 in 2079ms
+ GET / 200 in 80ms
+ GET / 200 in 73ms
+ ○ Compiling /admin/login ...
+[Error: Cannot apply unknown utility class `bg-background`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive]
+ ✓ Compiled /admin/login in 4.8s (2108 modules)
+ GET /admin/login 200 in 7325ms
+ GET / 200 in 6544ms
+ GET / 200 in 879ms
+ GET / 200 in 82ms
+ GET / 200 in 82ms
+ GET / 200 in 90ms
+ GET / 200 in 80ms
+ GET / 200 in 82ms
+ GET / 200 in 98ms
+ GET / 200 in 104ms
+ GET / 200 in 97ms
+ GET / 200 in 93ms
+ GET / 200 in 3276ms
+ GET / 200 in 1201ms
+ GET / 200 in 338ms
+ GET / 200 in 80ms
+ GET / 200 in 64ms
+ GET / 200 in 73ms
+ GET / 200 in 59ms
+ GET / 200 in 59ms
+ GET / 200 in 70ms
+ GET / 200 in 62ms
