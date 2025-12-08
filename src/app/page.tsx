@@ -90,8 +90,8 @@ export default function Home() {
               fogFallSpeed={0.6}  // Back to original
               decay={3}  // As specified
               falloffStart={1.22}  // As specified
-              horizontalBeamOffset={0}  // Reset to zero
-              verticalBeamOffset={0}  // Reset to zero
+              horizontalBeamOffset={1}  // Reset to zero
+              verticalBeamOffset={1}  // Reset to zero
             />
           </DeferredComponent>
         </div>
