@@ -1,0 +1,366 @@
+"use client";
+
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { Play, ExternalLink, Calendar, Code, Video } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import DarkVeil from "@/components/DarkVeil";
+
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image?: string;
+  video?: string;
+  projectLink?: string;
+  category: string;
+  technologies: string[];
+  featured: boolean;
+  published: boolean;
+  createdAt: string;
+}
+
+export default function ProjectsPage() {
+  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
+
+  // Mock projects data - in real app, this would come from API
+  const projects: Project[] = [
+    {
+      id: "1",
+      title: "E-Commerce Platform",
+      description: "A modern e-commerce platform with real-time inventory management, AI-powered recommendations, and seamless payment integration. Built with scalability and performance in mind, this platform handles thousands of concurrent users and provides an exceptional shopping experience.",
+      image: "/placeholder-project.jpg",
+      video: "/sample-video.mp4",
+      projectLink: "https://example-ecommerce.com",
+      category: "web",
+      technologies: ["Next.js", "TypeScript", "Prisma", "Stripe", "Tailwind CSS", "Redis"],
+      featured: true,
+      published: true,
+      createdAt: "2024-01-10"
+    },
+    {
+      id: "2",
+      title: "Task Management App",
+      description: "Collaborative task management application with real-time updates, team analytics, and intuitive project tracking. Features include drag-and-drop interface, time tracking, team collaboration tools, and comprehensive reporting dashboard.",
+      image: "/placeholder-project.jpg",
+      video: "/sample-video2.mp4",
+      category: "web",
+      technologies: ["React", "Node.js", "Socket.io", "MongoDB", "Express", "JWT"],
+      featured: true,
+      published: true,
+      createdAt: "2024-01-08"
+    },
+    {
+      id: "3",
+      title: "Fitness Tracker Mobile",
+      description: "Cross-platform mobile app for tracking fitness goals with social features and progress analytics. Includes workout planning, nutrition tracking, social challenges, and integration with wearable devices for comprehensive health monitoring.",
+      image: "/placeholder-project.jpg",
+      video: "/sample-video3.mp4",
+      category: "mobile",
+      technologies: ["React Native", "Firebase", "Redux", "Expo", "HealthKit", "Google Fit"],
+      featured: false,
+      published: true,
+      createdAt: "2024-01-05"
+    },
+    {
+      id: "4",
+      title: "Desktop Video Editor",
+      description: "Professional video editing software with advanced features and intuitive user interface. Supports multiple formats, real-time effects, color grading, audio editing, and export optimization for various platforms.",
+      image: "/placeholder-project.jpg",
+      video: "/sample-video4.mp4",
+      category: "desktop",
+      technologies: ["Electron", "FFmpeg", "React", "TypeScript", "WebGL", "WebAssembly"],
+      featured: false,
+      published: true,
+      createdAt: "2023-12-20"
+    },
+    {
+      id: "5",
+      title: "CRM System",
+      description: "Comprehensive customer relationship management system for small to medium businesses. Features include contact management, sales pipeline tracking, email integration, reporting analytics, and automated workflow management.",
+      image: "/placeholder-project.jpg",
+      video: "/sample-video5.mp4",
+      projectLink: "https://example-crm.com",
+      category: "web",
+      technologies: ["Vue.js", "Laravel", "MySQL", "Docker", "Elasticsearch", "Redis"],
+      featured: true,
+      published: true,
+      createdAt: "2023-12-15"
+    }
+  ];
+
+  const featuredProjects = projects.filter(project => project.featured);
+  const regularProjects = projects.filter(project => !project.featured);
+
+  const handlePlayVideo = (videoUrl: string) => {
+    setSelectedVideo(videoUrl);
+  };
+
+  return (
+    <div className="min-h-screen" style={{ backgroundColor: '#0f172a' }}>
+      {/* Hero Section with DarkVeil */}
+      <section className="relative -mt-20"> {/* Updated negative margin for new header height */}
+        <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
+          <DarkVeil 
+            hueShift={60}
+            noiseIntensity={0}
+            scanlineIntensity={0}
+            speed={1}
+            scanlineFrequency={5}
+            warpAmount={5}
+          />
+        </div>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-center z-10">
+            <h1 className="text-4xl md:text-6xl lg:text-8xl font-thin mb-6 text-white tracking-widest" style={{ fontFamily: '"Poppins", "Inter", "Quicksand", "Nunito", "Rubik", sans-serif' }}>
+              Our Projects
+            </h1>
+            <p className="text-xl md:text-2xl font-thin text-white/90 tracking-wider max-w-3xl mx-auto" style={{ fontFamily: '"Inter", "Quicksand", "Nunito", sans-serif' }}>
+              The creativity of our works are higher than competition's potential
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Top Projects */}
+      {featuredProjects.length > 0 && (
+        <section className="px-4 py-20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#f8fafc' }}>
+                Top Best Projects
+              </h2>
+              <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#328e6e' }}></div>
+            </div>
+            <div className="grid gap-12 md:gap-16">
+              {featuredProjects.map((project) => (
+                <div key={project.id} className="group">
+                  <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                    {/* Left side - Video/Image */}
+                    <div className="lg:w-1/2 relative">
+                      <div className="aspect-video rounded-2xl overflow-hidden bg-gray-800 relative">
+                        <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: '#90c67c' }}>
+                          <div className="text-center text-white">
+                            <div className="text-6xl mb-4">🎬</div>
+                            <p className="text-lg">Project Preview</p>
+                          </div>
+                        </div>
+                        
+                        {/* Play button overlay */}
+                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                          <Dialog>
+                            <DialogTrigger asChild>
+                              <Button
+                                size="lg"
+                                className="rounded-full w-16 h-16 bg-white/90 hover:bg-white text-[#328e6e] hover:text-[#328e6e] shadow-lg transform hover:scale-110 transition-all duration-300"
+                                onClick={() => handlePlayVideo(project.video || '')}
+                              >
+                                <Play className="h-8 w-8" />
+                              </Button>
+                            </DialogTrigger>
+                            <DialogContent className="max-w-4xl bg-black border-none p-0">
+                              <div className="aspect-video bg-black flex items-center justify-center">
+                                <div className="text-center text-white">
+                                  <div className="text-6xl mb-4">🎥</div>
+                                  <p className="text-lg">Video Player</p>
+                                  <p className="text-sm text-gray-400 mt-2">
+                                    {project.title} - Video Demo
+                                  </p>
+                                </div>
+                              </div>
+                            </DialogContent>
+                          </Dialog>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Right side - Details */}
+                    <div className="lg:w-1/2 space-y-6">
+                      <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-4" style={{ color: '#f8fafc' }}>
+                        {project.title}
+                      </h3>
+
+                      <div className="flex flex-wrap gap-3">
+                        <Badge className="capitalize px-4 py-2 text-base" style={{ backgroundColor: '#328e6e', color: '#f8fafc', border: 'none' }}>
+                          {project.category}
+                        </Badge>
+                        {project.featured && (
+                          <Badge className="bg-yellow-500 text-black border-none px-4 py-2 text-base font-semibold">
+                            Best
+                          </Badge>
+                        )}
+                      </div>
+
+                      <p className="text-gray-300 leading-relaxed text-lg">
+                        {project.description}
+                      </p>
+
+
+
+
+
+
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* All Projects */}
+      <section className="px-4 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#f8fafc' }}>
+              All Projects
+            </h2>
+            <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#328e6e' }}></div>
+          </div>
+          <div className="grid gap-12 md:gap-16">
+            {regularProjects.map((project) => (
+              <div key={project.id} className="group">
+                <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                  {/* Left side - Video/Image */}
+                  <div className="lg:w-1/2 relative">
+                    <div className="aspect-video rounded-2xl overflow-hidden bg-gray-800 relative">
+                      <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: '#90c67c' }}>
+                        <div className="text-center text-white">
+                          <div className="text-6xl mb-4">🎬</div>
+                          <p className="text-lg">Project Preview</p>
+                        </div>
+                      </div>
+                      
+                      {/* Play button overlay */}
+                      <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <Button
+                              size="lg"
+                              className="rounded-full w-16 h-16 bg-white/90 hover:bg-white text-[#328e6e] hover:text-[#328e6e] shadow-lg transform hover:scale-110 transition-all duration-300"
+                              onClick={() => handlePlayVideo(project.video || '')}
+                            >
+                              <Play className="h-8 w-8" />
+                            </Button>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-4xl bg-black border-none p-0">
+                            <div className="aspect-video bg-black flex items-center justify-center">
+                              <div className="text-center text-white">
+                                <div className="text-6xl mb-4">🎥</div>
+                                <p className="text-lg">Video Player</p>
+                                <p className="text-sm text-gray-400 mt-2">
+                                  {project.title} - Video Demo
+                                </p>
+                              </div>
+                            </div>
+                          </DialogContent>
+                        </Dialog>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right side - Details */}
+                  <div className="lg:w-1/2 space-y-6">
+                    <div className="flex flex-wrap gap-2">
+                      <Badge className="capitalize px-3 py-1" style={{ backgroundColor: '#328e6e', color: '#f8fafc', border: 'none' }}>
+                        {project.category}
+                      </Badge>
+                      {project.video && (
+                        <Badge variant="outline" className="px-3 py-1" style={{ borderColor: '#328e6e', color: '#f8fafc' }}>
+                          <Video className="h-3 w-3 mr-1" />
+                          Video
+                        </Badge>
+                      )}
+                    </div>
+
+                    <h3 className="text-2xl md:text-3xl font-bold leading-tight" style={{ color: '#f8fafc' }}>
+                      {project.title}
+                    </h3>
+
+                    <p className="text-gray-300 leading-relaxed text-lg">
+                      {project.description}
+                    </p>
+
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies.slice(0, 6).map((tech, index) => (
+                        <Badge 
+                          key={index} 
+                          variant="outline" 
+                          className="text-sm px-3 py-1"
+                          style={{ borderColor: '#328e6e', color: '#f8fafc' }}
+                        >
+                          {tech}
+                        </Badge>
+                      ))}
+                      {project.technologies.length > 6 && (
+                        <Badge 
+                          variant="outline" 
+                          className="text-sm px-3 py-1"
+                          style={{ borderColor: '#328e6e', color: '#f8fafc' }}
+                        >
+                          +{project.technologies.length - 6} more
+                        </Badge>
+                      )}
+                    </div>
+
+                    <div className="flex items-center gap-4 text-sm text-gray-400">
+                      <div className="flex items-center gap-1">
+                        <Calendar className="h-4 w-4" />
+                        <span>{new Date(project.createdAt).toLocaleDateString()}</span>
+                      </div>
+                    </div>
+
+                    <div className="pt-4">
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button 
+                            className="px-8 py-3 rounded-lg font-medium shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                            style={{ backgroundColor: '#328e6e', color: '#f8fafc' }}
+                            onClick={() => handlePlayVideo(project.video || '')}
+                          >
+                            <Play className="h-4 w-4 mr-2" />
+                            Play Demo
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl bg-black border-none p-0">
+                          <div className="aspect-video bg-black flex items-center justify-center">
+                            <div className="text-center text-white">
+                              <div className="text-6xl mb-4">🎥</div>
+                              <p className="text-lg">Video Player</p>
+                              <p className="text-sm text-gray-400 mt-2">
+                                {project.title} - Video Demo
+                              </p>
+                            </div>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4" style={{ background: 'linear-gradient(135deg, #328e6e 0%, #67ae6e 50%, #90c67c 100%)' }}>
+        <div className="max-w-4xl mx-auto text-center">
+          <Button 
+            size="lg" 
+            className="text-lg px-12 py-6 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 border-2 border-white/20 backdrop-blur-sm"
+            style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)', color: '#328e6e' }}
+            asChild
+          >
+            <Link href="/contact" prefetch={true}>Start Your Project</Link>
+          </Button>
+        </div>
+      </section>
+    </div>
+  );
+}
