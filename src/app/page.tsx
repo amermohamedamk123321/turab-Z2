@@ -82,7 +82,7 @@ export default function Home() {
               verticalSizing={3.2}  // As specified
               wispDensity={0.8}  // As specified
               wispSpeed={13}  // Back to original
-              wispIntensity={0}  // As specified
+              wispIntensity={1}  // As specified
               flowSpeed={0.39}  // Back to original
               flowStrength={1}  // As specified
               fogIntensity={0.45}  // As specified
@@ -90,8 +90,8 @@ export default function Home() {
               fogFallSpeed={0.6}  // Back to original
               decay={3}  // As specified
               falloffStart={1.22}  // As specified
-              horizontalBeamOffset={5}  // Reset to zero
-              verticalBeamOffset={5}  // Reset to zero
+              horizontalBeamOffset={0}  // Reset to zero
+              verticalBeamOffset={0}  // Reset to zero
             />
           </DeferredComponent>
         </div>
