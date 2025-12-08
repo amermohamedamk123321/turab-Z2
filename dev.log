@@ -359,3 +359,226 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 > Ready on http://0.0.0.0:3000
 > Socket.IO server running at ws://0.0.0.0:3000/api/socketio
  ○ Compiling /admin/dashboard ...
+ ✓ Compiled /admin/login in 48.8s (1917 modules)
+ GET /admin/dashboard 200 in 54174ms
+ GET /admin/login?reload=1765211903093 200 in 50659ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 33289ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 31757ms
+ GET / 200 in 11044ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 1841ms
+ GET / 200 in 1227ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 84ms
+ GET / 200 in 63ms
+ GET / 200 in 76ms
+ GET / 200 in 72ms
+ GET / 200 in 67ms
+ GET / 200 in 8ms
+ GET / 200 in 68ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 1229ms (2070 modules)
+ GET /projects 200 in 1333ms
+ GET / 200 in 172ms
+ ✓ Compiled /about in 361ms (2097 modules)
+ GET /about 200 in 418ms
+ GET / 200 in 130ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 3.2s (2120 modules)
+ GET /contact 200 in 3274ms
+ GET / 200 in 562ms
+ GET / 200 in 84ms
+ GET / 200 in 7ms
+ GET / 200 in 70ms
+ GET / 200 in 60ms
+ GET /projects 200 in 14ms
+ GET / 200 in 58ms
+ GET /about 200 in 12ms
+ GET /contact 200 in 16ms
+ GET / 200 in 90ms
+ GET /admin/login 200 in 20ms
+ GET / 200 in 104ms
+ GET / 200 in 82ms
+ GET / 200 in 79ms
+ GET / 200 in 69ms
+ GET /admin/dashboard 200 in 22ms
+ GET / 200 in 87ms
+ GET / 200 in 85ms
+ GET / 200 in 91ms
+ GET /admin/login 200 in 8ms
+ GET / 200 in 64ms
+ GET / 200 in 62ms
+ GET / 200 in 70ms
+ GET / 200 in 65ms
+ GET / 200 in 77ms
+ GET / 200 in 66ms
+ GET / 200 in 69ms
+ GET / 200 in 70ms
+ GET / 200 in 70ms
+ GET / 200 in 78ms
+ GET / 200 in 71ms
+ GET / 200 in 74ms
+ GET / 200 in 62ms
+ GET /?reload=1765212151913 200 in 72ms
+ GET / 200 in 77ms
+ GET / 200 in 137ms
+ GET / 200 in 66ms
+ GET / 200 in 64ms
+ GET / 200 in 69ms
+ GET / 200 in 74ms
+ GET / 200 in 84ms
+ GET / 200 in 68ms
+ GET / 200 in 68ms
+ GET / 200 in 67ms
+ GET / 200 in 73ms
+ GET / 200 in 69ms
+ GET / 200 in 72ms
+ GET / 200 in 79ms
+ GET / 200 in 69ms
+ GET / 200 in 72ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+> Ready on http://0.0.0.0:3000
+> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 4.3s (1811 modules)
+ GET /?reload=1765212257039 200 in 1235ms
+ GET / 200 in 4891ms
+ GET / 200 in 88ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 80ms
+ GET / 200 in 88ms
+ GET / 200 in 92ms
+ GET / 200 in 94ms
+ GET / 200 in 90ms
+ GET / 200 in 74ms
+ GET / 200 in 72ms
+ GET / 200 in 87ms
+ GET / 200 in 68ms
+ GET / 200 in 67ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+> Ready on http://0.0.0.0:3000
+> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 4.1s (1811 modules)
+ GET / 200 in 4649ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 2.2s (1964 modules)
+ GET /projects 200 in 2516ms
+ GET / 200 in 1160ms
+ GET / 200 in 10ms
+ GET / 200 in 79ms
+ GET / 200 in 92ms
+ GET / 200 in 81ms
+ GET /?reload=1765212356271 200 in 80ms
+ GET / 200 in 87ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 80ms
+ GET / 200 in 75ms
+ GET / 200 in 83ms
+ GET / 200 in 74ms
+ GET / 200 in 74ms
+ GET / 200 in 80ms
+ GET / 200 in 90ms
+ GET / 200 in 96ms
+ GET / 200 in 67ms
+ GET / 200 in 68ms
+ GET / 200 in 78ms
+ GET / 200 in 69ms
+ GET / 200 in 69ms
+ GET / 200 in 70ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+> Ready on http://0.0.0.0:3000
+> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling /projects ...
+ ✓ Compiled / in 18.1s (1964 modules)
+ GET / 200 in 20912ms
+ GET /projects 200 in 27751ms
+ GET /projects 200 in 1680ms
+ GET / 200 in 5602ms
+ GET / 200 in 1042ms
+ ○ Compiling /about ...
+ ✓ Compiled /contact in 58.4s (1991 modules)
+ ✓ Compiled in 22.2s (2050 modules)
+ GET /contact 200 in 50321ms
+ GET /about 200 in 98237ms
+ GET /about 200 in 69121ms
+ GET /about 200 in 55921ms
+ GET /about 200 in 54958ms
+ GET /projects?reload=1765212561348 200 in 28959ms
+ GET /projects?reload=1765212565303 200 in 26398ms
+ GET /projects?reload=1765212565606 200 in 26239ms
+ GET /projects?reload=1765212565858 200 in 23280ms
+ GET /projects?reload=1765212566175 200 in 22877ms
+ GET / 200 in 15524ms
+ GET / 200 in 1201ms
+ GET / 200 in 62ms
+ GET / 200 in 8ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 11ms
+ GET / 200 in 8ms
+ GET / 200 in 7ms
+ GET / 200 in 7ms
+ GET / 200 in 56ms
+ GET / 200 in 75ms
+ GET / 200 in 58ms
+ GET /projects 200 in 10ms
+ GET / 200 in 66ms
+ GET /about 200 in 10ms
+ GET /contact 200 in 9ms
+ GET / 200 in 80ms
+ ○ Compiling /admin/login ...
+ ✓ Compiled /admin/login in 1660ms (2081 modules)
+ GET /admin/login 200 in 1900ms
+ GET / 200 in 1236ms
+ GET / 200 in 81ms
+ GET / 200 in 9ms
+ GET / 200 in 76ms
+ GET / 200 in 100ms
+ GET / 200 in 94ms
+ GET / 200 in 92ms
+ GET / 200 in 95ms
+ GET / 200 in 77ms
+ GET / 200 in 105ms
+ GET / 200 in 79ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
+> Ready on http://0.0.0.0:3000
+> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling / ...
+ ✓ Compiled / in 36.4s (1811 modules)
+ GET / 200 in 21356ms
+ GET /?reload=1765212703233 200 in 32003ms
+ GET / 200 in 1278ms
+ GET / 200 in 1121ms
+ GET / 200 in 80ms
+ GET / 200 in 78ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 84ms
+ GET / 200 in 73ms
+ GET / 200 in 79ms
+ GET / 200 in 71ms
+ GET / 200 in 72ms
+ GET / 200 in 67ms
+ GET / 200 in 63ms
+ GET / 200 in 105ms
+ GET / 200 in 92ms
+ GET / 200 in 92ms
+ GET / 200 in 82ms
+ GET / 200 in 80ms
+ GET / 200 in 68ms
+ GET / 200 in 61ms
+ GET / 200 in 75ms
+ GET / 200 in 69ms
+ GET / 200 in 67ms
+ GET / 200 in 69ms
+ GET / 200 in 65ms
+ GET / 200 in 65ms
+ GET / 200 in 68ms
+ GET / 200 in 100ms
