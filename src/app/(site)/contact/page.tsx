@@ -31,7 +31,9 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { BackgroundGradient } from "@/components/BackgroundGradient";
-import Orb from "@/components/Orb";
+import OrbLazy from "@/components/OrbLazy";
+import DeferredComponent from "@/components/DeferredComponent";
+import { SkeletonLoader } from "@/components/SkeletonLoader";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -153,12 +155,14 @@ export default function ContactPage() {
             <div className="text-center max-w-4xl mx-auto h-full flex flex-col justify-center">
               {/* Orb Component */}
               <div className="w-full h-[600px] relative mb-8">
-                <Orb
-                  hoverIntensity={0.5}
-                  rotateOnHover={true}
-                  hue={280}
-                  forceHoverState={false}
-                />
+                <DeferredComponent fallback={<SkeletonLoader className="w-full h-full rounded-full" />}>
+                  <OrbLazy
+                    hoverIntensity={0.5}
+                    rotateOnHover={true}
+                    hue={280}
+                    forceHoverState={false}
+                  />
+                </DeferredComponent>
               </div>
               
               {/* Title */}

@@ -19,6 +19,8 @@ import LampContainer from "@/components/LampLazy";
 import { BackgroundGradient } from "@/components/BackgroundGradient";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import DeferredComponent from "@/components/DeferredComponent";
+import { SkeletonLoader } from "@/components/SkeletonLoader";
 
 export default function AboutPage() {
 
