@@ -69,7 +69,7 @@ export default function Home() {
             <LaserFlowLazy
               style={{
                 position: 'absolute',
-                top: 0,
+                top: -2,
                 left: 0,
                 width: '100%',
                 height: '100%',
@@ -90,8 +90,8 @@ export default function Home() {
               fogFallSpeed={0.6}  // Back to original
               decay={3}  // As specified
               falloffStart={1.22}  // As specified
-              horizontalBeamOffset={1}  // Reset to zero
-              verticalBeamOffset={1}  // Reset to zero
+              horizontalBeamOffset={0}  // Reset to zero
+              verticalBeamOffset={0}  // Reset to zero
             />
           </DeferredComponent>
         </div>
