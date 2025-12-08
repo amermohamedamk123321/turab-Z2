@@ -156,3 +156,25 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 66ms
  GET / 200 in 62ms
  GET / 200 in 76ms
+ GET /admin/login?reload=1765211276429 200 in 38ms
+ GET / 200 in 68ms
+ GET / 200 in 69ms
+ GET / 200 in 58ms
+ GET / 200 in 73ms
+ GET / 200 in 64ms
+ GET / 200 in 61ms
+ GET / 200 in 67ms
+ GET / 200 in 61ms
+ GET / 200 in 65ms
+ GET / 200 in 102ms
+ GET / 200 in 71ms
+ GET / 200 in 70ms
+ GET / 200 in 73ms
+ GET / 200 in 70ms
+ GET / 200 in 72ms
+ GET / 200 in 66ms
+ GET / 200 in 70ms
+ GET / 200 in 70ms
+ GET / 200 in 69ms
+ GET / 200 in 62ms
+ GET / 200 in 79ms
