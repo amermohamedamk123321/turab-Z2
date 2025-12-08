@@ -347,3 +347,5 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /admin/login 200 in 20ms
  GET / 200 in 70ms
  GET / 200 in 88ms
+ GET / 200 in 92ms
+[32m[nodemon] restarting due to changes...[39m
