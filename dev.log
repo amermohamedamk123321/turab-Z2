@@ -208,3 +208,23 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 69ms
  GET / 200 in 69ms
  GET / 200 in 66ms
+ GET /admin/login?reload=1765211577638 200 in 34ms
+ GET / 200 in 67ms
+ GET / 200 in 75ms
+ GET / 200 in 68ms
+ GET / 200 in 71ms
+ GET / 200 in 73ms
+ GET / 200 in 68ms
+ GET / 200 in 73ms
+ GET / 200 in 67ms
+ GET / 200 in 66ms
+ GET / 200 in 68ms
+ GET / 200 in 67ms
+ GET / 200 in 69ms
+ GET / 200 in 72ms
+ GET / 200 in 65ms
+ GET / 200 in 118ms
+ GET / 200 in 72ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] restarting due to changes...[39m
