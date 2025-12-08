@@ -5,8 +5,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Code, Smartphone, Monitor, Headphones, Shield, MessageCircle, Facebook, Mail } from "lucide-react";
 import Link from "next/link";
-import LaserFlow from "@/components/LaserFlow";
-import { Meteors } from "@/components/Meteors";
+import LaserFlowLazy from "@/components/LaserFlowLazy";
+import MeteorsLazy from "@/components/MeteorsLazy";
+import DeferredComponent from "@/components/DeferredComponent";
+import { SkeletonLoader } from "@/components/SkeletonLoader";
 
 export default function Home() {
   const services = [
