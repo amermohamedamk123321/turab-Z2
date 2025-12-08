@@ -291,3 +291,59 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  ○ Compiling / ...
  ✓ Compiled / in 3.7s (1811 modules)
  GET / 200 in 4307ms
+ GET / 200 in 84ms
+ ○ Compiling /admin/login ...
+ ✓ Compiled /admin/login in 992ms (1840 modules)
+ GET /admin/login?reload=1765211759168 200 in 1298ms
+ GET / 200 in 113ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 80ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 49ms
+ GET / 200 in 78ms
+ GET / 200 in 90ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 37ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 65ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 54ms
+ GET / 200 in 63ms
+ GET / 200 in 68ms
+ GET / 200 in 62ms
+ GET / 200 in 63ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 37ms
+ GET / 200 in 59ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 40ms
+ GET / 200 in 82ms
+ GET / 200 in 59ms
+ GET / 200 in 67ms
+ GET / 200 in 13ms
+ GET / 200 in 98ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 1352ms (2001 modules)
+ GET /projects 200 in 1647ms
+ GET / 200 in 1383ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 788ms (2028 modules)
+ GET /about 200 in 986ms
+ GET / 200 in 849ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 1693ms (2087 modules)
+ GET /contact 200 in 1909ms
+ GET / 200 in 772ms
+ GET / 200 in 103ms
+ GET / 200 in 117ms
+ GET /contact?reload=1765211826226 200 in 235ms
+ GET /contact?reload=1765211828723 200 in 154ms
+ GET / 200 in 88ms
+ GET / 200 in 89ms
+ GET / 200 in 17ms
+ GET / 200 in 97ms
+ GET / 200 in 8ms
+ GET / 200 in 95ms
+ GET /projects 200 in 23ms
+ GET / 200 in 83ms
+ GET /about 200 in 15ms
+ GET / 200 in 66ms
+ GET / 200 in 79ms
+ GET /admin/login 200 in 20ms
+ GET / 200 in 70ms
+ GET / 200 in 88ms
