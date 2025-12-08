@@ -57,28 +57,30 @@ export default function AboutPage() {
     <div className="min-h-screen bg-gray-900 text-white">
       {/* Hero Section with Lamp */}
       <section className="h-screen">
-        <LampContainer className="h-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 1 }}
-            className="text-center max-w-4xl mx-auto h-full flex items-center justify-center"
-          >
-            <motion.h1 
-              initial={{ opacity: 0.5, y: 100 }}
+        <DeferredComponent fallback={<SkeletonLoader className="w-full h-full" />}>
+          <LampContainer className="h-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.8,
-                ease: "easeInOut",
-              }}
-              className="bg-gradient-to-br from-[#3674B5] to-[#A1E3F9] py-4 bg-clip-text text-center text-3xl font-thin tracking-widest text-transparent md:text-5xl lg:text-6xl"
-              style={{ fontFamily: '"Poppins", "Inter", "Quicksand", "Nunito", "Rubik", sans-serif' }}
+              transition={{ delay: 0.5, duration: 1 }}
+              className="text-center max-w-4xl mx-auto h-full flex items-center justify-center"
             >
-              Leading Innovator Software Company in Afghanistan
-            </motion.h1>
-          </motion.div>
-        </LampContainer>
+              <motion.h1
+                initial={{ opacity: 0.5, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.3,
+                  duration: 0.8,
+                  ease: "easeInOut",
+                }}
+                className="bg-gradient-to-br from-[#3674B5] to-[#A1E3F9] py-4 bg-clip-text text-center text-3xl font-thin tracking-widest text-transparent md:text-5xl lg:text-6xl"
+                style={{ fontFamily: '"Poppins", "Inter", "Quicksand", "Nunito", "Rubik", sans-serif' }}
+              >
+                Leading Innovator Software Company in Afghanistan
+              </motion.h1>
+            </motion.div>
+          </LampContainer>
+        </DeferredComponent>
       </section>
 
       {/* Stats Section */}
