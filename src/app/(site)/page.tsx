@@ -65,33 +65,35 @@ export default function Home() {
         <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
         {/* LaserFlow background */}
         <div className="absolute inset-0 z-0">
-          <LaserFlow
-            style={{ 
-              position: 'absolute', 
-              top: 0, 
-              left: 0, 
-              width: '100%', 
-              height: '100%',
-              opacity: 1,
-              visibility: 'visible',
-              background: 'black'
-            }}
-            color="#1E93AB"  // Changed to requested color
-            horizontalSizing={2}  // As specified
-            verticalSizing={3.2}  // As specified
-            wispDensity={0.8}  // As specified
-            wispSpeed={13}  // Back to original
-            wispIntensity={0}  // As specified
-            flowSpeed={0.39}  // Back to original
-            flowStrength={1}  // As specified
-            fogIntensity={0.45}  // As specified
-            fogScale={0.39}  // As specified
-            fogFallSpeed={0.6}  // Back to original
-            decay={3}  // As specified
-            falloffStart={1.22}  // As specified
-            horizontalBeamOffset={0}  // Reset to zero
-            verticalBeamOffset={0}  // Reset to zero
-          />
+          <DeferredComponent fallback={<SkeletonLoader className="w-full h-full bg-black" />}>
+            <LaserFlowLazy
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                opacity: 1,
+                visibility: 'visible',
+                background: 'black'
+              }}
+              color="#1E93AB"  // Changed to requested color
+              horizontalSizing={2}  // As specified
+              verticalSizing={3.2}  // As specified
+              wispDensity={0.8}  // As specified
+              wispSpeed={13}  // Back to original
+              wispIntensity={0}  // As specified
+              flowSpeed={0.39}  // Back to original
+              flowStrength={1}  // As specified
+              fogIntensity={0.45}  // As specified
+              fogScale={0.39}  // As specified
+              fogFallSpeed={0.6}  // Back to original
+              decay={3}  // As specified
+              falloffStart={1.22}  // As specified
+              horizontalBeamOffset={0}  // Reset to zero
+              verticalBeamOffset={0}  // Reset to zero
+            />
+          </DeferredComponent>
         </div>
         
         {/* Content */}
