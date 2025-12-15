@@ -11,837 +11,138 @@ https://nextjs.org/telemetry
 > Ready on http://0.0.0.0:3000
 > Socket.IO server running at ws://0.0.0.0:3000/api/socketio
  ○ Compiling / ...
- ✓ Compiled / in 96.9s (1820 modules)
- GET / 200 in 16161ms
- GET / 200 in 650ms
- GET / 200 in 7109ms
- GET /?reload=1765210532383 200 in 1033ms
- GET / 200 in 3359ms
- GET /?reload=1765210532383 200 in 491ms
- GET / 200 in 1119ms
- GET / 200 in 397ms
+ ✓ Compiled / in 116s (1829 modules)
+ GET / 200 in 18560ms
+ GET / 200 in 1509ms
+ GET /?reload=0 200 in 2007ms
+ GET /?reload=1765817725132 200 in 2550ms
+ GET / 200 in 8080ms
+ GET / 200 in 1276ms
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 662ms
  ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 2400ms
+ GET / 200 in 644ms
+ GET / 200 in 1103ms
+ GET / 200 in 792ms
+ GET / 200 in 61ms
+ GET / 200 in 60ms
+ GET / 200 in 68ms
+ GET / 200 in 62ms
+ GET / 200 in 66ms
  GET / 200 in 76ms
- GET / 200 in 72ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 10.5s (1955 modules)
- GET /projects 200 in 13004ms
- GET / 200 in 8549ms
- GET / 200 in 880ms
- GET / 200 in 97ms
- ○ Compiling /about ...
- ✓ Compiled /about in 530ms (1982 modules)
- GET /about 200 in 593ms
- GET / 200 in 255ms
+ GET / 200 in 70ms
+ GET / 200 in 76ms
+ GET / 200 in 66ms
+ GET / 200 in 67ms
+ GET / 200 in 108ms
+ GET / 200 in 99ms
+ GET / 200 in 107ms
+ GET / 200 in 71ms
+ GET / 200 in 81ms
  GET / 200 in 85ms
+ GET / 200 in 69ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 1887ms (1964 modules)
+ GET /projects 200 in 1973ms
+ GET / 200 in 178ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 599ms (1991 modules)
+ GET /about 200 in 670ms
+ GET / 200 in 149ms
  ○ Compiling /contact ...
- ✓ Compiled /contact in 5.1s (2039 modules)
- GET /contact 200 in 7048ms
- GET / 200 in 2079ms
- GET / 200 in 80ms
- GET / 200 in 73ms
- ○ Compiling /admin/login ...
+ ✓ Compiled /contact in 1104ms (2050 modules)
+ GET /contact 200 in 1163ms
+ GET / 200 in 158ms
+ GET / 200 in 86ms
 [Error: Cannot apply unknown utility class `bg-background`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive]
- ✓ Compiled /admin/login in 4.8s (2108 modules)
- GET /admin/login 200 in 7325ms
- GET / 200 in 6544ms
- GET / 200 in 879ms
- GET / 200 in 82ms
- GET / 200 in 82ms
- GET / 200 in 90ms
- GET / 200 in 80ms
- GET / 200 in 82ms
- GET / 200 in 98ms
- GET / 200 in 104ms
- GET / 200 in 97ms
- GET / 200 in 93ms
- GET / 200 in 3276ms
- GET / 200 in 1201ms
- GET / 200 in 338ms
- GET / 200 in 80ms
- GET / 200 in 64ms
- GET / 200 in 73ms
- GET / 200 in 59ms
- GET / 200 in 59ms
- GET / 200 in 70ms
- GET / 200 in 62ms
- GET / 200 in 73ms
- GET / 200 in 65ms
- GET / 200 in 61ms
- GET / 200 in 66ms
- GET /admin/login?reload=1765210771480 200 in 43ms
- GET / 200 in 68ms
- GET / 200 in 65ms
- GET / 200 in 61ms
- GET / 200 in 64ms
- GET / 200 in 71ms
- GET / 200 in 70ms
- GET / 200 in 60ms
- GET / 200 in 62ms
- GET / 200 in 62ms
- GET / 200 in 74ms
- GET / 200 in 72ms
- GET / 200 in 209ms
- GET / 200 in 65ms
- GET / 200 in 73ms
- GET / 200 in 70ms
- GET / 200 in 61ms
- GET / 200 in 60ms
- GET / 200 in 68ms
- GET / 200 in 62ms
- GET / 200 in 66ms
- GET / 200 in 68ms
- GET / 200 in 62ms
- GET / 200 in 61ms
- GET / 200 in 72ms
- GET / 200 in 68ms
- GET / 200 in 72ms
- GET / 200 in 61ms
- GET / 200 in 60ms
- GET / 200 in 69ms
- GET / 200 in 63ms
- GET / 200 in 66ms
- GET / 200 in 64ms
- GET / 200 in 61ms
- GET / 200 in 63ms
- GET / 200 in 67ms
- GET / 200 in 69ms
- GET / 200 in 65ms
- GET / 200 in 60ms
- GET / 200 in 60ms
- GET / 200 in 62ms
- GET / 200 in 60ms
- GET / 200 in 62ms
- GET / 200 in 63ms
- GET / 200 in 65ms
- GET / 200 in 66ms
- GET / 200 in 65ms
- GET / 200 in 64ms
- GET / 200 in 105ms
- GET / 200 in 84ms
- GET / 200 in 72ms
- GET / 200 in 78ms
- GET / 200 in 63ms
- GET / 200 in 74ms
- GET / 200 in 65ms
- GET / 200 in 64ms
- GET / 200 in 64ms
- GET / 200 in 63ms
- GET / 200 in 63ms
- GET / 200 in 71ms
- GET / 200 in 68ms
- GET / 200 in 63ms
- GET / 200 in 60ms
- GET /admin/login?reload=1765211140687 200 in 36ms
- GET / 200 in 61ms
- GET / 200 in 66ms
- GET / 200 in 71ms
- GET / 200 in 69ms
- GET / 200 in 68ms
- GET / 200 in 71ms
- GET / 200 in 63ms
- GET / 200 in 64ms
- GET / 200 in 62ms
- GET / 200 in 63ms
- GET / 200 in 63ms
- GET / 200 in 102ms
- GET / 200 in 74ms
- GET / 200 in 64ms
- GET / 200 in 68ms
- GET / 200 in 64ms
- GET / 200 in 68ms
- GET / 200 in 65ms
- GET / 200 in 63ms
- GET / 200 in 66ms
- GET / 200 in 62ms
- GET / 200 in 76ms
- GET /admin/login?reload=1765211276429 200 in 38ms
- GET / 200 in 68ms
- GET / 200 in 69ms
- GET / 200 in 58ms
- GET / 200 in 73ms
- GET / 200 in 64ms
- GET / 200 in 61ms
- GET / 200 in 67ms
- GET / 200 in 61ms
- GET / 200 in 65ms
- GET / 200 in 102ms
- GET / 200 in 71ms
- GET / 200 in 70ms
- GET / 200 in 73ms
- GET / 200 in 70ms
- GET / 200 in 72ms
- GET / 200 in 66ms
- GET / 200 in 70ms
- GET / 200 in 70ms
- GET / 200 in 69ms
- GET / 200 in 62ms
- GET / 200 in 79ms
- GET / 200 in 67ms
- GET / 200 in 68ms
- GET / 200 in 67ms
- GET / 200 in 69ms
- GET / 200 in 66ms
- GET / 200 in 69ms
- GET / 200 in 67ms
- GET /admin/login?reload=1765211441578 200 in 40ms
- GET / 200 in 251ms
- GET / 200 in 64ms
- GET / 200 in 72ms
- GET / 200 in 70ms
- GET / 200 in 68ms
- GET / 200 in 77ms
- GET / 200 in 79ms
- GET / 200 in 64ms
- GET / 200 in 70ms
- GET / 200 in 66ms
- GET / 200 in 64ms
- GET / 200 in 75ms
- GET / 200 in 79ms
- GET / 200 in 65ms
- GET / 200 in 65ms
- GET / 200 in 71ms
- GET / 200 in 77ms
- GET / 200 in 67ms
- GET / 200 in 66ms
- GET / 200 in 69ms
- GET / 200 in 69ms
- GET / 200 in 66ms
- GET /admin/login?reload=1765211577638 200 in 34ms
- GET / 200 in 67ms
- GET / 200 in 75ms
- GET / 200 in 68ms
- GET / 200 in 71ms
- GET / 200 in 73ms
- GET / 200 in 68ms
- GET / 200 in 73ms
- GET / 200 in 67ms
- GET / 200 in 66ms
- GET / 200 in 68ms
- GET / 200 in 67ms
- GET / 200 in 69ms
- GET / 200 in 72ms
- GET / 200 in 65ms
- GET / 200 in 118ms
- GET / 200 in 72ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
  ○ Compiling /admin/login ...
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4s (1794 modules)
- ⨯ ReferenceError: LaserFlow is not defined
-    at Home (src/app/page.tsx:68:11)
-  66 |         {/* LaserFlow background */}
-  67 |         <div className="absolute inset-0 z-0">
-> 68 |           <LaserFlow
-     |           ^
-  69 |             style={{ 
-  70 |               position: 'absolute', 
-  71 |               top: 0,  {
-  digest: '1243785170'
-}
- GET / 500 in 4503ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 3.9s (1811 modules)
- GET / 200 in 4499ms
- GET / 200 in 102ms
- GET / 200 in 76ms
- GET / 200 in 92ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 3.5s (1811 modules)
- GET / 200 in 4020ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 3.7s (1811 modules)
- GET / 200 in 4307ms
- GET / 200 in 84ms
- ○ Compiling /admin/login ...
- ✓ Compiled /admin/login in 992ms (1840 modules)
- GET /admin/login?reload=1765211759168 200 in 1298ms
- GET / 200 in 113ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 80ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 49ms
- GET / 200 in 78ms
- GET / 200 in 90ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 37ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 65ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 54ms
- GET / 200 in 63ms
- GET / 200 in 68ms
- GET / 200 in 62ms
- GET / 200 in 63ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 37ms
- GET / 200 in 59ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 40ms
- GET / 200 in 82ms
- GET / 200 in 59ms
- GET / 200 in 67ms
- GET / 200 in 13ms
- GET / 200 in 98ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 1352ms (2001 modules)
- GET /projects 200 in 1647ms
- GET / 200 in 1383ms
- ○ Compiling /about ...
- ✓ Compiled /about in 788ms (2028 modules)
- GET /about 200 in 986ms
- GET / 200 in 849ms
- ○ Compiling /contact ...
- ✓ Compiled /contact in 1693ms (2087 modules)
- GET /contact 200 in 1909ms
- GET / 200 in 772ms
- GET / 200 in 103ms
- GET / 200 in 117ms
- GET /contact?reload=1765211826226 200 in 235ms
- GET /contact?reload=1765211828723 200 in 154ms
- GET / 200 in 88ms
- GET / 200 in 89ms
- GET / 200 in 17ms
- GET / 200 in 97ms
- GET / 200 in 8ms
- GET / 200 in 95ms
- GET /projects 200 in 23ms
- GET / 200 in 83ms
- GET /about 200 in 15ms
- GET / 200 in 66ms
- GET / 200 in 79ms
- GET /admin/login 200 in 20ms
- GET / 200 in 70ms
- GET / 200 in 88ms
- GET / 200 in 92ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled /admin/login in 5.4s (1840 modules)
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling /admin/dashboard ...
- ✓ Compiled /admin/login in 48.8s (1917 modules)
- GET /admin/dashboard 200 in 54174ms
- GET /admin/login?reload=1765211903093 200 in 50659ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 33289ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 31757ms
- GET / 200 in 11044ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 1841ms
- GET / 200 in 1227ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 84ms
- GET / 200 in 63ms
- GET / 200 in 76ms
- GET / 200 in 72ms
- GET / 200 in 67ms
- GET / 200 in 8ms
- GET / 200 in 68ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 1229ms (2070 modules)
- GET /projects 200 in 1333ms
- GET / 200 in 172ms
- ✓ Compiled /about in 361ms (2097 modules)
- GET /about 200 in 418ms
- GET / 200 in 130ms
- ○ Compiling /contact ...
- ✓ Compiled /contact in 3.2s (2120 modules)
- GET /contact 200 in 3274ms
- GET / 200 in 562ms
- GET / 200 in 84ms
- GET / 200 in 7ms
- GET / 200 in 70ms
- GET / 200 in 60ms
- GET /projects 200 in 14ms
- GET / 200 in 58ms
- GET /about 200 in 12ms
- GET /contact 200 in 16ms
- GET / 200 in 90ms
- GET /admin/login 200 in 20ms
- GET / 200 in 104ms
- GET / 200 in 82ms
- GET / 200 in 79ms
- GET / 200 in 69ms
- GET /admin/dashboard 200 in 22ms
- GET / 200 in 87ms
- GET / 200 in 85ms
- GET / 200 in 91ms
- GET /admin/login 200 in 8ms
- GET / 200 in 64ms
- GET / 200 in 62ms
- GET / 200 in 70ms
- GET / 200 in 65ms
- GET / 200 in 77ms
- GET / 200 in 66ms
- GET / 200 in 69ms
- GET / 200 in 70ms
- GET / 200 in 70ms
- GET / 200 in 78ms
- GET / 200 in 71ms
- GET / 200 in 74ms
- GET / 200 in 62ms
- GET /?reload=1765212151913 200 in 72ms
- GET / 200 in 77ms
- GET / 200 in 137ms
- GET / 200 in 66ms
- GET / 200 in 64ms
- GET / 200 in 69ms
- GET / 200 in 74ms
- GET / 200 in 84ms
- GET / 200 in 68ms
- GET / 200 in 68ms
- GET / 200 in 67ms
- GET / 200 in 73ms
- GET / 200 in 69ms
- GET / 200 in 72ms
- GET / 200 in 79ms
- GET / 200 in 69ms
- GET / 200 in 72ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.3s (1811 modules)
- GET /?reload=1765212257039 200 in 1235ms
- GET / 200 in 4891ms
- GET / 200 in 88ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 80ms
- GET / 200 in 88ms
- GET / 200 in 92ms
- GET / 200 in 94ms
- GET / 200 in 90ms
- GET / 200 in 74ms
- GET / 200 in 72ms
- GET / 200 in 87ms
- GET / 200 in 68ms
- GET / 200 in 67ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.1s (1811 modules)
- GET / 200 in 4649ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 2.2s (1964 modules)
- GET /projects 200 in 2516ms
- GET / 200 in 1160ms
- GET / 200 in 10ms
- GET / 200 in 79ms
- GET / 200 in 92ms
- GET / 200 in 81ms
- GET /?reload=1765212356271 200 in 80ms
- GET / 200 in 87ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 80ms
- GET / 200 in 75ms
- GET / 200 in 83ms
- GET / 200 in 74ms
- GET / 200 in 74ms
- GET / 200 in 80ms
- GET / 200 in 90ms
- GET / 200 in 96ms
- GET / 200 in 67ms
- GET / 200 in 68ms
- GET / 200 in 78ms
- GET / 200 in 69ms
- GET / 200 in 69ms
- GET / 200 in 70ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling /projects ...
- ✓ Compiled / in 18.1s (1964 modules)
- GET / 200 in 20912ms
- GET /projects 200 in 27751ms
- GET /projects 200 in 1680ms
- GET / 200 in 5602ms
- GET / 200 in 1042ms
- ○ Compiling /about ...
- ✓ Compiled /contact in 58.4s (1991 modules)
- ✓ Compiled in 22.2s (2050 modules)
- GET /contact 200 in 50321ms
- GET /about 200 in 98237ms
- GET /about 200 in 69121ms
- GET /about 200 in 55921ms
- GET /about 200 in 54958ms
- GET /projects?reload=1765212561348 200 in 28959ms
- GET /projects?reload=1765212565303 200 in 26398ms
- GET /projects?reload=1765212565606 200 in 26239ms
- GET /projects?reload=1765212565858 200 in 23280ms
- GET /projects?reload=1765212566175 200 in 22877ms
- GET / 200 in 15524ms
- GET / 200 in 1201ms
- GET / 200 in 62ms
- GET / 200 in 8ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 11ms
- GET / 200 in 8ms
- GET / 200 in 7ms
- GET / 200 in 7ms
- GET / 200 in 56ms
- GET / 200 in 75ms
- GET / 200 in 58ms
- GET /projects 200 in 10ms
- GET / 200 in 66ms
- GET /about 200 in 10ms
- GET /contact 200 in 9ms
- GET / 200 in 80ms
- ○ Compiling /admin/login ...
- ✓ Compiled /admin/login in 1660ms (2081 modules)
- GET /admin/login 200 in 1900ms
- GET / 200 in 1236ms
- GET / 200 in 81ms
+ ✓ Compiled /admin/login in 597ms (2095 modules)
+ GET /admin/login 200 in 738ms
+ GET / 200 in 151ms
  GET / 200 in 9ms
- GET / 200 in 76ms
+ GET / 200 in 92ms
  GET / 200 in 100ms
- GET / 200 in 94ms
- GET / 200 in 92ms
- GET / 200 in 95ms
- GET / 200 in 77ms
- GET / 200 in 105ms
- GET / 200 in 79ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 36.4s (1811 modules)
- GET / 200 in 21356ms
- GET /?reload=1765212703233 200 in 32003ms
- GET / 200 in 1278ms
- GET / 200 in 1121ms
- GET / 200 in 80ms
- GET / 200 in 78ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 84ms
- GET / 200 in 73ms
- GET / 200 in 79ms
- GET / 200 in 71ms
- GET / 200 in 72ms
- GET / 200 in 67ms
- GET / 200 in 63ms
- GET / 200 in 105ms
- GET / 200 in 92ms
- GET / 200 in 92ms
- GET / 200 in 82ms
- GET / 200 in 80ms
- GET / 200 in 68ms
- GET / 200 in 61ms
- GET / 200 in 75ms
- GET / 200 in 69ms
- GET / 200 in 67ms
- GET / 200 in 69ms
- GET / 200 in 65ms
- GET / 200 in 65ms
- GET / 200 in 68ms
- GET / 200 in 100ms
- GET / 200 in 79ms
- GET /?reload=1765212891328 200 in 60ms
- GET / 200 in 64ms
- GET / 200 in 71ms
- GET / 200 in 64ms
- GET / 200 in 64ms
- GET / 200 in 68ms
- GET / 200 in 65ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 1437ms (1964 modules)
- GET /projects 200 in 1727ms
- GET / 200 in 482ms
- ○ Compiling /about ...
- ✓ Compiled /about in 1068ms (1991 modules)
- GET /about 200 in 1236ms
- GET / 200 in 148ms
- GET / 200 in 93ms
  GET /projects 200 in 24ms
- GET / 200 in 98ms
- GET / 200 in 84ms
- ○ Compiling /contact ...
- ✓ Compiled /contact in 732ms (2050 modules)
- GET /contact 200 in 789ms
- GET / 200 in 138ms
- GET / 200 in 83ms
- GET / 200 in 74ms
- GET / 200 in 63ms
- GET / 200 in 63ms
- GET / 200 in 58ms
- GET / 200 in 59ms
- GET / 200 in 70ms
- GET / 200 in 66ms
- GET / 200 in 63ms
- GET / 200 in 89ms
- GET / 200 in 88ms
- GET / 200 in 84ms
- GET / 200 in 91ms
- GET / 200 in 94ms
- GET / 200 in 75ms
- GET / 200 in 65ms
- GET / 200 in 74ms
- GET / 200 in 71ms
- GET / 200 in 79ms
- GET / 200 in 71ms
- GET / 200 in 65ms
- GET / 200 in 69ms
- GET / 200 in 78ms
- GET / 200 in 87ms
- GET / 200 in 64ms
- GET / 200 in 63ms
- GET / 200 in 65ms
- GET / 200 in 69ms
- GET / 200 in 63ms
- GET / 200 in 101ms
- GET / 200 in 74ms
- GET / 200 in 72ms
- GET / 200 in 69ms
- GET / 200 in 71ms
- GET / 200 in 83ms
- GET / 200 in 66ms
- GET / 200 in 70ms
- GET / 200 in 69ms
- GET / 200 in 67ms
- GET / 200 in 74ms
- GET / 200 in 77ms
- GET / 200 in 66ms
- GET / 200 in 85ms
- GET / 200 in 72ms
- GET / 200 in 74ms
- GET / 200 in 71ms
- GET / 200 in 71ms
- GET / 200 in 77ms
- GET / 200 in 74ms
- GET / 200 in 69ms
- GET / 200 in 79ms
- GET / 200 in 71ms
- GET / 200 in 125ms
- GET / 200 in 69ms
- GET / 200 in 86ms
- GET / 200 in 70ms
- GET / 200 in 83ms
- GET / 200 in 84ms
- GET / 200 in 69ms
- GET / 200 in 83ms
- GET / 200 in 69ms
- GET / 200 in 76ms
- GET / 200 in 75ms
- GET / 200 in 70ms
- GET / 200 in 70ms
- GET / 200 in 98ms
- GET / 200 in 75ms
+ GET /about 200 in 15ms
+ GET / 200 in 97ms
+ GET /contact 200 in 14ms
  GET / 200 in 11ms
- GET / 200 in 81ms
- GET / 200 in 74ms
- GET / 200 in 63ms
- GET / 200 in 86ms
- GET / 200 in 74ms
- GET / 200 in 79ms
- GET / 200 in 75ms
- GET / 200 in 61ms
- GET / 200 in 73ms
- GET / 200 in 82ms
- GET / 200 in 80ms
- GET / 200 in 63ms
- GET / 200 in 66ms
- GET / 200 in 69ms
- GET / 200 in 69ms
- GET / 200 in 67ms
- GET / 200 in 87ms
- GET / 200 in 79ms
- GET / 200 in 74ms
- GET / 200 in 81ms
- GET / 200 in 79ms
- GET / 200 in 78ms
- GET / 200 in 68ms
- GET / 200 in 72ms
- GET / 200 in 69ms
- GET / 200 in 67ms
- GET / 200 in 66ms
- GET / 200 in 68ms
- GET / 200 in 68ms
- GET / 200 in 68ms
- GET / 200 in 70ms
- GET / 200 in 68ms
- GET / 200 in 60ms
- GET / 200 in 71ms
- GET / 200 in 176ms
- GET / 200 in 71ms
- GET / 200 in 75ms
- GET / 200 in 66ms
- GET / 200 in 69ms
- GET / 200 in 65ms
- GET / 200 in 63ms
- GET / 200 in 66ms
- GET / 200 in 62ms
  GET / 200 in 76ms
- GET / 200 in 64ms
- GET / 200 in 68ms
- GET / 200 in 73ms
- GET / 200 in 61ms
- GET / 200 in 69ms
- GET / 200 in 69ms
- GET / 200 in 67ms
- GET / 200 in 70ms
- GET / 200 in 116ms
- GET / 200 in 81ms
- GET / 200 in 68ms
- GET / 200 in 77ms
  GET / 200 in 82ms
- GET / 200 in 67ms
- GET / 200 in 65ms
- GET / 200 in 64ms
- GET / 200 in 65ms
- GET / 200 in 74ms
- GET / 200 in 66ms
- GET / 200 in 62ms
- GET / 200 in 65ms
- GET / 200 in 69ms
- GET / 200 in 66ms
- GET / 200 in 63ms
- GET / 200 in 63ms
- GET / 200 in 70ms
- GET / 200 in 117ms
- GET / 200 in 72ms
- GET / 200 in 66ms
- GET / 200 in 78ms
- GET / 200 in 85ms
- GET / 200 in 71ms
- GET / 200 in 60ms
- GET / 200 in 66ms
- GET / 200 in 72ms
- GET / 200 in 70ms
- GET / 200 in 71ms
- GET / 200 in 74ms
- GET / 200 in 73ms
- GET / 200 in 80ms
- GET / 200 in 66ms
- GET / 200 in 65ms
- GET / 200 in 63ms
- GET / 200 in 63ms
- GET / 200 in 101ms
- GET / 200 in 75ms
- GET / 200 in 73ms
- GET / 200 in 75ms
- GET / 200 in 70ms
- GET / 200 in 70ms
- GET / 200 in 67ms
- GET / 200 in 78ms
- GET / 200 in 72ms
- GET / 200 in 65ms
- GET / 200 in 61ms
- GET / 200 in 69ms
- GET / 200 in 66ms
- GET / 200 in 74ms
- GET / 200 in 63ms
- GET / 200 in 68ms
- GET / 200 in 66ms
- GET / 200 in 66ms
- GET / 200 in 257ms
- GET / 200 in 76ms
- GET / 200 in 65ms
- GET / 200 in 68ms
- GET / 200 in 60ms
- GET / 200 in 78ms
- GET / 200 in 61ms
- GET / 200 in 59ms
- GET / 200 in 71ms
- GET / 200 in 73ms
- GET / 200 in 82ms
- GET / 200 in 63ms
- GET / 200 in 63ms
- GET / 200 in 68ms
- GET / 200 in 77ms
- GET / 200 in 71ms
- GET / 200 in 65ms
- GET / 200 in 64ms
- GET / 200 in 104ms
- GET / 200 in 87ms
- GET / 200 in 72ms
- GET / 200 in 66ms
+ GET /projects 200 in 14ms
  GET / 200 in 88ms
- GET / 200 in 68ms
- GET / 200 in 67ms
- GET / 200 in 67ms
+ GET /about 200 in 10ms
  GET / 200 in 71ms
- GET / 200 in 76ms
- GET / 200 in 68ms
- GET / 200 in 61ms
- GET / 200 in 67ms
- GET / 200 in 64ms
- GET / 200 in 65ms
- GET / 200 in 76ms
- GET / 200 in 69ms
- GET / 200 in 67ms
- GET / 200 in 131ms
- GET / 200 in 76ms
- GET / 200 in 72ms
- GET / 200 in 69ms
- GET / 200 in 70ms
- GET / 200 in 64ms
- GET / 200 in 73ms
+ GET / 200 in 85ms
+ GET /contact 200 in 11ms
+ GET / 200 in 74ms
+ GET / 200 in 82ms
+ GET / 200 in 10ms
+ GET / 200 in 91ms
+ GET / 200 in 81ms
+ GET / 200 in 100ms
+ GET / 200 in 102ms
+ GET / 200 in 98ms
+ GET / 200 in 81ms
+ GET / 200 in 81ms
  GET / 200 in 71ms
- GET / 200 in 64ms
- GET / 200 in 72ms
- GET / 200 in 67ms
- GET / 200 in 70ms
- GET / 200 in 72ms
- GET / 200 in 69ms
- GET / 200 in 86ms
- GET / 200 in 59ms
- GET / 200 in 65ms
- GET / 200 in 66ms
- GET / 200 in 115ms
- GET / 200 in 75ms
- GET / 200 in 73ms
- GET / 200 in 71ms
- GET / 200 in 71ms
- GET / 200 in 63ms
- GET / 200 in 69ms
- GET / 200 in 68ms
- GET / 200 in 64ms
- GET / 200 in 87ms
+ GET / 200 in 98ms
  GET / 200 in 77ms
+ GET / 200 in 78ms
+ GET / 200 in 75ms
+ GET / 200 in 84ms
+ GET / 200 in 75ms
+ GET / 200 in 81ms
+ GET / 200 in 75ms
+ GET / 200 in 78ms
+ GET / 200 in 84ms
+ GET / 200 in 76ms
+ GET / 200 in 85ms
+ GET / 200 in 125ms
+ GET / 200 in 88ms
+ GET / 200 in 82ms
+ GET / 200 in 95ms
+ GET / 200 in 78ms
+ GET / 200 in 83ms
+ GET / 200 in 77ms
+ GET / 200 in 84ms
+ GET / 200 in 69ms
+ GET / 200 in 73ms
+ GET / 200 in 75ms
+ GET / 200 in 75ms
+ GET / 200 in 74ms
+ GET / 200 in 71ms
+ GET / 200 in 70ms
+ GET / 200 in 79ms
+ GET / 200 in 66ms
+ GET / 200 in 70ms
+ GET / 200 in 99ms
+ GET / 200 in 90ms
+ GET / 200 in 77ms
+ GET / 200 in 71ms
+ GET / 200 in 73ms
+ GET / 200 in 86ms
+ GET / 200 in 77ms
+ GET / 200 in 70ms
+ GET / 200 in 80ms
+ GET / 200 in 68ms
+ GET / 200 in 79ms
+ GET / 200 in 81ms
+ GET / 200 in 74ms
+ GET / 200 in 71ms
+ GET / 200 in 77ms
+ GET / 200 in 74ms
+ GET / 200 in 67ms
+ GET / 200 in 72ms
+ GET / 200 in 108ms
+ GET / 200 in 91ms
+ GET / 200 in 80ms
+ GET / 200 in 72ms
+ GET / 200 in 74ms
+ GET / 200 in 72ms
+ GET / 200 in 74ms
+ GET / 200 in 74ms
+ GET / 200 in 79ms
+ GET / 200 in 71ms
+ GET / 200 in 74ms
