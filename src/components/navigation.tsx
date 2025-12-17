@@ -160,26 +160,29 @@ const Navigation = memo(function Navigation() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white/95 backdrop-blur-lg border border-white/20">
               <div className="flex flex-col space-y-4 mt-8">
-                {navigation.map((item) => (
-                  <Button
-                    key={item.name}
-                    variant="ghost"
-                    asChild
-                    className={`text-sm font-medium transition-all duration-300 justify-start rounded-full ${
-                      pathname === item.href
-                        ? "bg-white text-black border-2"
-                        : "bg-white/90 text-black hover:bg-white"
-                    }`}
-                    style={{
-                      borderColor: pathname === item.href && item.name === "Home" ? '#fbb70ef' : (pathname === item.href ? theme.primary : '#fbb70ef'),
-                    }}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Link href={item.href} prefetch={item.href !== '/admin/login'}>
-                      {item.name}
-                    </Link>
-                  </Button>
-                ))}
+                {navigation.map((item) => {
+                  const isActive = pathname === item.href;
+                  const borderColor = item.name === "Home" ? '#fdd76c' : theme.primary;
+
+                  return (
+                    <Button
+                      key={item.name}
+                      variant="ghost"
+                      asChild
+                      className={`text-sm font-medium transition-all duration-300 justify-start rounded-full bg-white/90 text-black hover:bg-white ${
+                        isActive ? "border-4" : "border-2"
+                      }`}
+                      style={{
+                        borderColor: borderColor,
+                      }}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <Link href={item.href} prefetch={item.href !== '/admin/login'}>
+                        {item.name}
+                      </Link>
+                    </Button>
+                  );
+                })}
                 <div className="pt-4 border-t border-white/20">
                   {isLoggedIn ? (
                     <div className="flex flex-col space-y-2">
