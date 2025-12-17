@@ -70,10 +70,10 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md relative z-10">
         {/* Back to home button */}
         <div className="mb-6">
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             onClick={() => router.push("/")}
-            className="group text-[#146C94]/70 hover:text-[#19A7CE] hover:bg-white/30 hover:shadow-sm hover:scale-105 backdrop-blur-sm border border-[#146C94]/20 rounded-full px-6 py-3 transition-all duration-300 ease-in-out transform hover:border-[#19A7CE]/20"
+            className="group text-[#146C94]/80 hover:text-white hover:bg-gradient-to-r hover:from-[#146C94]/60 hover:to-[#19A7CE]/60 hover:shadow-lg hover:scale-105 backdrop-blur-sm border border-[#146C94]/30 rounded-3xl px-6 py-3 transition-all duration-300 ease-in-out transform hover:border-[#19A7CE]/40"
           >
             <Home className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
             <span className="font-medium">Back to Home</span>
