@@ -147,3 +147,4 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  ✓ Compiled / in 4.4s (1811 modules)
  GET / 200 in 4912ms
  GET / 200 in 96ms
+ GET / 200 in 86ms
