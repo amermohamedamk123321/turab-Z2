@@ -142,6 +142,7 @@ const Navigation = memo(function Navigation() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white/95 backdrop-blur-lg border border-white/20">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col space-y-4 mt-8">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
