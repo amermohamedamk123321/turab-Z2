@@ -29,7 +29,7 @@ export default function AdminLoginPage() {
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       // Validate against specific admin credentials
-      if (formData.username === "TurabAcademy99" && formData.password === "shahroot$369") {
+      if (formData.username === "TurabAcademy99" && formData.password === "TurabAcademy99") {
         // Simulate successful login
         localStorage.setItem("isAdminLoggedIn", "true");
         localStorage.setItem("adminUser", JSON.stringify({
