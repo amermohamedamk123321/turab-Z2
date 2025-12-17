@@ -707,3 +707,70 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  ✓ Compiled / in 4.2s (1811 modules)
  GET / 200 in 4785ms
  GET / 200 in 105ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 1167ms (1964 modules)
+ GET /projects?reload=1766005306408 200 in 1449ms
+ GET / 200 in 98ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 156ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 111ms
+ GET / 200 in 142ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 143ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 236ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 239ms
+ GET / 200 in 92ms
+ GET / 200 in 81ms
+ GET / 200 in 68ms
+ GET / 200 in 77ms
+ GET / 200 in 65ms
+ GET / 200 in 71ms
+ GET / 200 in 73ms
+ GET / 200 in 70ms
+ GET / 200 in 61ms
+ GET / 200 in 70ms
+ GET / 200 in 64ms
+ GET / 200 in 69ms
+ GET / 200 in 64ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 99ms
+ GET / 200 in 64ms
+ GET / 200 in 67ms
+ GET / 200 in 61ms
+ GET / 200 in 71ms
+ GET / 200 in 61ms
+ GET / 200 in 62ms
+ GET / 200 in 59ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 91ms
+ GET / 200 in 69ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 92ms
+ GET / 200 in 69ms
+ GET / 200 in 64ms
+ GET / 200 in 61ms
+ GET / 200 in 64ms
+ GET / 200 in 68ms
+ GET / 200 in 75ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 88ms
+ GET / 200 in 65ms
+ GET / 200 in 71ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 83ms
+ GET / 200 in 66ms
+ GET / 200 in 73ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 85ms
+ GET / 200 in 70ms
+ GET / 200 in 69ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 85ms
+ GET / 200 in 66ms
+ GET / 200 in 63ms
+ GET / 200 in 63ms
+ GET / 200 in 65ms
+ GET / 200 in 77ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 83ms
+ GET / 200 in 65ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 88ms
+ GET / 200 in 71ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 109ms
+ GET / 200 in 90ms
+ GET / 200 in 75ms
+ GET / 200 in 80ms
+ GET / 200 in 71ms
+[32m[nodemon] restarting due to changes...[39m

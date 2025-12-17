@@ -81,7 +81,7 @@ const Navigation = memo(function Navigation() {
                   key={item.name}
                   variant="ghost"
                   asChild
-                  className={`text-sm font-medium transition-all duration-300 hover:scale-105 rounded-3xl px-6 py-4 bg-white/90 text-black hover:bg-white shadow-md hover:shadow-lg ${
+                  className={`text-sm font-medium transition-all duration-300 hover:scale-105 rounded-3xl px-6 py-5 bg-white/90 text-black hover:bg-white shadow-md hover:shadow-lg ${
                     isActive ? "border-4" : "border-2"
                   }`}
                   style={{
