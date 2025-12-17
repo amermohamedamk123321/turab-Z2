@@ -24,23 +24,23 @@ const Navigation = memo(function Navigation() {
   const pageColors = useMemo(() => ({
     '/': {
       name: 'Home',
-      borderNormal: '#fdd76c',    // Yellow
-      borderActive: '#ffed99',    // Bright yellow
+      borderNormal: '#FFD700',    // Rich gold/yellow
+      borderActive: '#FFED4E',    // Bright yellow
     },
     '/projects': {
       name: 'Projects',
-      borderNormal: '#5cb85c',    // Green
-      borderActive: '#7ee07e',    // Bright green
+      borderNormal: '#1DB954',    // Rich green
+      borderActive: '#1ed760',    // Bright green
     },
     '/about': {
       name: 'About Us',
-      borderNormal: '#3674B5',    // Blue
-      borderActive: '#5a9ce6',    // Bright blue
+      borderNormal: '#0066FF',    // Rich blue
+      borderActive: '#4D94FF',    // Bright blue
     },
     '/contact': {
       name: 'Contact Us',
-      borderNormal: '#9b59b6',    // Purple
-      borderActive: '#bb8dd9',    // Bright purple
+      borderNormal: '#E74C3C',    // Rich red/pink
+      borderActive: '#FF6B6B',    // Bright red/pink
     },
   }), []);
 
