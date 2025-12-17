@@ -115,22 +115,12 @@ const Navigation = memo(function Navigation() {
                 </Button>
               </div>
             ) : (
-              <div className="relative group">
-                <Button asChild className="rounded-full px-12 py-5 border-2 border-transparent hover:border-white/30 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden relative bg-gradient-to-r from-[#146C94] via-[#19A7CE] to-[#146C94] hover:from-[#0f4a61] hover:via-[#146C94] hover:to-[#0f4a61]">
-                  <Link href="/admin/login" prefetch={false} className="relative z-10 flex items-center">
-                    <User className="h-4 w-4 mr-2 text-white" />
-                    <span className="text-white font-medium">Admin</span>
-                  </Link>
-                </Button>
-                {/* Glass shine effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-full bg-gradient-to-b from-transparent via-white/40 to-transparent group-hover:w-full transition-all duration-700 ease-out skew-x-12"></div>
-                </div>
-                {/* Additional shine layer for more realistic glass effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-60 transition-opacity duration-300">
-                  <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-white/20 to-transparent"></div>
-                </div>
-              </div>
+              <Button asChild className="rounded-3xl px-8 py-3 border-2 border-transparent hover:border-white/40 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden relative bg-gradient-to-r from-[#146C94] via-[#19A7CE] to-[#146C94] hover:from-[#19A7CE] hover:via-[#0f4a61] hover:to-[#19A7CE]">
+                <Link href="/admin/login" prefetch={false} className="relative z-10 flex items-center">
+                  <User className="h-4 w-4 mr-2 text-white" />
+                  <span className="text-white font-medium">Admin</span>
+                </Link>
+              </Button>
             )}
           </div>
 
