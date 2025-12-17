@@ -20,46 +20,29 @@ const Navigation = memo(function Navigation() {
   const pathname = usePathname();
   const [isLoggedIn, setIsLoggedIn] = useState(false); // This will be replaced with actual auth state
 
-  // Determine page-specific theme colors - memoized to prevent recalculation
-  const theme = useMemo(() => {
-    switch (pathname) {
-      case '/':
-        return {
-          primary: '#E62727',
-          secondary: '#C1E93A',
-          background: 'rgba(230, 39, 39, 0.1)',
-          border: 'rgba(230, 39, 39, 0.3)'
-        };
-      case '/projects':
-        return {
-          primary: '#90c67c',  // Lighter green for projects page
-          secondary: '#C1E93A',
-          background: 'rgba(193, 233, 58, 0.1)',
-          border: 'rgba(144, 198, 124, 0.4)'  // Much lighter border color
-        };
-      case '/about':
-        return {
-          primary: '#3674B5',  // Deep Blue from the palette
-          secondary: '#A1E3F9',  // Light Cyan from the palette
-          background: 'rgba(54, 116, 181, 0.1)',
-          border: 'rgba(54, 116, 181, 0.3)'
-        };
-      case '/contact':
-        return {
-          primary: '#B33791',  // Deep Pink from contact palette
-          secondary: '#FEC5F6',  // Very Light Pink from contact palette
-          background: 'rgba(179, 55, 145, 0.1)',
-          border: 'rgba(179, 55, 145, 0.3)'
-        };
-      default:
-        return {
-          primary: '#E62727',
-          secondary: '#C1E93A',
-          background: 'rgba(230, 39, 39, 0.1)',
-          border: 'rgba(230, 39, 39, 0.3)'
-        };
-    }
-  }, [pathname]);
+  // Map of page-specific colors: normal and active (bright) states
+  const pageColors = useMemo(() => ({
+    '/': {
+      name: 'Home',
+      borderNormal: '#fdd76c',    // Yellow
+      borderActive: '#ffed99',    // Bright yellow
+    },
+    '/projects': {
+      name: 'Projects',
+      borderNormal: '#5cb85c',    // Green
+      borderActive: '#7ee07e',    // Bright green
+    },
+    '/about': {
+      name: 'About Us',
+      borderNormal: '#3674B5',    // Blue
+      borderActive: '#5a9ce6',    // Bright blue
+    },
+    '/contact': {
+      name: 'Contact Us',
+      borderNormal: '#9b59b6',    // Purple
+      borderActive: '#bb8dd9',    // Bright purple
+    },
+  }), []);
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-white/20 backdrop-blur-md bg-black/10">
