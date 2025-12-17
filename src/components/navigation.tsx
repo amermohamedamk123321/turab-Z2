@@ -91,7 +91,6 @@ const Navigation = memo(function Navigation() {
             {navigation.map((item) => {
               const isActive = pathname === item.href;
               const borderColor = item.name === "Home" ? '#fdd76c' : theme.primary;
-              const isHomeButton = item.name === "Home";
 
               return (
                 <Button

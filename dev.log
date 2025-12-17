@@ -137,3 +137,7 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 > Ready on http://0.0.0.0:3000
 > Socket.IO server running at ws://0.0.0.0:3000/api/socketio
  ○ Compiling / ...
+ ✓ Compiled / in 4.7s (1811 modules)
+ GET / 200 in 5366ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
