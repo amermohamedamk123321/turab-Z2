@@ -127,3 +127,5 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 62ms
  GET / 200 in 62ms
  GET / 200 in 72ms
+ GET / 200 in 58ms
+[32m[nodemon] restarting due to changes...[39m

@@ -88,25 +88,29 @@ const Navigation = memo(function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            {navigation.map((item) => (
-              <Button
-                key={item.name}
-                variant="ghost"
-                asChild
-                className={`text-sm font-medium transition-all duration-300 hover:scale-105 rounded-full px-4 py-5 border-2 ${
-                  pathname === item.href
-                    ? "bg-white text-black border-4"
-                    : "bg-white/90 text-black hover:bg-white"
-                }`}
-                style={{
-                  borderColor: pathname === item.href && item.name === "Home" ? '#fbb70ef !important' : (pathname === item.href ? theme.primary : '#fbb70ef'),
-                }}
-              >
-                <Link href={item.href} prefetch={item.href !== '/admin/login'}>
-                  {item.name}
-                </Link>
-              </Button>
-            ))}
+            {navigation.map((item) => {
+              const isActive = pathname === item.href;
+              const borderColor = item.name === "Home" ? '#fdd76c' : theme.primary;
+              const isHomeButton = item.name === "Home";
+
+              return (
+                <Button
+                  key={item.name}
+                  variant="ghost"
+                  asChild
+                  className={`text-sm font-medium transition-all duration-300 hover:scale-105 rounded-full px-4 py-5 bg-white/90 text-black hover:bg-white ${
+                    isActive ? "border-4" : "border-2"
+                  }`}
+                  style={{
+                    borderColor: borderColor,
+                  }}
+                >
+                  <Link href={item.href} prefetch={item.href !== '/admin/login'}>
+                    {item.name}
+                  </Link>
+                </Button>
+              );
+            })}
           </div>
 
           {/* Desktop Auth Button */}
