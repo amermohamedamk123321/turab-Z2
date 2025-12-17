@@ -161,10 +161,7 @@ export default function AdminLoginPage() {
                   <span className="font-medium text-[#146C94]/90">Demo Credentials:</span>
                 </p>
                 <p className="text-xs text-[#146C94]/60 mt-1">
-                  Username: TurabAcademy99
-                </p>
-                <p className="text-xs text-[#146C94]/60">
-                  Password: shahroot$369
+                  Username & Password: TurabAcademy99
                 </p>
               </div>
             </div>
