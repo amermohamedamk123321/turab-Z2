@@ -7,8 +7,6 @@ import { ArrowRight, Code, Smartphone, Monitor, Headphones, Shield, MessageCircl
 import Link from "next/link";
 import LaserFlowLazy from "@/components/LaserFlowLazy";
 import MeteorsLazy from "@/components/MeteorsLazy";
-import DeferredComponent from "@/components/DeferredComponent";
-import { SkeletonLoader } from "@/components/SkeletonLoader";
 
 export default function Home() {
   const services = [
