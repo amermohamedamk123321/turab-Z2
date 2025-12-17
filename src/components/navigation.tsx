@@ -145,14 +145,15 @@ const Navigation = memo(function Navigation() {
               <div className="flex flex-col space-y-4 mt-8">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
-                  const borderColor = item.name === "Home" ? '#fdd76c' : theme.primary;
+                  const colors = pageColors[item.href] || pageColors['/'];
+                  const borderColor = isActive ? colors.borderActive : colors.borderNormal;
 
                   return (
                     <Button
                       key={item.name}
                       variant="ghost"
                       asChild
-                      className={`text-sm font-medium transition-all duration-300 justify-start rounded-full bg-white/90 text-black hover:bg-white ${
+                      className={`text-sm font-medium transition-all duration-300 justify-start rounded-full px-4 py-2 bg-white/90 text-black hover:bg-white ${
                         isActive ? "border-4" : "border-2"
                       }`}
                       style={{
