@@ -683,3 +683,4 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /projects 200 in 23ms
  GET / 200 in 66ms
  GET / 200 in 70ms
+ GET / 200 in 75ms
