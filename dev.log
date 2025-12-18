@@ -6,1249 +6,491 @@
 > Ready on http://0.0.0.0:3000
 > Socket.IO server running at ws://0.0.0.0:3000/api/socketio
  ○ Compiling / ...
- ✓ Compiled / in 3.3s (1797 modules)
- GET / 200 in 3898ms
- GET /?reload=0 200 in 97ms
- GET / 200 in 89ms
- GET /?reload=0 200 in 82ms
- GET /?reload=1766002666240 200 in 98ms
- GET / 200 in 80ms
- GET / 200 in 85ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 224ms
+ ✓ Compiled / in 4s (1797 modules)
+ GET / 200 in 4696ms
+ GET / 200 in 90ms
+ GET /?reload=0 200 in 80ms
  GET / 200 in 105ms
- GET / 200 in 74ms
- GET / 200 in 72ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 1691ms (1964 modules)
- GET /projects 200 in 2011ms
- GET / 200 in 917ms
- GET / 200 in 87ms
- ✓ Compiled /about in 358ms (1991 modules)
- GET /about 200 in 425ms
- GET / 200 in 150ms
- ○ Compiling /contact ...
- ✓ Compiled /contact in 949ms (2050 modules)
- GET /contact 200 in 1125ms
- GET / 200 in 153ms
- GET / 200 in 94ms
- GET / 200 in 97ms
- GET / 200 in 98ms
- GET / 200 in 8ms
- ○ Compiling /admin/login ...
- ✓ Compiled /admin/login in 1175ms (2081 modules)
- GET /admin/login 200 in 1233ms
- GET / 200 in 156ms
- GET / 200 in 9ms
- GET /projects 200 in 20ms
- GET / 200 in 92ms
- GET /about 200 in 15ms
- GET /contact 200 in 17ms
- GET / 200 in 7ms
- GET / 200 in 82ms
- GET / 200 in 104ms
- GET / 200 in 88ms
- GET / 200 in 108ms
- GET / 200 in 78ms
- GET / 200 in 74ms
- GET / 200 in 74ms
- GET / 200 in 68ms
- GET / 200 in 115ms
- GET / 200 in 93ms
- GET / 200 in 82ms
- GET / 200 in 65ms
- GET / 200 in 65ms
- GET / 200 in 68ms
- GET / 200 in 71ms
- GET / 200 in 64ms
- GET / 200 in 75ms
- GET / 200 in 85ms
- GET / 200 in 72ms
- GET / 200 in 70ms
- GET / 200 in 65ms
- GET / 200 in 67ms
- GET / 200 in 71ms
- GET / 200 in 63ms
- GET / 200 in 82ms
- GET / 200 in 61ms
- GET / 200 in 69ms
- GET / 200 in 64ms
- GET / 200 in 63ms
- GET / 200 in 59ms
- GET / 200 in 66ms
- GET / 200 in 78ms
- GET / 200 in 69ms
- GET / 200 in 85ms
- GET / 200 in 65ms
- GET / 200 in 61ms
- GET / 200 in 65ms
- GET / 200 in 61ms
- GET / 200 in 69ms
- GET / 200 in 78ms
- GET / 200 in 68ms
- GET / 200 in 75ms
- GET / 200 in 75ms
- GET / 200 in 68ms
- GET / 200 in 80ms
- GET / 200 in 70ms
- GET / 200 in 61ms
- GET / 200 in 61ms
- GET / 200 in 59ms
- GET / 200 in 63ms
- GET / 200 in 75ms
- GET / 200 in 66ms
- GET / 200 in 61ms
- GET / 200 in 60ms
- GET / 200 in 68ms
- GET / 200 in 61ms
- GET / 200 in 74ms
- GET / 200 in 62ms
- GET / 200 in 74ms
- GET / 200 in 73ms
- GET / 200 in 65ms
- GET / 200 in 60ms
- GET / 200 in 61ms
- GET / 200 in 68ms
- GET / 200 in 73ms
- GET / 200 in 70ms
- GET / 200 in 66ms
- GET / 200 in 61ms
- GET / 200 in 68ms
- GET / 200 in 62ms
- GET / 200 in 66ms
- GET / 200 in 61ms
- GET / 200 in 77ms
- GET / 200 in 119ms
- GET / 200 in 74ms
- GET / 200 in 61ms
- GET / 200 in 68ms
- GET / 200 in 75ms
- GET / 200 in 62ms
- GET / 200 in 62ms
- GET / 200 in 72ms
- GET / 200 in 58ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.7s (1811 modules)
- GET / 200 in 5366ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.4s (1811 modules)
- GET / 200 in 4912ms
- GET / 200 in 96ms
- GET / 200 in 86ms
- GET /?reload=1766003275652 200 in 82ms
- GET / 200 in 114ms
- GET / 200 in 103ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 121ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 1316ms (1964 modules)
- GET /projects 200 in 1604ms
- GET / 200 in 1016ms
- GET / 200 in 87ms
- ✓ Compiled /about in 487ms (1991 modules)
- GET /about 200 in 552ms
- GET / 200 in 158ms
- ✓ Compiled /contact in 393ms (2050 modules)
- GET /contact 200 in 449ms
- GET / 200 in 142ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 78ms
- GET / 200 in 77ms
- GET / 200 in 7ms
- GET /projects 200 in 23ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 84ms
- GET / 200 in 84ms
- GET / 200 in 82ms
- GET /about 200 in 11ms
- GET /contact 200 in 11ms
- GET / 200 in 67ms
- ○ Compiling /admin/login ...
- ✓ Compiled /admin/login in 662ms (2081 modules)
- GET /admin/login 200 in 722ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 141ms
- GET / 200 in 84ms
- GET / 200 in 89ms
- GET / 200 in 10ms
- GET / 200 in 93ms
- GET / 200 in 83ms
- GET / 200 in 100ms
- GET / 200 in 112ms
- GET / 200 in 79ms
- GET / 200 in 75ms
- GET / 200 in 82ms
- GET / 200 in 73ms
- GET / 200 in 84ms
- GET / 200 in 85ms
  GET / 200 in 99ms
- GET / 200 in 86ms
- GET / 200 in 85ms
- GET / 200 in 72ms
- GET / 200 in 68ms
- GET / 200 in 76ms
- GET / 200 in 73ms
- GET / 200 in 78ms
- GET / 200 in 79ms
- GET / 200 in 65ms
- GET / 200 in 77ms
- GET / 200 in 67ms
- GET / 200 in 70ms
- GET / 200 in 76ms
- GET / 200 in 85ms
- GET / 200 in 76ms
- GET / 200 in 71ms
- GET / 200 in 77ms
- GET / 200 in 74ms
- GET / 200 in 78ms
- GET / 200 in 107ms
- GET / 200 in 95ms
- GET / 200 in 81ms
- GET / 200 in 71ms
- GET / 200 in 73ms
- GET / 200 in 74ms
- GET / 200 in 75ms
- GET / 200 in 73ms
- GET / 200 in 71ms
- GET / 200 in 68ms
- GET / 200 in 67ms
- GET / 200 in 69ms
- GET / 200 in 72ms
- GET / 200 in 75ms
- GET / 200 in 78ms
- GET / 200 in 66ms
- GET /projects 200 in 18ms
- GET / 200 in 71ms
- GET / 200 in 101ms
- GET / 200 in 76ms
- GET / 200 in 75ms
- GET / 200 in 71ms
- GET / 200 in 64ms
- GET / 200 in 68ms
- GET / 200 in 117ms
- GET / 200 in 80ms
- GET / 200 in 70ms
- GET / 200 in 67ms
- GET / 200 in 66ms
- GET / 200 in 82ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.1s (1811 modules)
- GET / 200 in 4754ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 1518ms (1964 modules)
- GET /projects?reload=1766003708198 200 in 1899ms
- GET / 200 in 1046ms
- GET / 200 in 76ms
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 80ms
  ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
 Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET /projects 200 in 15ms
- GET / 200 in 161ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 113ms
- GET / 200 in 65ms
- GET / 200 in 69ms
- GET /projects 200 in 11ms
- ○ Compiling /about ...
- ✓ Compiled /about in 873ms (1991 modules)
- GET /about 200 in 1251ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 1187ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 1190ms
- GET / 200 in 86ms
- GET / 200 in 61ms
- GET / 200 in 79ms
- ○ Compiling /contact ...
- ✓ Compiled /contact in 1200ms (2050 modules)
- GET /contact 200 in 1394ms
- GET / 200 in 627ms
- GET / 200 in 89ms
- GET / 200 in 77ms
- GET / 200 in 79ms
- GET / 200 in 103ms
- GET / 200 in 96ms
- GET /projects 200 in 16ms
- GET / 200 in 111ms
- GET /about 200 in 15ms
- GET /contact 200 in 10ms
- GET / 200 in 81ms
- GET / 200 in 71ms
- GET / 200 in 72ms
- GET / 200 in 80ms
- GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 230ms
- GET / 200 in 86ms
- GET / 200 in 77ms
- GET / 200 in 161ms
- GET / 200 in 97ms
- GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 148ms
- GET / 200 in 69ms
- GET / 200 in 74ms
- GET / 200 in 75ms
- GET / 200 in 74ms
- GET / 200 in 78ms
- GET / 200 in 64ms
- GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 104ms
- GET / 200 in 86ms
- GET / 200 in 69ms
- GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 151ms
- GET / 200 in 72ms
- GET / 200 in 58ms
- GET / 200 in 69ms
- GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 121ms
- GET / 200 in 75ms
- GET / 200 in 75ms
- GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 108ms
- GET / 200 in 75ms
- GET / 200 in 71ms
- GET / 200 in 75ms
- GET / 200 in 65ms
- GET / 200 in 67ms
- GET / 200 in 62ms
- GET / 200 in 64ms
- GET / 200 in 8ms
- GET / 200 in 67ms
- GET / 200 in 64ms
- GET / 200 in 62ms
- GET / 200 in 67ms
- GET / 200 in 63ms
- GET / 200 in 93ms
- GET /projects 200 in 10ms
- GET / 200 in 69ms
- GET / 200 in 75ms
- GET / 200 in 61ms
- ○ Compiling /admin/login ...
- ✓ Compiled /admin/login in 1832ms (2081 modules)
- GET /admin/login 200 in 2137ms
- GET / 200 in 1299ms
- GET / 200 in 85ms
- GET / 200 in 12ms
- GET / 200 in 96ms
- GET /contact 200 in 21ms
- GET / 200 in 76ms
- GET / 200 in 79ms
- GET /projects 200 in 17ms
- GET / 200 in 79ms
- GET / 200 in 79ms
- GET / 200 in 58ms
- GET / 200 in 67ms
- GET / 200 in 80ms
- GET / 200 in 63ms
- GET / 200 in 96ms
- GET / 200 in 99ms
- GET / 200 in 169ms
- GET / 200 in 101ms
- GET / 200 in 94ms
- GET / 200 in 93ms
- GET / 200 in 74ms
- GET / 200 in 81ms
- GET / 200 in 73ms
- GET / 200 in 82ms
- GET / 200 in 82ms
- GET / 200 in 85ms
- GET / 200 in 74ms
- GET / 200 in 74ms
- GET / 200 in 66ms
- GET / 200 in 86ms
- GET / 200 in 80ms
- GET / 200 in 83ms
- GET / 200 in 71ms
- GET / 200 in 75ms
- GET / 200 in 71ms
- GET / 200 in 205ms
- GET / 200 in 70ms
- GET / 200 in 69ms
- GET / 200 in 63ms
- GET / 200 in 70ms
- GET / 200 in 72ms
- GET / 200 in 75ms
- GET / 200 in 70ms
- GET / 200 in 67ms
- GET / 200 in 80ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.2s (1811 modules)
- GET / 200 in 4803ms
- GET / 200 in 89ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 3.9s (1811 modules)
- GET /?reload=1766004252948 200 in 657ms
- GET / 200 in 4578ms
- GET / 200 in 201ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 86ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 95ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 84ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 85ms
- GET / 200 in 63ms
- GET / 200 in 110ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 66ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 65ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 1249ms (1964 modules)
- GET /projects 200 in 1351ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 185ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 165ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 164ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 107ms
- GET / 200 in 86ms
- GET / 200 in 93ms
- GET / 200 in 78ms
- ○ Compiling /about ...
- ✓ Compiled /about in 703ms (1991 modules)
- GET /about 200 in 759ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 134ms
- GET / 200 in 81ms
- ○ Compiling /contact ...
- ✓ Compiled /contact in 506ms (2050 modules)
- GET /contact 200 in 562ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 141ms
- GET / 200 in 96ms
- GET / 200 in 92ms
- ○ Compiling /admin/login ...
- ✓ Compiled /admin/login in 1147ms (2081 modules)
- GET /admin/login 200 in 1211ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 157ms
- GET / 200 in 185ms
- GET / 200 in 11ms
- GET / 200 in 87ms
- GET /admin/login 200 in 9ms
- GET / 200 in 84ms
- GET / 200 in 98ms
- GET / 200 in 94ms
- ○ Compiling /admin/dashboard ...
- ✓ Compiled /admin/dashboard in 3.3s (2120 modules)
- GET /admin/dashboard 200 in 3395ms
- GET / 200 in 363ms
- GET / 200 in 103ms
- GET / 200 in 91ms
- GET / 200 in 99ms
- GET /admin/login 200 in 21ms
- GET / 200 in 83ms
- GET / 200 in 100ms
- GET /admin/dashboard 200 in 14ms
- GET / 200 in 89ms
- GET /admin/login 200 in 10ms
- GET / 200 in 10ms
- GET / 200 in 81ms
- GET / 200 in 72ms
- GET /?reload=1766004386542 200 in 76ms
- GET / 200 in 95ms
- GET / 200 in 65ms
- GET / 200 in 130ms
- GET / 200 in 88ms
- GET / 200 in 77ms
- GET / 200 in 71ms
- GET / 200 in 77ms
- GET / 200 in 68ms
- GET / 200 in 85ms
- GET / 200 in 72ms
- GET / 200 in 77ms
- GET /projects 200 in 21ms
- GET / 200 in 67ms
- GET /about 200 in 19ms
- GET / 200 in 71ms
- GET /projects 200 in 11ms
- GET / 200 in 73ms
- GET /about 200 in 10ms
- GET / 200 in 95ms
- GET /contact 200 in 20ms
- GET / 200 in 65ms
- GET / 200 in 83ms
- GET / 200 in 152ms
- GET / 200 in 95ms
- GET / 200 in 91ms
- GET / 200 in 75ms
- GET / 200 in 70ms
- GET / 200 in 75ms
- GET / 200 in 71ms
- GET / 200 in 80ms
- GET / 200 in 74ms
- GET / 200 in 70ms
- GET / 200 in 80ms
- GET / 200 in 75ms
- GET / 200 in 78ms
- GET / 200 in 85ms
- GET / 200 in 70ms
- GET / 200 in 76ms
- GET / 200 in 76ms
- GET / 200 in 71ms
- GET / 200 in 68ms
- GET / 200 in 71ms
- GET / 200 in 72ms
- GET / 200 in 182ms
- GET / 200 in 82ms
- GET / 200 in 78ms
- GET / 200 in 69ms
- GET / 200 in 72ms
- GET / 200 in 10ms
- GET / 200 in 87ms
- GET / 200 in 70ms
- GET / 200 in 71ms
- GET / 200 in 71ms
- GET / 200 in 76ms
- GET / 200 in 84ms
- GET / 200 in 88ms
- GET / 200 in 73ms
- GET / 200 in 66ms
- GET / 200 in 70ms
- GET / 200 in 72ms
- GET / 200 in 66ms
- GET / 200 in 67ms
- GET / 200 in 65ms
- GET / 200 in 79ms
- GET / 200 in 167ms
- GET / 200 in 103ms
- GET / 200 in 87ms
- GET / 200 in 71ms
- GET / 200 in 67ms
- GET / 200 in 100ms
- GET / 200 in 73ms
- GET / 200 in 74ms
- GET / 200 in 70ms
- GET / 200 in 64ms
- GET / 200 in 87ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.3s (1811 modules)
- GET / 200 in 5007ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.2s (1811 modules)
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 1170ms
- GET / 200 in 4851ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET /?reload=1766004836517 200 in 369ms
- GET / 200 in 311ms
- GET / 200 in 144ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 172ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 170ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 67ms
- GET / 200 in 84ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 92ms
- GET / 200 in 67ms
- GET / 200 in 78ms
- ○ Compiling /admin/login ...
- ✓ Compiled /admin/login in 1443ms (1834 modules)
- GET /admin/login 200 in 1737ms
- GET / 200 in 1175ms
- GET / 200 in 88ms
- GET / 200 in 10ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 856ms (1995 modules)
- GET /projects 200 in 1057ms
- GET / 200 in 942ms
- ○ Compiling /about ...
- ✓ Compiled /about in 1271ms (2022 modules)
- GET /about 200 in 1473ms
- GET / 200 in 1001ms
- GET / 200 in 88ms
- ✓ Compiled /contact in 435ms (2081 modules)
- GET /contact 200 in 490ms
- GET / 200 in 243ms
- GET / 200 in 9ms
- GET /admin/login 200 in 25ms
- GET / 200 in 81ms
- GET / 200 in 86ms
- GET / 200 in 93ms
- ○ Compiling /admin/dashboard ...
- ✓ Compiled /admin/dashboard in 1539ms (2120 modules)
- GET /admin/dashboard 200 in 1695ms
- GET / 200 in 245ms
- GET /admin/login 200 in 16ms
- GET / 200 in 106ms
- GET / 200 in 9ms
- GET / 200 in 74ms
- GET / 200 in 68ms
- GET /admin/login 200 in 9ms
- GET / 200 in 72ms
- GET /admin/dashboard 200 in 8ms
- GET / 200 in 61ms
- GET /admin/login 200 in 11ms
- GET / 200 in 7ms
- GET / 200 in 71ms
- GET / 200 in 66ms
- GET / 200 in 65ms
- GET /projects 200 in 19ms
- GET / 200 in 61ms
  GET / 200 in 90ms
- GET / 200 in 107ms
- GET / 200 in 91ms
- GET / 200 in 91ms
- GET / 200 in 100ms
- GET / 200 in 96ms
- GET / 200 in 76ms
- GET / 200 in 71ms
- GET / 200 in 72ms
- GET / 200 in 78ms
- GET / 200 in 69ms
- GET / 200 in 74ms
- GET / 200 in 79ms
- GET / 200 in 71ms
- GET / 200 in 69ms
- GET / 200 in 72ms
- GET / 200 in 80ms
- GET / 200 in 80ms
- GET / 200 in 73ms
- GET / 200 in 71ms
- GET / 200 in 72ms
- GET / 200 in 97ms
- GET / 200 in 85ms
- GET / 200 in 71ms
- GET / 200 in 80ms
- GET / 200 in 76ms
- GET / 200 in 87ms
- GET / 200 in 69ms
- GET / 200 in 70ms
- GET / 200 in 79ms
- GET / 200 in 74ms
- GET / 200 in 70ms
- GET / 200 in 79ms
- GET / 200 in 71ms
- GET / 200 in 70ms
- GET / 200 in 71ms
- GET / 200 in 74ms
- GET / 200 in 68ms
- GET / 200 in 66ms
- GET / 200 in 73ms
- GET / 200 in 78ms
+ GET / 200 in 93ms
+ GET / 200 in 90ms
  GET / 200 in 95ms
- GET / 200 in 80ms
- GET / 200 in 75ms
- GET / 200 in 86ms
- GET / 200 in 70ms
- GET / 200 in 71ms
- GET / 200 in 71ms
- GET / 200 in 76ms
- GET / 200 in 62ms
- GET / 200 in 81ms
- GET / 200 in 67ms
- GET / 200 in 69ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.2s (1811 modules)
- GET / 200 in 4785ms
- GET / 200 in 105ms
  ○ Compiling /projects ...
- ✓ Compiled /projects in 1167ms (1964 modules)
- GET /projects?reload=1766005306408 200 in 1449ms
- GET / 200 in 98ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 156ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 111ms
- GET / 200 in 142ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 143ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 236ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 239ms
- GET / 200 in 92ms
- GET / 200 in 81ms
- GET / 200 in 68ms
- GET / 200 in 77ms
- GET / 200 in 65ms
- GET / 200 in 71ms
- GET / 200 in 73ms
- GET / 200 in 70ms
- GET / 200 in 61ms
- GET / 200 in 70ms
- GET / 200 in 64ms
- GET / 200 in 69ms
- GET / 200 in 64ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 99ms
- GET / 200 in 64ms
- GET / 200 in 67ms
- GET / 200 in 61ms
- GET / 200 in 71ms
- GET / 200 in 61ms
- GET / 200 in 62ms
- GET / 200 in 59ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 91ms
- GET / 200 in 69ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 92ms
- GET / 200 in 69ms
- GET / 200 in 64ms
- GET / 200 in 61ms
- GET / 200 in 64ms
- GET / 200 in 68ms
- GET / 200 in 75ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 88ms
- GET / 200 in 65ms
- GET / 200 in 71ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 83ms
- GET / 200 in 66ms
- GET / 200 in 73ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 85ms
- GET / 200 in 70ms
- GET / 200 in 69ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 85ms
- GET / 200 in 66ms
- GET / 200 in 63ms
- GET / 200 in 63ms
- GET / 200 in 65ms
- GET / 200 in 77ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 83ms
- GET / 200 in 65ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 88ms
- GET / 200 in 71ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 109ms
- GET / 200 in 90ms
- GET / 200 in 75ms
- GET / 200 in 80ms
- GET / 200 in 71ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling /projects ...
- ✓ Compiled / in 5.9s (1964 modules)
- GET /projects?reload=1766005592434 200 in 6544ms
- GET / 200 in 5430ms
- GET / 200 in 227ms
- GET / 200 in 86ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- ○ Compiling /about ...
- ✓ Compiled /about in 1008ms (1991 modules)
- GET /about 200 in 1096ms
- GET / 200 in 191ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 139ms
- ✓ Compiled /contact in 399ms (2050 modules)
- GET /contact 200 in 451ms
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 178ms
- GET / 200 in 120ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 126ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 111ms
- GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 187ms
- GET / 200 in 67ms
- GET / 200 in 7ms
- GET / 200 in 70ms
- GET / 200 in 96ms
- ○ Compiling /admin/login ...
- ✓ Compiled /admin/login in 1165ms (2081 modules)
- GET /admin/login 200 in 1262ms
- GET / 200 in 223ms
- GET / 200 in 15ms
- GET / 200 in 88ms
- GET /projects 200 in 19ms
- GET / 200 in 63ms
- GET /about 200 in 16ms
- GET / 200 in 63ms
- GET / 200 in 77ms
- GET /contact 200 in 18ms
- GET / 200 in 65ms
- GET / 200 in 64ms
- GET / 200 in 60ms
- GET / 200 in 64ms
- GET / 200 in 69ms
- GET / 200 in 69ms
- GET / 200 in 63ms
- GET / 200 in 64ms
- GET / 200 in 63ms
- GET / 200 in 70ms
- GET / 200 in 67ms
- GET / 200 in 58ms
- GET / 200 in 62ms
- GET / 200 in 67ms
- GET / 200 in 66ms
- GET / 200 in 63ms
- GET / 200 in 62ms
- GET / 200 in 79ms
- GET / 200 in 72ms
- GET / 200 in 62ms
- GET / 200 in 64ms
- GET / 200 in 60ms
- GET / 200 in 64ms
- GET / 200 in 63ms
- GET / 200 in 63ms
- GET / 200 in 64ms
- GET / 200 in 61ms
- GET / 200 in 60ms
- GET / 200 in 60ms
- GET / 200 in 66ms
- GET / 200 in 75ms
- GET / 200 in 60ms
- GET / 200 in 70ms
- GET / 200 in 59ms
- GET / 200 in 76ms
- GET / 200 in 63ms
- GET / 200 in 59ms
- GET / 200 in 64ms
- GET / 200 in 62ms
- GET / 200 in 67ms
- GET / 200 in 64ms
- GET / 200 in 69ms
- GET / 200 in 59ms
- GET / 200 in 64ms
- GET / 200 in 97ms
- GET / 200 in 63ms
- GET / 200 in 65ms
- GET / 200 in 60ms
- GET / 200 in 59ms
- GET / 200 in 71ms
- GET / 200 in 60ms
- GET / 200 in 65ms
- GET / 200 in 70ms
- GET /contact 200 in 10ms
- GET / 200 in 67ms
- GET / 200 in 65ms
- GET / 200 in 70ms
- GET / 200 in 60ms
- GET / 200 in 60ms
- GET / 200 in 71ms
- GET / 200 in 65ms
- GET / 200 in 66ms
- GET / 200 in 60ms
- GET / 200 in 61ms
- GET / 200 in 76ms
- GET / 200 in 65ms
- GET / 200 in 58ms
- GET / 200 in 62ms
- GET / 200 in 62ms
- GET / 200 in 59ms
- GET / 200 in 63ms
- GET / 200 in 66ms
- GET / 200 in 69ms
- GET / 200 in 63ms
- GET / 200 in 65ms
- GET / 200 in 82ms
- GET / 200 in 61ms
- GET / 200 in 65ms
- GET / 200 in 72ms
- GET / 200 in 60ms
- GET / 200 in 62ms
- GET / 200 in 63ms
- GET / 200 in 61ms
- GET / 200 in 61ms
- GET / 200 in 63ms
- GET / 200 in 65ms
- GET / 200 in 61ms
- GET / 200 in 63ms
- GET / 200 in 66ms
- GET / 200 in 60ms
- GET / 200 in 64ms
- GET / 200 in 59ms
- GET / 200 in 64ms
- GET / 200 in 67ms
- GET / 200 in 60ms
- GET / 200 in 60ms
- GET / 200 in 67ms
- GET / 200 in 70ms
- GET / 200 in 66ms
- GET / 200 in 60ms
- GET / 200 in 66ms
- GET / 200 in 60ms
- GET / 200 in 59ms
- GET / 200 in 78ms
- GET / 200 in 63ms
- GET / 200 in 64ms
- GET / 200 in 72ms
- GET / 200 in 63ms
- GET / 200 in 70ms
- GET / 200 in 61ms
- GET / 200 in 76ms
- GET / 200 in 61ms
- GET / 200 in 77ms
- GET / 200 in 64ms
- GET / 200 in 63ms
- GET /about 200 in 8ms
- GET /about 200 in 9ms
- GET / 200 in 58ms
- GET / 200 in 71ms
- GET / 200 in 64ms
- GET /contact 200 in 9ms
- GET / 200 in 77ms
- GET / 200 in 62ms
- GET / 200 in 82ms
- GET / 200 in 72ms
- GET / 200 in 71ms
- GET / 200 in 74ms
- GET / 200 in 69ms
- GET / 200 in 70ms
- GET / 200 in 71ms
- GET /about 200 in 9ms
- GET / 200 in 67ms
- GET / 200 in 87ms
- GET / 200 in 66ms
- GET / 200 in 63ms
- GET / 200 in 68ms
- GET / 200 in 77ms
- GET /projects 200 in 10ms
- GET / 200 in 68ms
- GET / 200 in 14ms
- GET / 200 in 65ms
- GET / 200 in 70ms
- GET /admin/login 200 in 10ms
- GET / 200 in 65ms
- GET / 200 in 71ms
- GET / 200 in 74ms
- GET / 200 in 101ms
- GET / 200 in 73ms
- GET / 200 in 72ms
- GET / 200 in 76ms
- GET / 200 in 66ms
- GET / 200 in 94ms
- GET / 200 in 66ms
- GET / 200 in 76ms
- GET / 200 in 66ms
- GET / 200 in 76ms
- GET / 200 in 69ms
- GET / 200 in 75ms
- GET / 200 in 67ms
- GET / 200 in 82ms
- GET / 200 in 71ms
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-[32m[nodemon] restarting due to changes...[39m
-[32m[nodemon] starting `npx tsx server.ts`[39m
-> Ready on http://0.0.0.0:3000
-> Socket.IO server running at ws://0.0.0.0:3000/api/socketio
- ○ Compiling / ...
- ✓ Compiled / in 4.4s (1811 modules)
- GET / 200 in 5078ms
- GET / 200 in 97ms
- GET / 200 in 82ms
- GET / 200 in 88ms
- GET / 200 in 109ms
- ○ Compiling /admin/login ...
- ✓ Compiled /admin/login in 1672ms (1834 modules)
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 1917ms
- GET / 200 in 104ms
- ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
- GET / 200 in 61ms
- GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 47ms
- GET / 200 in 92ms
- GET / 200 in 94ms
- GET / 200 in 96ms
- GET / 200 in 98ms
- GET / 200 in 90ms
- GET / 200 in 99ms
- GET / 200 in 78ms
+ ✓ Compiled /projects in 1244ms (1964 modules)
+ GET /projects 200 in 1352ms
+ GET / 200 in 300ms
  GET / 200 in 83ms
- GET /?reload=0 200 in 64ms
- GET / 200 in 67ms
- GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 87ms
- GET / 200 in 115ms
- GET / 200 in 73ms
- ○ Compiling /projects ...
- ✓ Compiled /projects in 1190ms (1995 modules)
- GET /projects 200 in 1283ms
- GET / 200 in 196ms
- GET / 200 in 89ms
+ GET / 200 in 83ms
  ○ Compiling /about ...
- ✓ Compiled /about in 928ms (2022 modules)
- GET /about 200 in 1018ms
+ ✓ Compiled /about in 1290ms (1991 modules)
+ GET /about 200 in 1471ms
  GET / 200 in 188ms
- GET / 200 in 103ms
- GET / 200 in 98ms
+ GET / 200 in 127ms
+ GET / 200 in 96ms
  ○ Compiling /contact ...
- ✓ Compiled /contact in 839ms (2081 modules)
- GET /contact 200 in 904ms
- GET / 200 in 144ms
+ ✓ Compiled /contact in 778ms (2050 modules)
+ GET /contact 200 in 839ms
+ GET / 200 in 150ms
+ GET / 200 in 82ms
  GET / 200 in 92ms
- GET /admin/login 200 in 19ms
- GET / 200 in 85ms
- GET / 200 in 68ms
- GET / 200 in 68ms
- GET / 200 in 70ms
- ○ Compiling /admin/dashboard ...
- ✓ Compiled /admin/dashboard in 1273ms (2120 modules)
- GET /admin/dashboard 200 in 1319ms
- GET / 200 in 203ms
- GET /admin/login 200 in 17ms
- GET / 200 in 85ms
- GET / 200 in 8ms
- GET / 200 in 95ms
- GET /projects 200 in 20ms
- GET / 200 in 85ms
- GET /about 200 in 15ms
- GET / 200 in 81ms
- GET /contact 200 in 19ms
- GET / 200 in 95ms
- GET / 200 in 79ms
- GET / 200 in 70ms
- GET / 200 in 82ms
- GET / 200 in 8ms
- GET / 200 in 71ms
- GET / 200 in 129ms
- GET /?reload=1766006821402 200 in 91ms
- GET / 200 in 78ms
- GET / 200 in 79ms
- GET / 200 in 67ms
- GET / 200 in 94ms
- GET / 200 in 104ms
- GET /projects 200 in 12ms
- GET / 200 in 73ms
- GET / 200 in 71ms
- GET /about 200 in 11ms
- GET / 200 in 74ms
- GET / 200 in 70ms
- GET / 200 in 84ms
- GET /contact 200 in 17ms
- GET / 200 in 77ms
- GET / 200 in 74ms
- GET /admin/login 200 in 13ms
+ ○ Compiling /admin/login ...
+ ✓ Compiled /admin/login in 1235ms (2081 modules)
+ GET /admin/login 200 in 1285ms
+ GET / 200 in 140ms
  GET / 200 in 83ms
- GET / 200 in 69ms
- GET /admin/dashboard 200 in 9ms
- GET / 200 in 79ms
+ GET / 200 in 82ms
  GET / 200 in 109ms
- GET / 200 in 74ms
- GET /admin/login 200 in 11ms
- GET / 200 in 11ms
- GET / 200 in 76ms
- GET / 200 in 90ms
- GET /admin/login 200 in 10ms
- GET / 200 in 83ms
- GET /admin/dashboard 200 in 9ms
- GET / 200 in 82ms
- GET /admin/login 200 in 10ms
- GET / 200 in 87ms
- GET / 200 in 8ms
- GET / 200 in 71ms
- GET /contact 200 in 11ms
- GET / 200 in 67ms
- GET /about 200 in 13ms
- GET /projects 200 in 10ms
- GET / 200 in 77ms
- GET / 200 in 66ms
- GET / 200 in 71ms
- GET / 200 in 84ms
- GET / 200 in 66ms
- GET / 200 in 70ms
- GET / 200 in 67ms
- GET / 200 in 69ms
- GET / 200 in 69ms
- GET / 200 in 83ms
- GET / 200 in 70ms
- GET / 200 in 112ms
- GET / 200 in 80ms
- GET / 200 in 98ms
- GET / 200 in 76ms
- GET / 200 in 83ms
- GET / 200 in 65ms
- GET / 200 in 67ms
- GET / 200 in 73ms
- GET / 200 in 64ms
- GET / 200 in 73ms
- GET / 200 in 67ms
- GET / 200 in 64ms
- GET / 200 in 68ms
- GET / 200 in 81ms
- GET / 200 in 88ms
- GET / 200 in 75ms
- GET / 200 in 68ms
- GET / 200 in 67ms
- GET / 200 in 69ms
- GET / 200 in 152ms
- GET / 200 in 81ms
- GET / 200 in 64ms
- GET / 200 in 67ms
- GET / 200 in 75ms
- GET / 200 in 72ms
- GET / 200 in 64ms
- GET / 200 in 69ms
- GET / 200 in 77ms
- GET / 200 in 62ms
- GET / 200 in 66ms
- GET / 200 in 73ms
- GET / 200 in 66ms
- GET / 200 in 67ms
- GET / 200 in 72ms
- GET / 200 in 88ms
- GET / 200 in 68ms
- GET / 200 in 66ms
- GET / 200 in 68ms
- GET / 200 in 134ms
- GET / 200 in 80ms
- GET / 200 in 71ms
- GET / 200 in 63ms
- GET / 200 in 80ms
- GET / 200 in 66ms
- GET / 200 in 65ms
- GET / 200 in 73ms
- GET / 200 in 69ms
- GET / 200 in 61ms
- GET / 200 in 79ms
- GET / 200 in 70ms
- GET / 200 in 64ms
- GET / 200 in 65ms
- GET / 200 in 74ms
- GET / 200 in 62ms
- GET / 200 in 69ms
- GET / 200 in 61ms
- GET / 200 in 72ms
- GET / 200 in 71ms
- GET / 200 in 135ms
- GET / 200 in 82ms
- GET / 200 in 78ms
- GET / 200 in 75ms
- GET / 200 in 71ms
- GET / 200 in 70ms
- GET / 200 in 66ms
- GET / 200 in 82ms
- GET / 200 in 65ms
- GET / 200 in 75ms
- GET / 200 in 74ms
- GET / 200 in 72ms
- GET / 200 in 68ms
- GET / 200 in 64ms
- GET / 200 in 63ms
- GET / 200 in 67ms
- GET / 200 in 69ms
- GET / 200 in 59ms
- GET / 200 in 75ms
- GET / 200 in 61ms
- GET / 200 in 117ms
+ GET / 200 in 94ms
+ GET / 200 in 92ms
+ ○ Compiling /admin/dashboard ...
+ ✓ Compiled /admin/dashboard in 1464ms (2120 modules)
+ GET /admin/dashboard 200 in 1698ms
+ GET / 200 in 1161ms
+ GET / 200 in 94ms
+ GET /admin/login 200 in 20ms
  GET / 200 in 99ms
- GET / 200 in 73ms
- GET / 200 in 67ms
- GET / 200 in 70ms
- GET / 200 in 63ms
- GET / 200 in 70ms
- GET / 200 in 69ms
- GET / 200 in 68ms
- GET / 200 in 74ms
- GET / 200 in 73ms
- GET / 200 in 68ms
- GET / 200 in 69ms
- GET / 200 in 66ms
- GET / 200 in 68ms
- GET / 200 in 66ms
- GET / 200 in 72ms
- GET / 200 in 75ms
- GET / 200 in 67ms
- GET / 200 in 71ms
- GET / 200 in 110ms
- GET / 200 in 83ms
- GET / 200 in 68ms
- GET / 200 in 64ms
- GET / 200 in 70ms
- GET / 200 in 64ms
- GET / 200 in 70ms
- GET / 200 in 68ms
- GET / 200 in 71ms
- GET / 200 in 70ms
- GET / 200 in 68ms
- GET / 200 in 68ms
- GET / 200 in 69ms
- GET / 200 in 68ms
- GET / 200 in 69ms
- GET / 200 in 70ms
- GET / 200 in 68ms
- GET / 200 in 66ms
- GET / 200 in 65ms
- GET / 200 in 67ms
- GET / 200 in 158ms
+ GET / 200 in 9ms
+ GET /about 200 in 22ms
  GET / 200 in 87ms
+ GET /projects 200 in 21ms
+ GET /contact 200 in 20ms
+ GET / 200 in 88ms
+ GET / 200 in 93ms
+ GET / 200 in 81ms
  GET / 200 in 74ms
- GET / 200 in 72ms
- GET / 200 in 75ms
  GET / 200 in 68ms
- GET / 200 in 73ms
- GET / 200 in 91ms
- GET / 200 in 79ms
- GET / 200 in 72ms
+ GET / 200 in 68ms
+ GET / 200 in 70ms
+ GET / 200 in 69ms
+ GET / 200 in 78ms
+ GET / 200 in 65ms
  GET / 200 in 83ms
+ GET / 200 in 77ms
+ GET / 200 in 68ms
+ GET / 200 in 69ms
+ GET / 200 in 68ms
+ GET / 200 in 61ms
+ GET / 200 in 63ms
+ GET / 200 in 63ms
+ GET / 200 in 63ms
+ GET / 200 in 62ms
+ GET / 200 in 58ms
+ GET / 200 in 64ms
+ GET / 200 in 74ms
+ GET / 200 in 68ms
+ GET / 200 in 66ms
+ GET / 200 in 68ms
+ GET / 200 in 62ms
+ GET / 200 in 64ms
+ GET / 200 in 65ms
+ GET / 200 in 9ms
+ GET / 200 in 59ms
+ GET / 200 in 63ms
+ GET / 200 in 76ms
+ GET / 200 in 76ms
+ GET / 200 in 63ms
+ GET / 200 in 62ms
+ GET / 200 in 71ms
+ GET / 200 in 63ms
+ GET / 200 in 61ms
+ GET / 200 in 64ms
+ GET / 200 in 69ms
+ GET / 200 in 62ms
+ GET / 200 in 68ms
+ GET / 200 in 61ms
+ GET / 200 in 60ms
+ GET / 200 in 59ms
+ GET / 200 in 64ms
+ GET / 200 in 60ms
+ GET / 200 in 64ms
+ GET / 200 in 74ms
+ GET / 200 in 70ms
+ GET / 200 in 61ms
+ GET / 200 in 63ms
+ GET / 200 in 60ms
+ GET / 200 in 60ms
+ GET / 200 in 63ms
+ GET / 200 in 61ms
+ GET / 200 in 64ms
+ GET / 200 in 66ms
+ GET / 200 in 63ms
+ GET / 200 in 68ms
+ GET / 200 in 56ms
+ GET / 200 in 61ms
+ GET / 200 in 66ms
+ GET / 200 in 68ms
+ GET / 200 in 63ms
+ GET / 200 in 61ms
+ GET / 200 in 60ms
+ GET /contact 200 in 12ms
+ GET / 200 in 68ms
+ GET / 200 in 68ms
+ GET / 200 in 65ms
+ GET /projects 200 in 10ms
+ GET / 200 in 60ms
+ GET / 200 in 60ms
+ GET / 200 in 58ms
+ GET / 200 in 67ms
+ GET / 200 in 63ms
+ GET / 200 in 66ms
+ GET / 200 in 60ms
+ GET / 200 in 68ms
+ GET / 200 in 72ms
+ GET / 200 in 62ms
+ GET / 200 in 72ms
+ GET / 200 in 65ms
+ GET / 200 in 154ms
+ GET / 200 in 79ms
+ GET / 200 in 71ms
+ GET / 200 in 63ms
+ GET / 200 in 64ms
+ GET / 200 in 67ms
+ GET / 200 in 61ms
+ GET / 200 in 62ms
+ GET / 200 in 74ms
+ GET / 200 in 65ms
+ GET / 200 in 63ms
+ GET / 200 in 73ms
+ GET / 200 in 63ms
+ GET / 200 in 64ms
+ GET / 200 in 59ms
+ GET / 200 in 62ms
+ GET / 200 in 60ms
+ GET / 200 in 60ms
+ GET / 200 in 61ms
+ GET / 200 in 62ms
+ GET / 200 in 60ms
+ GET / 200 in 68ms
+ GET / 200 in 60ms
+ GET / 200 in 68ms
+ GET / 200 in 70ms
+ GET / 200 in 9ms
+ GET / 200 in 75ms
+ GET / 200 in 66ms
+ GET /contact 200 in 13ms
+ GET / 200 in 59ms
+ GET / 200 in 63ms
+ GET / 200 in 81ms
+ GET / 200 in 61ms
+ GET / 200 in 66ms
+ GET / 200 in 70ms
+ GET / 200 in 62ms
+ GET / 200 in 62ms
+ GET / 200 in 66ms
+ GET / 200 in 63ms
+ GET / 200 in 75ms
+ GET / 200 in 65ms
+ GET / 200 in 60ms
+ GET / 200 in 66ms
+ GET / 200 in 66ms
+ GET / 200 in 59ms
+ GET / 200 in 62ms
+ GET / 200 in 64ms
+ GET / 200 in 61ms
+ GET / 200 in 67ms
+ GET / 200 in 64ms
+ GET / 200 in 67ms
+ GET / 200 in 62ms
+ GET / 200 in 63ms
+ GET / 200 in 71ms
+ GET / 200 in 70ms
+ GET / 200 in 64ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 232ms
+ GET / 200 in 91ms
+ GET / 200 in 93ms
+ GET / 200 in 86ms
+ GET / 200 in 82ms
+ GET / 200 in 90ms
+ GET / 200 in 90ms
  GET / 200 in 78ms
  GET / 200 in 74ms
- GET / 200 in 84ms
- GET / 200 in 68ms
- GET / 200 in 77ms
- GET / 200 in 77ms
- GET / 200 in 73ms
- GET / 200 in 90ms
- GET / 200 in 76ms
- GET / 200 in 102ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 126ms
  GET / 200 in 81ms
- GET / 200 in 68ms
+ GET / 200 in 78ms
+ GET / 200 in 74ms
+ GET / 200 in 80ms
  GET / 200 in 82ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 131ms
+ GET / 200 in 72ms
+ GET / 200 in 66ms
+ GET / 200 in 65ms
+ GET / 200 in 75ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 114ms
+ GET / 200 in 71ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 124ms
+ GET / 200 in 89ms
+ GET / 200 in 65ms
+ GET / 200 in 62ms
+ GET / 200 in 76ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 126ms
+ GET / 200 in 69ms
+ GET / 200 in 75ms
+ GET / 200 in 71ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 111ms
+ GET / 200 in 85ms
+ GET / 200 in 78ms
+ GET / 200 in 67ms
+ GET / 200 in 76ms
+ GET / 200 in 68ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 118ms
+ GET / 200 in 70ms
+ GET / 200 in 68ms
+ GET / 200 in 66ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 101ms
+ GET / 200 in 71ms
+ GET / 200 in 65ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 115ms
+ GET / 200 in 65ms
+ GET / 200 in 61ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 110ms
+ GET / 200 in 73ms
+ GET / 200 in 75ms
+ GET / 200 in 65ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 114ms
+ GET / 200 in 62ms
+ GET / 200 in 60ms
+ GET / 200 in 61ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 127ms
+ GET / 200 in 170ms
+ GET / 200 in 73ms
+ GET / 200 in 70ms
+ GET / 200 in 62ms
+ GET / 200 in 67ms
+ GET / 200 in 65ms
+ GET / 200 in 59ms
+ GET / 200 in 60ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 110ms
+ GET / 200 in 71ms
+ GET / 200 in 74ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 123ms
+ GET / 200 in 72ms
+ GET / 200 in 63ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 112ms
+ GET / 200 in 99ms
+ GET / 200 in 66ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 111ms
+ GET / 200 in 78ms
+ GET / 200 in 70ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 131ms
+ GET / 200 in 70ms
+ GET / 200 in 73ms
+ GET / 200 in 68ms
+ GET / 200 in 63ms
+ GET / 200 in 65ms
+ GET / 200 in 63ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 119ms
+ GET / 200 in 90ms
+ GET / 200 in 69ms
+ GET / 200 in 73ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 115ms
+ GET / 200 in 64ms
+ GET / 200 in 62ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 133ms
+ GET / 200 in 109ms
+ GET / 200 in 75ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 112ms
+ GET / 200 in 66ms
+ GET / 200 in 63ms
+ GET / 200 in 58ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 108ms
+ GET / 200 in 66ms
+ GET / 200 in 65ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 133ms
+ GET / 200 in 66ms
+ GET / 200 in 68ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 106ms
+ GET / 200 in 77ms
+ GET / 200 in 71ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 116ms
+ GET / 200 in 62ms
+ GET / 200 in 66ms
+ GET / 200 in 66ms
+ GET / 200 in 61ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 106ms
+ GET / 200 in 62ms
+ GET / 200 in 64ms
+ GET / 200 in 71ms
+ GET / 200 in 63ms
+ GET / 200 in 67ms
+ GET / 200 in 59ms
+ GET / 200 in 70ms
+ GET / 200 in 75ms
+ GET / 200 in 60ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 129ms
+ GET / 200 in 60ms
+ GET / 200 in 74ms
+ GET / 200 in 64ms
+ GET / 200 in 64ms
+ GET / 200 in 59ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 132ms
+ GET / 200 in 65ms
+ GET / 200 in 66ms
+ GET / 200 in 70ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 118ms
+ GET / 200 in 59ms
+ GET / 200 in 58ms
+ GET / 200 in 61ms
+ GET / 200 in 73ms
+ GET / 200 in 67ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 113ms
+ GET / 200 in 76ms
+ GET / 200 in 65ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 106ms
+ GET / 200 in 58ms
+ GET / 200 in 66ms
+ GET / 200 in 62ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 116ms
+ GET / 200 in 67ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 110ms
+ GET / 200 in 88ms
+ GET / 200 in 62ms
+ GET / 200 in 64ms
+ GET / 200 in 63ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 107ms
+ GET / 200 in 68ms
+ GET / 200 in 70ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 110ms
+ GET / 200 in 64ms
+ GET / 200 in 60ms
+ GET / 200 in 69ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 108ms
+ GET / 200 in 60ms
+ GET / 200 in 70ms
+ GET / 200 in 67ms
+ GET / 200 in 64ms
+ GET / 200 in 63ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 113ms
+ GET / 200 in 64ms
+ GET / 200 in 60ms
+ GET / 200 in 69ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 115ms
+ GET / 200 in 62ms
+ GET / 200 in 63ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 112ms
+ GET / 200 in 65ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 102ms
+ GET / 200 in 69ms
+ GET / 200 in 62ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 106ms
+ GET / 200 in 69ms
+ GET / 200 in 67ms
+ GET / 200 in 68ms
+ GET / 200 in 67ms
+ GET / 200 in 66ms
+ GET / 200 in 70ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 114ms
+ GET / 200 in 76ms
+ GET / 200 in 80ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 116ms
+ GET / 200 in 67ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 121ms
+ GET / 200 in 229ms
+ GET / 200 in 71ms
+ GET / 200 in 67ms
+ GET / 200 in 63ms
+ GET / 200 in 68ms
+ GET / 200 in 59ms
+ GET / 200 in 61ms
+ GET / 200 in 64ms
+ GET / 200 in 60ms
+ GET / 200 in 75ms
+ GET / 200 in 59ms
+ GET / 200 in 67ms
+ GET / 200 in 68ms
+ GET / 200 in 67ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 102ms
+ GET / 200 in 65ms
+ GET / 200 in 63ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 110ms
+ GET / 200 in 62ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 114ms
+ GET / 200 in 65ms
+ GET / 200 in 60ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 104ms
+ GET / 200 in 62ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 115ms
+ GET / 200 in 62ms
+ GET / 200 in 62ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 121ms
+ GET / 200 in 74ms
+ GET / 200 in 87ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 113ms
+ GET / 200 in 66ms
+ GET / 200 in 68ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 109ms
+ GET / 200 in 66ms
+ GET / 200 in 75ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 130ms
+ GET / 200 in 61ms
+ GET / 200 in 62ms
+ GET / 200 in 63ms
+ GET / 200 in 63ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 109ms
+ GET / 200 in 256ms
+ GET / 200 in 69ms
+ GET / 200 in 66ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 127ms
+ GET / 200 in 68ms
+ GET / 200 in 75ms
+ GET / 200 in 82ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 106ms
+ GET / 200 in 75ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 116ms
+ GET / 200 in 69ms
  GET / 200 in 69ms
  GET / 200 in 68ms
+ GET / 200 in 68ms
+ GET / 200 in 67ms
+ GET / 200 in 77ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 110ms
+ GET / 200 in 78ms
+ GET / 200 in 75ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 127ms
+ GET / 200 in 68ms
+ GET / 200 in 64ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 107ms
+ GET / 200 in 68ms
+ GET / 200 in 73ms
+ GET / 200 in 72ms
+ GET / 200 in 68ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 113ms
+ GET / 200 in 63ms
+ GET / 200 in 65ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 123ms
+ GET / 200 in 93ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 124ms
+ GET / 200 in 75ms
+ GET / 200 in 70ms
+ GET / 200 in 66ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 104ms
+ GET / 200 in 88ms
+ GET / 200 in 71ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 119ms
+ GET / 200 in 92ms
+ GET / 200 in 64ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 112ms
+ GET / 200 in 72ms
+ GET / 200 in 72ms
+ GET / 200 in 64ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 114ms
+ GET / 200 in 81ms
+ GET / 200 in 73ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 105ms
+ GET / 200 in 72ms
+ GET / 200 in 67ms
+ GET / 200 in 64ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 119ms
+ GET / 200 in 63ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 115ms
+ GET / 200 in 80ms
+ GET / 200 in 77ms
+ GET / 200 in 67ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 110ms
+ GET / 200 in 65ms
+ GET / 200 in 70ms
+ GET / 200 in 67ms
+ GET / 200 in 78ms
