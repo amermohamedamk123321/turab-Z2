@@ -120,23 +120,23 @@ export default function ContactPage() {
 
   const faqData = [
     {
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary depending on complexity and scope. A simple website might take 2-4 weeks, while a complex web application could take 2-6 months.",
+      question: "Who are these services for and what are the benefits ?",
+      answer: "Turab Root serves shops, clinics, restaurants and multi-branch companies with powerful and advanced systems to bring control, clarity and management .",
       icon: Clock
     },
     {
       question: "What is your pricing structure?",
-      answer: "We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a customized quote based on your needs.",
+      answer: "Cost depends on users, complexity , data migrations and chosen SLA . The more advanced the system is the more they get premium tags. ",
       icon: Star
     },
     {
-      question: "Do you provide ongoing support?",
+      question: "Do you provide ongoing support and updates ?",
       answer: "Yes, we offer comprehensive support and maintenance packages to ensure your software continues to perform optimally after launch.",
       icon: Zap
     },
     {
-      question: "Can you work with existing systems?",
-      answer: "Absolutely! We have experience integrating with and enhancing existing systems, databases, and third-party APIs.",
+      question: "Are your systems  Offline and/or  Online ?",
+      answer: "The systems are either offline or online. They are based on you needs and requirements . We also make websites for your businesses too. ",
       icon: Sparkles
     }
   ];
