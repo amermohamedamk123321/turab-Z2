@@ -92,22 +92,19 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["hello@softwareco.com", "support@softwareco.com"],
-      description: "We'll respond within 24 hours",
+      details: ["turabacademy96@gmail.com"],
       gradient: "from-[#B33791] to-[#C562AF]"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-      description: "Mon-Fri 9AM-6PM EST",
+      details: ["+93 767 101 001", "+93 792 502 101"],
       gradient: "from-[#C562AF] to-[#DB8DD0]"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["123 Tech Street", "Silicon Valley, CA 94025"],
-      description: "By appointment only",
+      details: ["Kabul , Afghanistan", "Dasht-e-Barchi , Hussainzada Market,\nfourth floor, office number 208"],
       gradient: "from-[#DB8DD0] to-[#FEC5F6]"
     }
   ];
