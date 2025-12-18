@@ -622,9 +622,6 @@ export default function ContactPage() {
                                     </motion.p>
                                   ))}
                                 </div>
-                                <p className="text-xs text-gray-500/70 mt-2">
-                                  {info.description}
-                                </p>
                               </div>
                             </div>
                           </CardContent>
