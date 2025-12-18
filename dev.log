@@ -525,3 +525,8 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 > Ready on http://0.0.0.0:3000
 > Socket.IO server running at ws://0.0.0.0:3000/api/socketio
  ○ Compiling / ...
+ ✓ Compiled /contact in 8.5s (2006 modules)
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 9125ms
+ GET /contact?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 7473ms
+ GET / 200 in 5926ms
+ GET / 200 in 211ms
