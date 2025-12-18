@@ -650,9 +650,8 @@ export default function ContactPage() {
                     <CardContent className="p-5">
                       <div className="space-y-3">
                         {[
-                          { days: "Monday - Friday", hours: "9:00 AM - 6:00 PM", color: "text-[#FEC5F6]/80" },
-                          { days: "Saturday", hours: "10:00 AM - 4:00 PM", color: "text-[#DB8DD0]/80" },
-                          { days: "Sunday", hours: "Closed", color: "text-gray-400/60" }
+                          { days: "Saturday - Friday", hours: "9:00 AM - 6:00 PM", color: "text-[#FEC5F6]/80" },
+                          { days: "Friday", hours: "Closed", color: "text-gray-400/60" }
                         ].map((item, index) => (
                           <motion.div 
                             key={index}
