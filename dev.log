@@ -694,3 +694,8 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 72ms
  GET / 200 in 73ms
  GET / 200 in 69ms
+ GET /projects?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 106ms
+ GET / 200 in 75ms
+ GET / 200 in 78ms
+ GET / 200 in 78ms
+ GET / 200 in 76ms

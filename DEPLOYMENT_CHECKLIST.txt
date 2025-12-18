@@ -1,0 +1,377 @@
+================================================================================
+                  VPS DEPLOYMENT CHECKLIST
+          Turab Root Website - Quick Verification Guide
+================================================================================
+
+Use this checklist to verify your deployment is complete and working correctly.
+Check off each item as you complete it.
+
+PHASE 1: SERVER SETUP
+======================
+
+[ ] SSH access to VPS works
+    Command: ssh root@YOUR_VPS_IP
+    Expected: You see root@vps:~# prompt
+
+[ ] System packages updated
+    Command: sudo apt update && sudo apt upgrade -y
+    Expected: No errors, completion message
+
+[ ] Node.js installed (v18 or v20)
+    Command: node --version
+    Expected: v18.x.x or v20.x.x
+
+[ ] NPM installed
+    Command: npm --version
+    Expected: 9.x.x or higher
+
+[ ] PM2 installed globally
+    Command: pm2 --version
+    Expected: version number (e.g., 5.3.0)
+
+[ ] Nginx installed
+    Command: sudo systemctl status nginx
+    Expected: active (running)
+
+[ ] SQLite tools installed (if using SQLite)
+    Command: sqlite3 --version
+    Expected: SQLite version number
+
+[ ] Application directory exists and you own it
+    Command: ls -la /var/www/turab-root
+    Expected: Listing shows files with your username as owner
+
+PHASE 2: CODE AND BUILD
+========================
+
+[ ] Code transferred to VPS
+    Command: ls -la /var/www/turab-root/
+    Expected: See package.json, next.config.ts, server.ts, src/, public/
+
+[ ] .env.local file created with all required variables
+    Command: cat /var/www/turab-root/.env.local
+    Expected: Shows DATABASE_URL, NODE_ENV=production, etc.
+
+[ ] NODE_ENV is set to "production" in .env.local
+    Command: grep NODE_ENV /var/www/turab-root/.env.local
+    Expected: NODE_ENV=production
+
+[ ] npm install completed successfully
+    Command: ls -la /var/www/turab-root/node_modules
+    Expected: node_modules folder exists with many subfolders
+
+[ ] Database initialized (Prisma)
+    Command: ls -la /var/www/turab-root/prisma/
+    Expected: See dev.db file (or your database file)
+
+[ ] npm run build completed successfully
+    Command: ls -la /var/www/turab-root/.next
+    Expected: .next folder exists with build artifacts
+
+[ ] Build output shows all pages compiled
+    Command: grep "✓ Compiled successfully" /var/www/turab-root/dev.log
+    Expected: Build succeeded message present (or check manually)
+
+[ ] public/sw.js exists (service worker)
+    Command: ls -la /var/www/turab-root/public/sw.js
+    Expected: File exists with size > 1KB
+
+PHASE 3: APPLICATION STARTUP
+=============================
+
+[ ] Application starts with PM2
+    Command: pm2 start npm --name "turab-root" -- start
+    Expected: See process started message
+
+[ ] Application is "online" status
+    Command: pm2 status
+    Expected: Status shows "online" (not stopped, errored, etc.)
+
+[ ] No startup errors in logs
+    Command: pm2 logs turab-root --lines 20
+    Expected: See "Ready on http://0.0.0.0:3000" message, no errors
+
+[ ] PM2 startup script enabled
+    Command: pm2 startup
+    Expected: Instructions shown, follow them
+    Command: pm2 save
+    Expected: Success message
+
+PHASE 4: NGINX CONFIGURATION
+=============================
+
+[ ] Nginx config file created
+    Command: ls -la /etc/nginx/sites-available/turab-root
+    Expected: File exists
+
+[ ] Nginx config is enabled
+    Command: ls -la /etc/nginx/sites-enabled/turab-root
+    Expected: Symbolic link exists
+
+[ ] Nginx config syntax is valid
+    Command: sudo nginx -t
+    Expected: "syntax is ok" and "test is successful"
+
+[ ] Nginx is running
+    Command: sudo systemctl status nginx
+    Expected: active (running)
+
+[ ] Nginx has correct domain configured
+    Command: grep "server_name" /etc/nginx/sites-available/turab-root
+    Expected: Shows your actual domain name (not placeholder)
+
+[ ] Service worker location block exists in Nginx config
+    Command: grep -A 3 "location /sw.js" /etc/nginx/sites-available/turab-root
+    Expected: See the location block with proper headers
+
+PHASE 5: SSL CERTIFICATE
+=========================
+
+[ ] SSL certificate obtained from Let's Encrypt
+    Command: sudo certbot certificates
+    Expected: Shows certificate for YOUR_DOMAIN_HERE
+
+[ ] Nginx config points to correct certificate paths
+    Command: grep "ssl_certificate" /etc/nginx/sites-available/turab-root
+    Expected: Paths exist and match certbot output
+
+[ ] Certificate is valid (not expired)
+    Command: sudo certbot certificates
+    Expected: Expiration date is in the future
+
+[ ] Certificate auto-renewal is enabled
+    Command: sudo systemctl list-timers | grep certbot
+    Expected: See certbot in timers list
+
+PHASE 6: CONNECTIVITY & ACCESS
+===============================
+
+[ ] Website accessible via HTTPS
+    Command: Open browser → https://YOUR_DOMAIN_HERE
+    Expected: Website loads, no SSL errors
+
+[ ] No "Bad Gateway" error
+    Expected: Website displays properly
+
+[ ] HTTP redirects to HTTPS
+    Command: Open browser → http://YOUR_DOMAIN_HERE
+    Expected: Redirects to https:// version
+
+[ ] All pages accessible
+    Expected: Home page works, can navigate to other pages
+
+[ ] All navigation buttons work
+    Expected: Click buttons, pages load correctly
+
+[ ] Styling and CSS loaded properly
+    Expected: Colors, fonts, and layout match development version
+
+[ ] Images and icons display
+    Expected: All visual elements appear correctly
+
+[ ] Contact form works (if applicable)
+    Expected: Can fill and submit form
+
+[ ] Responsive design works on mobile
+    Expected: Open on phone/tablet, layout adjusts properly
+
+PHASE 7: SERVICE WORKER & OFFLINE
+==================================
+
+[ ] Service worker file is accessible
+    Command: curl -I https://YOUR_DOMAIN_HERE/sw.js
+    Expected: HTTP 200 status, Content-Type: text/javascript
+
+[ ] Service worker registered in browser
+    Steps:
+    1. Open browser → https://YOUR_DOMAIN_HERE
+    2. Press F12 (DevTools)
+    3. Go to Application tab → Service Workers
+    Expected: See "/sw.js" with status "activated and running"
+
+[ ] Cache storage contains cached assets
+    Steps:
+    1. DevTools → Application → Cache Storage
+    2. Look for "turab-root-v1" or similar
+    Expected: See cache with multiple files
+
+[ ] Offline functionality works
+    Steps:
+    1. Open DevTools → Network tab
+    2. Check "Offline" checkbox
+    3. Refresh page
+    Expected: Page still loads (may show cached version)
+
+[ ] Service worker console shows no errors
+    Steps:
+    1. DevTools → Console tab
+    2. Look for any red error messages about SW
+    Expected: No service worker related errors
+
+PHASE 8: SECURITY
+=================
+
+[ ] Root password changed
+    Command: passwd (and enter new password)
+    Expected: Success message
+
+[ ] Firewall enabled and configured
+    Command: sudo ufw status
+    Expected: Status: active, with ports 22, 80, 443 allowed
+
+[ ] SSH root login disabled (recommended)
+    Command: grep PermitRootLogin /etc/ssh/sshd_config
+    Expected: PermitRootLogin no
+
+[ ] Regular system updates scheduled
+    Command: sudo apt update && sudo apt upgrade -y
+    Expected: Up to date or no upgrades available
+
+PHASE 9: MONITORING & LOGS
+==========================
+
+[ ] PM2 logs show no errors
+    Command: pm2 logs turab-root --lines 50
+    Expected: "Ready on..." message, no ERR! messages
+
+[ ] Nginx logs show no errors
+    Command: sudo tail -f /var/log/nginx/error.log
+    Expected: No frequent errors (some are normal)
+
+[ ] Database is accessible
+    Command: sqlite3 /var/www/turab-root/prisma/dev.db ".tables"
+    Expected: See table names (if using SQLite)
+
+[ ] Node.js process is using reasonable memory
+    Command: pm2 monit
+    Expected: Memory usage < 500MB (press q to exit)
+
+[ ] CPU usage is normal
+    Command: top
+    Expected: Node.js process not at 100% CPU (press q to exit)
+
+PHASE 10: FINAL VERIFICATION
+============================
+
+[ ] Test domain name resolves correctly
+    Command: nslookup YOUR_DOMAIN_HERE
+    Expected: Shows your VPS IP address
+
+[ ] Website loads quickly
+    Expected: Page loads in under 3 seconds
+
+[ ] All features work as expected
+    Expected: Every feature that works in dev also works here
+
+[ ] No console errors in browser DevTools
+    Steps: Open website, press F12, go to Console tab
+    Expected: No red error messages (warnings are okay)
+
+[ ] Mobile version works
+    Expected: Works on phone/tablet with proper layout
+
+[ ] Form submissions work (if applicable)
+    Expected: Can submit forms and see success messages
+
+[ ] Authentication works (if applicable)
+    Expected: Can login, logout, access protected pages
+
+[ ] WebSocket connections work (if applicable)
+    Steps: DevTools → Network → WS
+    Expected: Connection shows "101 Web Socket Protocol Handshake"
+
+[ ] Database operations work
+    Expected: If app stores/retrieves data, it works correctly
+
+================================================================================
+IF EVERYTHING IS CHECKED, YOUR DEPLOYMENT IS COMPLETE! ✓
+================================================================================
+
+WHAT TO DO IF A CHECK FAILS:
+
+1. Read the "Expected" result carefully
+2. Check the error message (if any)
+3. Go to the troubleshooting section in DEPLOYMENT_GUIDE.txt
+4. Or review the specific step in the deployment guide
+5. Fix the issue
+6. Come back and re-check the item
+
+COMMON QUICK FIXES:
+
+Website not loading?
+→ Check: pm2 status (is app online?)
+→ Check: sudo systemctl status nginx (is nginx running?)
+→ Check: ls -la .next (does build folder exist?)
+
+Offline doesn't work?
+→ Check: curl https://YOUR_DOMAIN/sw.js (does it return JS code?)
+→ Check: Browser DevTools → Application → Service Workers
+→ Check: npm run build (was it run after deploying code?)
+
+Slow website?
+→ Check: pm2 monit (memory usage?)
+→ Check: top (CPU usage?)
+→ Check: disk space with: df -h (need > 1GB free)
+
+Styling looks broken?
+→ Check: pm2 restart turab-root
+→ Check: Browser hard refresh (Ctrl+Shift+R)
+→ Check: npm run build (was it done?)
+
+Domain/SSL issues?
+→ Check: curl https://YOUR_DOMAIN (does it work?)
+→ Check: sudo certbot certificates (is cert valid?)
+→ Check: sudo systemctl restart nginx (after config changes)
+
+MAINTENANCE CHECKLIST (Do These Regularly):
+
+Every Week:
+[ ] Check logs: pm2 logs turab-root
+[ ] Check status: pm2 status
+[ ] Verify website loads: https://YOUR_DOMAIN_HERE
+
+Every Month:
+[ ] Check available disk space: df -h
+[ ] Update system: sudo apt update && sudo apt upgrade -y
+[ ] Check certificate expiration: sudo certbot certificates
+
+Every 3 Months:
+[ ] Review PM2 logs for patterns: pm2 logs turab-root --lines 200
+[ ] Test offline functionality
+[ ] Verify all features still work
+
+DEPLOYING UPDATES:
+
+When you make changes to your code:
+
+1. Transfer new code (git pull or scp)
+2. Run: npm install (if you added new packages)
+3. Run: npm run build (ALWAYS do this!)
+4. Run: pm2 restart turab-root (restart the app)
+5. Wait 5 seconds
+6. Test: https://YOUR_DOMAIN_HERE
+
+Done! Updates are live.
+
+================================================================================
+IMPORTANT REMINDERS
+================================================================================
+
+✓ Always run "npm run build" after code changes before restarting
+✓ Service worker caching builds up over time as users visit
+✓ Check "pm2 status" regularly - the app must stay "online"
+✓ Monitor logs occasionally for problems
+✓ Don't ignore error messages - they tell you what's wrong
+✓ Test in multiple browsers (Chrome, Firefox, Safari)
+✓ Test on mobile devices
+✓ Clear browser cache if something looks wrong
+✓ Restart Nginx after any config changes: sudo systemctl restart nginx
+✓ Keep your VPS secure - update regularly and use strong passwords
+
+Your website should now work exactly as it does in development!
+The offline functionality works because service workers are properly set up.
+All components render correctly because the build was done properly.
+
+Need help? Check DEPLOYMENT_GUIDE.txt for detailed instructions on any step.
+
+Good luck! 🚀
