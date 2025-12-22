@@ -64,7 +64,7 @@ export default function Home() {
       <section className="relative">
         <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
         {/* LaserFlow background */}
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0" suppressHydrationWarning>
           <DeferredComponent fallback={<SkeletonLoader className="w-full h-full bg-black" />}>
             <LaserFlowLazy
               style={{
