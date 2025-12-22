@@ -1,7 +1,8 @@
 import dynamic from 'next/dynamic';
+import { SkeletonLoader } from '@/components/SkeletonLoader';
 
 const LaserFlow = dynamic(() => import('@/components/LaserFlow'), {
-  loading: () => <div className="w-full h-full bg-black" />,
+  loading: () => <SkeletonLoader className="w-full h-full bg-black" />,
   ssr: false
 });
 

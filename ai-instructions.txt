@@ -1,0 +1,1375 @@
+================================================================================
+                      AI INSTRUCTIONS & CODEBASE GUIDE
+                     Turab Root Website - Complete Reference
+================================================================================
+
+PURPOSE:
+This file documents the entire Turab Root website project. Use this when working
+with an AI assistant to provide complete context about the project structure,
+technologies, how it's built, how it runs, and key patterns.
+
+
+================================================================================
+SECTION 1: PROJECT OVERVIEW
+================================================================================
+
+PROJECT NAME: Turab Root Website
+TYPE: Full-stack Next.js web application (portfolio/services company website)
+DOMAIN: turabroot.com (or your custom domain)
+PURPOSE: Showcase software development services (web, mobile, desktop apps)
+         and provide contact/project portfolio functionality
+
+KEY FEATURES:
+- Home page with hero section (LaserFlow animation) and service showcase
+- Projects portfolio page (display of past projects with images/descriptions)
+- About Us page (company information)
+- Contact Us page (contact form with email integration)
+- Admin login page (for future admin dashboard)
+- Service worker for offline support and intelligent caching
+- WebSocket support for real-time features
+- Responsive design (mobile, tablet, desktop)
+- Dark theme by default with light elements
+
+
+================================================================================
+SECTION 2: COMPLETE TECHNOLOGY STACK
+================================================================================
+
+FRONTEND FRAMEWORK:
+- Next.js 15.3.5 - React framework with App Router (server and client components)
+- React 19.0.0 - UI library
+- TypeScript 5 - Type-safe JavaScript
+
+STYLING & UI:
+- Tailwind CSS 4 - Utility-first CSS framework
+- Tailwind Merge - Utility conflict resolution
+- Tailwind Animate - Animation utilities
+- shadcn/ui - High-quality, accessible UI components built on Radix UI
+- Lucide React 0.525.0 - Beautiful SVG icon library
+
+ANIMATIONS & GRAPHICS:
+- Framer Motion 12.23.2 - Production-ready motion library for React
+- GSAP 3.13.0 - Professional animation framework
+- Three.js 0.180.0 - 3D graphics library
+- OGL 1.0.11 - Minimal WebGL library (used in LaserFlow component)
+
+FORMS & VALIDATION:
+- React Hook Form 7.60.0 - Performant, flexible form library
+- Zod 4.0.2 - TypeScript-first schema validation library
+- @hookform/resolvers 5.1.1 - Validation resolvers for React Hook Form
+
+STATE MANAGEMENT & DATA FETCHING:
+- Zustand 5.0.6 - Lightweight state management library
+- TanStack Query 5.82.0 - Powerful server state management and data fetching
+- Axios 1.10.0 - Promise-based HTTP client
+
+BACKEND & DATABASE:
+- Prisma 6.11.1 - Next-generation Node.js and TypeScript ORM
+- @prisma/client 6.11.1 - Prisma client library
+- SQLite (default) - Lightweight file-based database for development/small deployments
+- PostgreSQL (alternative) - Production-grade relational database (optional)
+
+REAL-TIME COMMUNICATION:
+- Socket.IO 4.8.1 - Real-time bidirectional communication library
+- Socket.IO Client 4.8.1 - Client-side Socket.IO library
+
+AUTHENTICATION:
+- NextAuth.js 4.24.11 - Complete open-source authentication solution for Next.js
+
+INTERNATIONALIZATION:
+- Next Intl 4.3.4 - Internationalization library for Next.js (multi-language support)
+
+UTILITIES & HELPERS:
+- Date-fns 4.1.0 - Modern JavaScript date utility library
+- UUID 11.1.0 - Generate unique identifiers
+- Class Variance Authority 0.7.1 - CSS class composition library
+- CLSX 2.1.1 - Utility for constructing className strings
+- Sharp 0.34.3 - High-performance image processing
+
+ADVANCED UI COMPONENTS:
+- TanStack Table 8.21.3 - Headless UI for building tables and datagrids
+- DND Kit 6.3.1, @dnd-kit/sortable, @dnd-kit/utilities - Modern drag and drop toolkit
+- React Resizable Panels 3.0.3 - Resizable panel components
+- Embla Carousel React 8.6.0 - Carousel/slider component library
+- Recharts 2.15.4 - Redefined chart library built with React and D3
+- MDX Editor 3.39.1 - Rich text editor with MDX support
+- React Markdown 10.1.0 - Markdown parser and renderer
+- Sonner 2.0.6 - Opinionated toast component library
+
+UI FRAMEWORK PRIMITIVES:
+- Radix UI (multiple packages) - Unstyled, accessible component primitives
+  - @radix-ui/react-accordion
+  - @radix-ui/react-alert-dialog
+  - @radix-ui/react-dialog
+  - @radix-ui/react-dropdown-menu
+  - @radix-ui/react-navigation-menu
+  - @radix-ui/react-sheet
+  - And 10+ more Radix UI components
+
+HOOKS & UTILITIES:
+- ReactUse @reactuses/core 6.0.5 - Collection of essential React hooks
+- Input OTP 1.4.2 - One-Time Password input component
+- React Day Picker 9.8.0 - Date picker component for calendar selection
+- Vaul 1.1.2 - Drawer/sidebar component
+
+DEVELOPMENT TOOLS:
+- Nodemon 3.1.10 - Monitor for changes and auto-restart development server
+- TSX 4.20.3 - TypeScript execution for Node.js
+- ESLint 9 - Code quality and style checker
+- Next Themes 0.4.6 - Dark mode support in Next.js
+
+BUILD & DEPLOYMENT:
+- npm - Package manager
+- PostCSS 4 - CSS transformation tool
+- Tailwind PostCSS Plugin - PostCSS plugin for Tailwind CSS
+
+
+WHY THESE TECHNOLOGIES?
+=======================
+- Next.js: Server-side rendering, static generation, API routes, and excellent dev experience
+- React: Component-based UI development with reusable, testable components
+- TypeScript: Type safety prevents runtime errors and improves code quality
+- Tailwind CSS: Rapid UI development with utility classes, small bundle sizes
+- shadcn/ui: Pre-built, customizable, accessible components (avoids design system friction)
+- Framer Motion & GSAP: Professional animations for hero section and interactions
+- Three.js & OGL: 3D graphics for LaserFlow hero animation
+- Prisma: Type-safe database access with auto-generated migrations
+- Socket.IO: WebSocket support for real-time features
+- Zod: Runtime type validation for form data and API responses
+
+
+================================================================================
+SECTION 3: ARCHITECTURE & HOW THE APP WORKS
+================================================================================
+
+OVERALL ARCHITECTURE:
+
+┌─────────────────────────────────────────────────────────────┐
+│                   Browser (Client-Side)                     │
+│  React Components → Tailwind CSS → HTML/JS/CSS Bundle      │
+│  Service Worker (offline caching)                           │
+│  Socket.IO Client (real-time features)                      │
+└──────────────────────┬──────────────────────────────────────┘
+                       │ HTTPS / WebSocket
+                       │
+┌──────────────────────▼──────────────────────────────────────┐
+│              Nginx Reverse Proxy (VPS)                      │
+│  - Routes HTTP/HTTPS traffic                               │
+│  - Serves static files (/public, /_next)                   │
+│  - Proxies dynamic requests to Node.js app                 │
+│  - Handles WebSocket upgrades for Socket.IO                │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+┌──────────────────────▼──────────────────────────────────────┐
+│            Custom Node.js Server (server.ts)               │
+│  - Handles HTTP requests via Next.js                       │
+│  - Socket.IO server for real-time communication            │
+│  - Port 3000 (internal only, proxied through Nginx)        │
+└──────────────────────┬──────────────────────────────────────┘
+                       │
+         ┌─────────────┴─────────────┐
+         │                           │
+    ┌────▼─────────────┐    ┌────────▼────────────┐
+    │  Next.js App     │    │   Socket.IO         │
+    │  - App Router    │    │   - Echo server     │
+    │  - Pages/Routes  │    │   - Real-time msgs  │
+    │  - API routes    │    │   - Broadcast       │
+    │  - Static gen    │    │   - Connection mgmt │
+    └────┬─────────────┘    └────────────────────┘
+         │
+         │
+    ┌────▼──────────────────┐
+    │   Database            │
+    │  - SQLite (dev)       │
+    │  - PostgreSQL (prod)  │
+    │  - Prisma ORM         │
+    └───────────────────────┘
+
+
+REQUEST FLOW (HTTP):
+1. Browser sends request to https://domain.com
+2. Nginx receives request (reverse proxy)
+3. Nginx forwards to http://localhost:3000
+4. Custom server (server.ts) routes to Next.js
+5. Next.js renders page (SSR) or sends static page (SSG)
+6. Response returned through Nginx to browser
+
+WEBSOCKET FLOW (Socket.IO):
+1. Browser initiates WebSocket connection
+2. Nginx detects ws:// upgrade headers
+3. Nginx forwards upgrade to Node.js on /api/socketio
+4. Socket.IO server handles on('connection')
+5. Bi-directional real-time communication established
+
+
+RENDERING STRATEGIES:
+
+Server-Side Rendering (SSR):
+- Home page uses dynamic content (LaserFlow with animations)
+- Contact form needs form handling
+- These use 'use client' directive for client-side interactivity
+
+Static Site Generation (SSG):
+- About page (mostly static content)
+- Some sections pre-rendered at build time
+
+Client-Side Rendering (CSR):
+- Navigation state (active page borders)
+- Form submissions
+- Socket.IO connections
+- Service worker registration
+
+Lazy Loading:
+- LaserFlowLazy component: Loads 3D graphics only on demand
+- MeteorsLazy component: Loads meteor animation only when needed
+- This improves initial page load performance
+
+
+SERVICE WORKER & OFFLINE SUPPORT:
+
+File: public/sw.js
+Purpose: Enable offline functionality and intelligent caching
+
+Caching Strategy:
+- CACHE_V1: General assets cache (pages, CSS, etc.)
+- API_CACHE: API response cache (network-first strategy)
+- IMG_CACHE: Image cache (cache-first strategy)
+
+How it works:
+1. Service worker installed on first visit
+2. Intercepts fetch requests
+3. API calls: Try network first, fallback to cache
+4. Images: Use cache first, fallback to network
+5. Other requests: Try network first, fallback to offline page
+6. When offline: Shows cached version or "offline" message
+
+Registration: ServiceWorkerInit.tsx component registers SW on mount
+
+
+CUSTOM SERVER (server.ts):
+
+Features:
+- HTTP server with Socket.IO integration
+- Next.js app handler for requests
+- Custom routing (skips Socket.IO requests from Next.js)
+- Listens on 0.0.0.0:3000 (all interfaces)
+- Socket.IO at /api/socketio path
+
+Used for:
+- Real-time features (WebSocket)
+- Next.js App Router compatibility
+- PM2 process management
+
+
+================================================================================
+SECTION 4: PROJECT STRUCTURE & FILE ORGANIZATION
+================================================================================
+
+src/
+│
+├── app/                          # Next.js App Router pages and layouts
+│   ├── (site)/                   # Public site routes (with header/footer)
+│   │   ├── page.tsx              # Home page (hero, services, business impact)
+│   │   ├── layout.tsx            # Site layout (wraps all public pages)
+│   │   ├── projects/
+│   │   │   └── page.tsx          # Projects portfolio page
+│   │   ├── about/
+│   │   │   └── page.tsx          # About Us page
+│   │   └── contact/
+│   │       └── page.tsx          # Contact Us page with form
+│   │
+│   ├── admin/                    # Admin section (no header/footer)
+│   │   ├── layout.tsx            # Admin layout (with theme provider)
+│   │   ├── admin.css             # Admin-specific styles
+│   │   └── login/
+│   │       └── page.tsx          # Admin login page
+│   │
+│   ├── layout.tsx                # Root layout (metadata, fonts, providers)
+│   ├── globals.css               # Global styles
+│   └── page.tsx                  # Fallback (usually not used, routes to (site))
+│
+├── components/                   # Reusable React components
+│   ├── ui/                       # shadcn/ui components (auto-generated)
+│   │   ├── button.tsx            # Button component
+│   │   ├── card.tsx              # Card container component
+│   │   ├── input.tsx             # Input field component
+│   │   ├── textarea.tsx          # Textarea component
+│   │   ├── badge.tsx             # Badge component
+│   │   ├── sheet.tsx             # Mobile menu sheet
+│   │   ├── dialog.tsx            # Modal dialog
+│   │   ├── select.tsx            # Select/dropdown
+│   │   ├── checkbox.tsx          # Checkbox
+│   │   └── ... 40+ more UI components
+│   │
+│   ├── navigation.tsx            # Global header with navigation links
+│   ├── footer.tsx                # Global footer
+│   ├── layout-wrapper.tsx        # Wrapper for navigation + footer
+│   │
+│   ├── LaserFlow.tsx             # 3D laser animation component (heavy 3D)
+│   ├── LaserFlowLazy.tsx         # Lazy-loaded LaserFlow wrapper
+│   ├── Lamp.tsx                  # Lamp lighting effect component
+│   ├── LampLazy.tsx              # Lazy-loaded Lamp wrapper
+│   ├── DarkVeil.tsx              # Dark overlay canvas component
+│   ├── DarkVeilLazy.tsx          # Lazy-loaded DarkVeil wrapper
+│   ├── Meteors.tsx               # Meteor animation component
+│   ├── MeteorsLazy.tsx           # Lazy-loaded Meteors wrapper
+│   ├── Orb.tsx                   # Orb animation component
+│   ├── OrbLazy.tsx               # Lazy-loaded Orb wrapper
+│   │
+│   ├── BackgroundGradient.tsx    # Gradient background effect
+│   ├── ChromaGrid.tsx            # Grid pattern effect
+│   ├── GlassSurface.tsx          # Glassmorphism effect
+│   ├── DeferredComponent.tsx     # Component deferral utility (rarely used)
+│   ├── SkeletonLoader.tsx        # Loading skeleton
+│   │
+│   ├── ServiceWorkerInit.tsx     # Service worker registration component
+│   ├── theme-provider.tsx        # Next Themes provider
+│   ├── theme-toggle.tsx          # Dark/light mode toggle button
+│
+├── data/
+│   └── projects.ts               # Project data (mock data for portfolio)
+│
+├── hooks/                        # Custom React hooks
+│   ├── use-local-storage.ts      # Hook for localStorage persistence
+│   ├── use-mobile.ts             # Hook for mobile detection
+│   ├── use-toast.ts              # Hook for toast notifications (Sonner)
+│
+├── lib/                          # Utility functions and configurations
+│   ├── db.ts                     # Prisma database singleton
+│   ├── socket.ts                 # Socket.IO server setup
+│   ├── service-worker-register.ts # Service worker registration function
+│   └── utils.ts                  # General utility functions (cn, etc.)
+
+public/
+├── sw.js                         # Service worker file (standalone, not bundled)
+├── robots.txt                    # SEO robots configuration
+└── logo.svg                      # Company logo
+
+prisma/
+└── schema.prisma                 # Database schema definition
+
+types/
+└── ogl.d.ts                      # TypeScript definitions for OGL library
+
+Configuration Files:
+├── next.config.ts                # Next.js configuration
+├── tsconfig.json                 # TypeScript configuration
+├── tailwind.config.ts            # Tailwind CSS configuration
+├── postcss.config.mjs            # PostCSS configuration (for Tailwind)
+├── server.ts                     # Custom Node.js server with Socket.IO
+├── package.json                  # Dependencies and scripts
+├── package-lock.json             # Locked dependency versions
+├── components.json               # shadcn/ui configuration
+
+
+KEY DIRECTORIES EXPLAINED:
+
+src/components/ui/
+- Contains shadcn/ui components
+- These are automatically generated from template
+- Do NOT manually edit if using shadcn/ui CLI
+- Based on Radix UI primitives for accessibility
+
+src/app/(site)/
+- Routes wrapped with header and footer
+- Public pages visible to all users
+- Layout wraps children with Navigation + Footer
+
+src/app/admin/
+- Routes without header and footer
+- Admin dashboard section
+- Typically requires authentication (not yet implemented)
+
+src/components/*Lazy.tsx
+- Wrapper components that lazy-load heavy components
+- Use dynamic() from Next.js to code-split
+- Improves initial page load performance
+- Example: LaserFlowLazy wraps LaserFlow
+
+
+DATABASE SCHEMA (Prisma):
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Post {
+  id        String   @id @default(cuid())
+  title     String
+  content   String?
+  published Boolean  @default(false)
+  authorId  String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+Currently, only User and Post models exist. Expand for features like:
+- Projects (for project portfolio)
+- ContactSubmission (for contact form)
+- Admin (for admin users)
+
+
+================================================================================
+SECTION 5: BUILD & RUN PROCESS
+================================================================================
+
+WHY THE BUILD PROCESS IS CRITICAL:
+==================================
+
+When you run "npm run build", Next.js creates the .next folder which contains:
+- Compiled JavaScript optimized for production
+- Pre-rendered static pages
+- Processed CSS from Tailwind (tree-shaking unused styles)
+- Minified and bundled code
+- Source maps for debugging
+- Asset optimization (images, fonts, etc.)
+
+WITHOUT "npm run build":
+- The app is just source code (TypeScript, JSX)
+- Browsers can't run TypeScript directly
+- Styles aren't compiled from Tailwind syntax
+- Animations and 3D graphics aren't bundled
+- Service worker has nothing to cache
+
+This is why offline functionality breaks without the build step.
+The service worker tries to cache source files, not the compiled output.
+
+
+DEVELOPMENT PROCESS:
+====================
+
+1. Start development server:
+   npm run dev
+
+   - Runs nodemon which watches src/ folder
+   - Restarts on file changes
+   - Runs custom server.ts
+   - Next.js app available at http://localhost:3000
+   - Hot reload for most changes (some require full restart)
+
+2. Make changes to files:
+   - .tsx files: React components
+   - .css files: Styles (Tailwind + custom)
+   - .ts files: Utilities, data, config
+   - Changes auto-reload in browser
+
+3. Test changes:
+   - Open browser to http://localhost:3000
+   - Navigate to pages
+   - Test interactions, forms, animations
+   - Check console for errors (F12)
+   - Check Network tab for API calls
+
+4. Run linting (optional):
+   npm run lint
+   - Checks code quality
+   - Identifies potential issues
+
+5. Stop development server:
+   Press Ctrl+C in terminal
+
+
+BUILD FOR PRODUCTION:
+====================
+
+1. Build the app:
+   npm run build
+
+   Output includes:
+   ✓ Compiled successfully
+   ✓ Linting and checking validity of types
+   ✓ Collecting page data
+   
+   Shows routes and their sizes:
+   Route (pages)                              Size
+   ┌ / (home)                                 XXX kB
+   ├ /projects                                XXX kB
+   ├ /about                                   XXX kB
+   └ /contact                                 XXX kB
+
+2. Verify build succeeded:
+   ls -la .next
+   - Should exist with large size
+   - Contains compiled output
+
+3. Start production server:
+   npm start
+   
+   Or with PM2:
+   pm2 start npm --name "turab-root" -- start
+
+   Server listens on http://0.0.0.0:3000
+
+
+IMPORTANT SCRIPTS IN package.json:
+==================================
+
+"dev"        npm run dev              # Development with auto-reload
+"build"      npm run build            # Build for production
+"start"      NODE_ENV=production ...  # Start production server
+"lint"       next lint                # Check code quality
+"db:push"    prisma db push           # Apply schema changes
+"db:generate" prisma generate          # Generate Prisma client
+"db:migrate" prisma migrate dev       # Create migration files
+"db:reset"   prisma migrate reset     # Reset database
+
+
+ENVIRONMENT VARIABLES:
+=====================
+
+Required:
+DATABASE_URL     - Prisma database connection string
+NODE_ENV         - "development" or "production"
+NEXTAUTH_SECRET  - Random secret for NextAuth (if using auth)
+
+Optional:
+NEXTAUTH_URL     - Your website URL (for NextAuth)
+PORT             - Server port (default 3000)
+
+Example .env.local:
+DATABASE_URL="file:./prisma/dev.db"
+NODE_ENV="production"
+NEXTAUTH_SECRET="your-random-secret-here"
+NEXTAUTH_URL="https://yourdomain.com"
+
+
+DATABASE OPERATIONS:
+====================
+
+Initialize database (create/update schema):
+npx prisma db push
+
+Generate Prisma client (after schema changes):
+npx prisma generate
+
+View database in UI:
+npx prisma studio
+
+Create a migration (for version control):
+npx prisma migrate dev --name add_new_feature
+
+Reset database (DELETES ALL DATA):
+npx prisma migrate reset
+
+
+================================================================================
+SECTION 6: DEVELOPMENT CONVENTIONS & PATTERNS
+================================================================================
+
+COMPONENT PATTERNS:
+
+1. Server Components (default):
+   export default function MyComponent() {
+     // Can access database directly
+     // Can use async/await for data
+     // Can't use hooks
+     return <div>...</div>
+   }
+
+2. Client Components (interactive):
+   'use client'
+   
+   import { useState } from 'react'
+   
+   export default function MyComponent() {
+     // Use React hooks
+     // Can handle user events
+     // Can use browser APIs
+     return <div>...</div>
+   }
+
+3. Lazy-loaded Components:
+   import dynamic from 'next/dynamic'
+   
+   const LazyComponent = dynamic(
+     () => import('@/components/Heavy'),
+     { loading: () => <div>Loading...</div> }
+   )
+
+4. memo (performance optimization):
+   import { memo } from 'react'
+   
+   const Navigation = memo(function Navigation() {
+     // Only re-renders if props change
+     return <nav>...</nav>
+   })
+
+
+STYLING PATTERNS:
+
+1. Tailwind utility classes (primary):
+   <div className="bg-black text-white rounded-lg p-4">
+   
+2. Conditional classes with clsx:
+   import clsx from 'clsx'
+   
+   <div className={clsx(
+     'base-styles',
+     isActive && 'active-styles'
+   )}>
+   
+3. Dynamic styles (for calculated values):
+   <div style={{ borderColor: '#FFD700' }}>
+   
+4. CSS modules (for complex styles):
+   import styles from './component.module.css'
+   
+   <div className={styles.container}>
+
+5. Global CSS:
+   src/app/globals.css for site-wide styles
+   src/app/admin/admin.css for admin section
+
+
+ROUTING PATTERNS:
+
+App Router (Next.js 13+):
+- File-based routing
+- Folders become URL paths
+- page.tsx is the route
+- layout.tsx wraps children
+
+Examples:
+src/app/(site)/page.tsx       → /
+src/app/(site)/projects/page.tsx  → /projects
+src/app/admin/login/page.tsx      → /admin/login
+
+Route Groups:
+- (site) folder groups routes
+- Doesn't appear in URL
+- Allows different layouts for different sections
+
+
+FORM PATTERNS:
+
+Using React Hook Form + Zod:
+import { useForm } from 'react-hook-form'
+import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
+
+const schema = z.object({
+  email: z.string().email(),
+  message: z.string().min(10),
+})
+
+export function ContactForm() {
+  const { register, handleSubmit, formState: { errors } } = 
+    useForm({ resolver: zodResolver(schema) })
+  
+  return (
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <input {...register('email')} />
+      {errors.email && <span>{errors.email.message}</span>}
+    </form>
+  )
+}
+
+
+DATA FETCHING PATTERNS:
+
+Server-side (in Server Components):
+import { db } from '@/lib/db'
+
+export default async function Page() {
+  const posts = await db.post.findMany()
+  return <div>{posts.map(p => <p>{p.title}</p>)}</div>
+}
+
+Client-side (with TanStack Query):
+import { useQuery } from '@tanstack/react-query'
+
+export function MyComponent() {
+  const { data, isLoading } = useQuery({
+    queryKey: ['posts'],
+    queryFn: () => fetch('/api/posts').then(r => r.json())
+  })
+  
+  return isLoading ? 'Loading...' : <div>{data.map(...)}</div>
+}
+
+
+STATE MANAGEMENT PATTERNS:
+
+Local component state (useState):
+export function Counter() {
+  const [count, setCount] = useState(0)
+  return <button onClick={() => setCount(count + 1)}>{count}</button>
+}
+
+Global state (Zustand):
+import { create } from 'zustand'
+
+const useStore = create((set) => ({
+  count: 0,
+  increment: () => set(s => ({ count: s.count + 1 }))
+}))
+
+export function MyComponent() {
+  const count = useStore(s => s.count)
+  const increment = useStore(s => s.increment)
+  return <button onClick={increment}>{count}</button>
+}
+
+Server state (TanStack Query):
+- Use for fetched data that changes
+- Handles caching, refetching, updates
+
+
+SHADCN/UI COMPONENT PATTERNS:
+
+All components from shadcn/ui follow Radix UI patterns:
+
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
+import { Input } from '@/components/ui/input'
+import { Badge } from '@/components/ui/badge'
+
+<Button variant="default">Click me</Button>
+<Card>
+  <CardHeader>
+    <CardTitle>Title</CardTitle>
+  </CardHeader>
+  <CardContent>Content here</CardContent>
+</Card>
+<Input placeholder="Enter text" />
+<Badge>Label</Badge>
+
+
+ANIMATION PATTERNS:
+
+Framer Motion:
+import { motion } from 'framer-motion'
+
+export function AnimatedDiv() {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      Content
+    </motion.div>
+  )
+}
+
+GSAP:
+import gsap from 'gsap'
+import { useEffect } from 'react'
+
+export function GSAPAnimation() {
+  useEffect(() => {
+    gsap.to('.box', { x: 100, duration: 1 })
+  }, [])
+  
+  return <div className="box">Animated</div>
+}
+
+Three.js / OGL:
+- Used in LaserFlow component
+- 3D graphics rendering
+- Usually wrapped in lazy component
+
+
+ERROR HANDLING PATTERNS:
+
+API errors:
+try {
+  const res = await fetch('/api/endpoint')
+  if (!res.ok) throw new Error('API error')
+  return await res.json()
+} catch (error) {
+  console.error(error)
+  // Show toast or error state
+}
+
+Zod validation errors:
+const result = schema.safeParse(data)
+if (!result.success) {
+  console.error(result.error.errors)
+}
+
+React error boundaries:
+// Not yet implemented in this project
+// Would catch React component errors
+// Can be added to layout.tsx
+
+
+================================================================================
+SECTION 7: KEY COMPONENTS EXPLAINED
+================================================================================
+
+NAVIGATION (src/components/navigation.tsx):
+- Sticky header at top
+- Logo on left
+- Desktop nav links in center
+- Mobile menu on right (hamburger)
+- Page buttons have color-coded borders
+  * Home: Yellow/Gold
+  * Projects: Green
+  * About: Blue
+  * Contact: Red/Pink
+- Active page has thicker border
+- Hover effects on buttons
+- Uses usePathname() to detect current page
+- Uses useMemo for color mapping
+- memo() wrapper for performance
+
+
+FOOTER (src/components/footer.tsx):
+- Appears on all public pages
+- Copyright year
+- Social media links
+- Company description
+- Business hours
+- Contact information
+
+
+LASER FLOW (src/components/LaserFlowLazy.tsx):
+- Hero section animation
+- 3D graphics with OGL
+- Performance-critical (heavy rendering)
+- Lazy-loaded to not block initial load
+- Falls back to static version if 3D not supported
+- Uses canvas element with WebGL
+
+
+DARK VEIL (src/components/DarkVeil.tsx):
+- Canvas overlay effect
+- Adds visual depth to hero
+- Runs subtle animation in background
+- Lazy-loaded as DarkVeilLazy
+
+
+METEORS (src/components/MeteorsLazy.tsx):
+- Particle effect animation
+- Decorative element
+- Lazy-loaded for performance
+
+
+LAYOUT WRAPPER (src/components/layout-wrapper.tsx):
+- Wraps all public pages with Navigation + Footer
+- Skips wrapper for /admin routes
+- Checks pathname to determine layout
+- Uses usePathname() hook (client component)
+
+
+SERVICE WORKER INIT (src/components/ServiceWorkerInit.tsx):
+- Registers service worker on first load
+- Client component
+- useEffect runs registerServiceWorker()
+- Returns null (no visible output)
+- Enables offline support
+
+
+================================================================================
+SECTION 8: COMMON DEBUGGING APPROACHES
+================================================================================
+
+PROBLEM: App doesn't build
+SOLUTION:
+1. Check error message carefully (usually tells you what's wrong)
+2. Try: npm install (dependencies might be broken)
+3. Check TypeScript errors: npm run lint
+4. Look for missing imports or syntax errors
+5. Check tsconfig.json for path mappings
+
+PROBLEM: Page loads but styling looks wrong
+SOLUTION:
+1. Check browser DevTools → Elements tab
+2. Look at applied Tailwind classes
+3. Check if CSS is being loaded (Network tab → CSS file)
+4. Hard refresh browser: Ctrl+Shift+R (Windows) or Cmd+Shift+R (Mac)
+5. Clear .next folder and rebuild: npm run build
+
+PROBLEM: Animation is choppy or slow
+SOLUTION:
+1. Check if animation is in lazy component (defer loading)
+2. Use Chrome DevTools → Performance tab
+3. Check memory usage: top command
+4. Reduce animation complexity
+5. Use will-change CSS for performance: will-change: transform
+
+PROBLEM: Images not loading
+SOLUTION:
+1. Check image path in public/ folder
+2. Verify Image component is used (Next.js optimization)
+3. Check alt text is provided
+4. Ensure width/height are set for Image component
+5. Check network requests for 404 errors
+
+PROBLEM: Form submission not working
+SOLUTION:
+1. Check browser console for errors (F12)
+2. Check Network tab → see if POST request is sent
+3. Verify form validation schema (Zod)
+4. Check server endpoint exists
+5. Look at server logs for errors
+
+PROBLEM: Socket.IO connection not working
+SOLUTION:
+1. Check browser console for WebSocket errors
+2. Verify /api/socketio path is correct
+3. Check server logs: pm2 logs turab-root
+4. Ensure server.ts is running
+5. Check firewall allows WebSocket (port 3000)
+
+PROBLEM: Service worker not registering
+SOLUTION:
+1. Check if /public/sw.js exists
+2. Verify browser console in DevTools
+3. Check Application tab → Service Workers
+4. Clear all storage and reload (DevTools → Application → Clear Storage)
+5. Check if HTTPS is being used (required for production)
+
+PROBLEM: Database operations fail
+SOLUTION:
+1. Check DATABASE_URL in .env.local
+2. Verify Prisma client is generated: npx prisma generate
+3. Check schema in prisma/schema.prisma
+4. Try: npx prisma db push
+5. View database: npx prisma studio
+
+DEBUGGING TOOLS:
+- Browser DevTools (F12): Inspect elements, check console, network
+- VS Code: Set breakpoints in .tsx files
+- PM2 logs: pm2 logs turab-root
+- Network tab: Monitor API calls and WebSocket
+- Performance tab: Check rendering performance
+- Lighthouse: Check accessibility and performance scores
+
+
+================================================================================
+SECTION 9: HOW TO EXTEND THE PROJECT
+================================================================================
+
+ADDING A NEW PAGE:
+
+1. Create folder structure:
+   src/app/(site)/my-page/page.tsx
+
+2. Write the component:
+   export default function MyPage() {
+     return <div>My page content</div>
+   }
+
+3. Add to navigation (src/components/navigation.tsx):
+   const navigation = [
+     ...existing items...
+     { name: "My Page", href: "/my-page" }
+   ]
+
+4. Test at http://localhost:3000/my-page
+
+
+ADDING A DATABASE TABLE:
+
+1. Edit prisma/schema.prisma:
+   model MyTable {
+     id    String  @id @default(cuid())
+     name  String
+   }
+
+2. Sync with database:
+   npx prisma db push
+
+3. Use in your code:
+   import { db } from '@/lib/db'
+   
+   const item = await db.myTable.create({
+     data: { name: "test" }
+   })
+
+
+ADDING AN API ENDPOINT:
+
+1. Create folder structure:
+   src/app/api/my-endpoint/route.ts
+
+2. Write the handler:
+   import { NextResponse } from 'next/server'
+   
+   export async function GET() {
+     return NextResponse.json({ message: "Hello" })
+   }
+   
+   export async function POST(request) {
+     const data = await request.json()
+     return NextResponse.json({ success: true })
+   }
+
+3. Test at http://localhost:3000/api/my-endpoint
+
+
+ADDING A FORM:
+
+1. Create component with React Hook Form:
+   'use client'
+   
+   import { useForm } from 'react-hook-form'
+   import { zodResolver } from '@hookform/resolvers/zod'
+   import { z } from 'zod'
+   import { Button } from '@/components/ui/button'
+   import { Input } from '@/components/ui/input'
+   
+   const schema = z.object({
+     name: z.string().min(1),
+     email: z.string().email(),
+   })
+   
+   export function MyForm() {
+     const { register, handleSubmit, formState: { errors } } = 
+       useForm({ resolver: zodResolver(schema) })
+     
+     const onSubmit = async (data) => {
+       const res = await fetch('/api/submit', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(data)
+       })
+       // Handle response
+     }
+     
+     return (
+       <form onSubmit={handleSubmit(onSubmit)}>
+         <Input {...register('name')} />
+         {errors.name && <span>{errors.name.message}</span>}
+         
+         <Input {...register('email')} type="email" />
+         {errors.email && <span>{errors.email.message}</span>}
+         
+         <Button type="submit">Submit</Button>
+       </form>
+     )
+   }
+
+2. Add to your page
+
+
+ADDING AN ANIMATION:
+
+1. For Framer Motion:
+   import { motion } from 'framer-motion'
+   
+   export function AnimatedElement() {
+     return (
+       <motion.div
+         initial={{ opacity: 0, y: 20 }}
+         animate={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.5 }}
+       >
+         Animated content
+       </motion.div>
+     )
+   }
+
+2. For GSAP:
+   import { useEffect, useRef } from 'react'
+   import gsap from 'gsap'
+   
+   export function GSAPElement() {
+     const ref = useRef()
+     
+     useEffect(() => {
+       gsap.to(ref.current, {
+         x: 100,
+         duration: 1,
+         repeat: -1,
+         yoyo: true
+       })
+     }, [])
+     
+     return <div ref={ref}>Animated</div>
+   }
+
+
+USING SHADCN/UI COMPONENTS:
+
+1. Check which components exist:
+   ls src/components/ui/
+
+2. Import and use:
+   import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
+   
+   <Dialog>
+     <DialogTrigger>Open</DialogTrigger>
+     <DialogContent>Dialog content</DialogContent>
+   </Dialog>
+
+3. Add missing components:
+   npx shadcn-ui@latest add [component-name]
+
+
+ADDING REAL-TIME FEATURES:
+
+1. Client-side connection:
+   'use client'
+   
+   import { useEffect, useState } from 'react'
+   import io from 'socket.io-client'
+   
+   export function RealtimeComponent() {
+     useEffect(() => {
+       const socket = io()
+       
+       socket.on('connect', () => {
+         console.log('Connected')
+       })
+       
+       socket.emit('message', { text: 'Hello' })
+       
+       socket.on('message', (data) => {
+         console.log('Received:', data)
+       })
+       
+       return () => socket.disconnect()
+     }, [])
+     
+     return <div>Real-time content</div>
+   }
+
+2. Server-side handling in src/lib/socket.ts
+
+
+================================================================================
+SECTION 10: IMPORTANT TECHNICAL DETAILS
+================================================================================
+
+WHY TYPESCRIPTIGNORE IS SET:
+
+next.config.ts contains:
+  typescript: { ignoreBuildErrors: true }
+
+This allows:
+- TypeScript errors don't block production builds
+- Useful during development when types might not be perfect
+- Can be removed once TypeScript is strict throughout
+
+Impact:
+- Build succeeds even with TS errors
+- Errors still show in IDE and console
+- Not recommended for production
+- Should be removed for strict type safety
+
+
+WHY REACTSTRICTMODE IS DISABLED:
+
+next.config.ts contains:
+  reactStrictMode: false
+
+Normally React Strict Mode:
+- Double-invokes components in development
+- Helps find bugs in useEffect cleanup
+- But causes double rendering issues here
+
+Why disabled:
+- Custom server setup might conflict
+- Development was cleaner without it
+- Can be enabled once issues are resolved
+
+
+WEBPACK CONFIGURATION:
+
+Disables hot module replacement to use nodemon instead:
+- Nodemon watches server.ts
+- Triggers full restart on changes
+- Cleaner than HMR in this setup
+- Good for custom server development
+
+
+SHADCN/UI COMPONENTS:
+
+- Built on Radix UI (accessible primitives)
+- Styled with Tailwind CSS
+- Customizable via Tailwind config
+- No external component library lock-in
+- Components are in your codebase (you can modify them)
+
+Location: src/components/ui/
+
+
+CUSTOM COLOR PALETTE:
+
+Tailwind config extends with:
+- 'cream': '#fffbdaff'
+- 'pink': '#fec9eff'
+- 'orange': '#fbb70ef'
+- 'coral': '#ed9455'
+
+Plus standard color scales for primary, secondary, accent, etc.
+
+
+LAZY LOADING STRATEGY:
+
+Heavy components are lazy-loaded:
+- LaserFlowLazy: 3D graphics (OGL)
+- DarkVeilLazy: Canvas effects
+- LampLazy: Lighting effects
+- MeteorsLazy: Particle effects
+- OrbLazy: Orb animation
+
+Benefits:
+- Initial page load is faster
+- Components load on demand
+- Users see content before animations load
+- Better perceived performance
+
+
+SOCKET.IO CONFIGURATION:
+
+Path: /api/socketio
+CORS enabled for all origins (can be restricted)
+Echo server setup: Returns messages sent to client
+Broadcast possible for multi-client features
+
+
+PRISMA IN DEVELOPMENT VS PRODUCTION:
+
+Development:
+- Uses SQLite file-based database
+- DATABASE_URL="file:./prisma/dev.db"
+- Easy for local development
+- No external database needed
+
+Production:
+- Use PostgreSQL for reliability
+- DATABASE_URL="postgresql://user:pass@host/db"
+- Better performance and scalability
+- Can handle more concurrent users
+
+
+================================================================================
+SECTION 11: DEPLOYMENT CONTEXT
+================================================================================
+
+When deploying to VPS:
+
+1. CRITICAL: npm run build MUST be done
+   - Creates .next folder with all compiled code
+   - Without this, nothing works
+
+2. Service worker MUST be served at /sw.js
+   - Nginx needs to proxy /sw.js correctly
+   - Browser must be able to fetch it
+
+3. Environment variables MUST be set
+   - Create .env.local on VPS
+   - DATABASE_URL must point to correct database
+   - NODE_ENV must be "production"
+
+4. PM2 manages the process
+   - pm2 start npm --name "turab-root" -- start
+   - Keeps app running even if it crashes
+   - Auto-restarts on server reboot
+
+5. Nginx acts as reverse proxy
+   - Listens on ports 80 and 443 (HTTP/HTTPS)
+   - Forwards traffic to Node.js on port 3000
+   - Serves static files efficiently
+   - Handles SSL certificates
+
+For complete deployment guide, see DEPLOYMENT_GUIDE.txt
+
+
+================================================================================
+SECTION 12: QUICK REFERENCE COMMANDS
+================================================================================
+
+DEVELOPMENT:
+npm install              # Install dependencies
+npm run dev              # Start development server
+npm run lint             # Check code quality
+npm run build            # Build for production
+npm start                # Start production server
+
+DATABASE:
+npx prisma studio       # Open database UI
+npx prisma db push      # Apply schema changes
+npx prisma generate     # Generate Prisma client
+npx prisma migrate dev  # Create migration
+npx prisma migrate reset # Clear database
+
+PM2:
+pm2 start npm --name "app" -- start     # Start app
+pm2 stop app                             # Stop app
+pm2 restart app                          # Restart app
+pm2 status                               # Check status
+pm2 logs app                             # View logs
+pm2 save                                 # Save config
+
+NGINX:
+sudo systemctl start nginx               # Start
+sudo systemctl stop nginx                # Stop
+sudo systemctl restart nginx             # Restart
+sudo nginx -t                            # Test config
+sudo systemctl status nginx              # Check status
+
+SSL:
+sudo certbot certonly --standalone -d domain.com  # Get cert
+sudo certbot renew --dry-run                      # Test renewal
+sudo certbot certificates                         # List certs
+
+
+================================================================================
+SECTION 13: PASSING THIS TO ANOTHER AI
+================================================================================
+
+When sharing this with another AI for help:
+
+1. Include this file: ai-instructions.txt
+
+2. Also share any error message or description of problem
+
+3. If showing code, include:
+   - File path
+   - The problematic code section
+   - Error message (if any)
+   - What you expected to happen
+
+4. Include context like:
+   - "What technology should I use?"
+   - "How do I add a new page?"
+   - "My form isn't submitting"
+   - "Performance is slow"
+
+5. The AI will be able to:
+   - Understand project structure
+   - Know all technologies used
+   - Follow established patterns
+   - Provide accurate solutions
+   - Avoid breaking existing code
+
+6. For specific file issues, also share:
+   - The file content
+   - The line numbers with issues
+   - Expected vs actual behavior
+
+7. For deployment issues, reference:
+   - DEPLOYMENT_GUIDE.txt
+   - DEPLOYMENT_CHECKLIST.txt
+
+With this comprehensive guide, any AI should be able to:
+✓ Understand your entire project
+✓ Follow your coding patterns
+✓ Know which technologies are used
+✓ Provide accurate solutions
+✓ Explain why changes work
+✓ Avoid introducing bugs
+✓ Suggest improvements
+
+
+================================================================================
+END OF AI INSTRUCTIONS
+================================================================================
+
+Last Updated: 2025
+Project: Turab Root Website
+Framework: Next.js 15
+Database: SQLite (development) / PostgreSQL (production)
+Deployment: VPS with Nginx and PM2
+
+For deployment, see: DEPLOYMENT_GUIDE.txt and DEPLOYMENT_CHECKLIST.txt
+For specific help, include error messages and file paths when asking AI for help.

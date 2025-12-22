@@ -4,7 +4,7 @@ import { useState, useMemo, memo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/components/ui/sheet";
 import { Menu, User, LogOut } from "lucide-react";
 import Image from "next/image";
 
@@ -20,46 +20,29 @@ const Navigation = memo(function Navigation() {
   const pathname = usePathname();
   const [isLoggedIn, setIsLoggedIn] = useState(false); // This will be replaced with actual auth state
 
-  // Determine page-specific theme colors - memoized to prevent recalculation
-  const theme = useMemo(() => {
-    switch (pathname) {
-      case '/':
-        return {
-          primary: '#E62727',
-          secondary: '#C1E93A',
-          background: 'rgba(230, 39, 39, 0.1)',
-          border: 'rgba(230, 39, 39, 0.3)'
-        };
-      case '/projects':
-        return {
-          primary: '#90c67c',  // Lighter green for projects page
-          secondary: '#C1E93A',
-          background: 'rgba(193, 233, 58, 0.1)',
-          border: 'rgba(144, 198, 124, 0.4)'  // Much lighter border color
-        };
-      case '/about':
-        return {
-          primary: '#3674B5',  // Deep Blue from the palette
-          secondary: '#A1E3F9',  // Light Cyan from the palette
-          background: 'rgba(54, 116, 181, 0.1)',
-          border: 'rgba(54, 116, 181, 0.3)'
-        };
-      case '/contact':
-        return {
-          primary: '#B33791',  // Deep Pink from contact palette
-          secondary: '#FEC5F6',  // Very Light Pink from contact palette
-          background: 'rgba(179, 55, 145, 0.1)',
-          border: 'rgba(179, 55, 145, 0.3)'
-        };
-      default:
-        return {
-          primary: '#E62727',
-          secondary: '#C1E93A',
-          background: 'rgba(230, 39, 39, 0.1)',
-          border: 'rgba(230, 39, 39, 0.3)'
-        };
-    }
-  }, [pathname]);
+  // Map of page-specific colors: normal and active (bright) states
+  const pageColors = useMemo(() => ({
+    '/': {
+      name: 'Home',
+      borderNormal: '#FFD700',    // Rich gold/yellow
+      borderActive: '#FFED4E',    // Bright yellow
+    },
+    '/projects': {
+      name: 'Projects',
+      borderNormal: '#1DB954',    // Rich green
+      borderActive: '#1ed760',    // Bright green
+    },
+    '/about': {
+      name: 'About Us',
+      borderNormal: '#0066FF',    // Rich blue
+      borderActive: '#4D94FF',    // Bright blue
+    },
+    '/contact': {
+      name: 'Contact Us',
+      borderNormal: '#E74C3C',    // Rich red/pink
+      borderActive: '#FF6B6B',    // Bright red/pink
+    },
+  }), []);
 
   return (
     <nav className="sticky top-0 z-50 w-full border-b border-white/20 backdrop-blur-md bg-black/10">
@@ -88,25 +71,29 @@ const Navigation = memo(function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
-            {navigation.map((item) => (
-              <Button
-                key={item.name}
-                variant="ghost"
-                asChild
-                className={`text-sm font-medium transition-all duration-300 hover:scale-105 rounded-full px-4 py-5 border-2 ${
-                  pathname === item.href
-                    ? "bg-white text-black border-4"
-                    : "bg-white/90 text-black hover:bg-white"
-                }`}
-                style={{
-                  borderColor: pathname === item.href && item.name === "Home" ? '#fbb70ef !important' : (pathname === item.href ? theme.primary : '#fbb70ef'),
-                }}
-              >
-                <Link href={item.href} prefetch={item.href !== '/admin/login'}>
-                  {item.name}
-                </Link>
-              </Button>
-            ))}
+            {navigation.map((item) => {
+              const isActive = pathname === item.href;
+              const colors = pageColors[item.href] || pageColors['/'];
+              const borderColor = isActive ? colors.borderActive : colors.borderNormal;
+
+              return (
+                <Button
+                  key={item.name}
+                  variant="ghost"
+                  asChild
+                  className={`text-sm font-medium transition-all duration-300 hover:scale-105 rounded-3xl px-6 py-5 bg-white/90 text-black hover:bg-white shadow-md hover:shadow-lg ${
+                    isActive ? "border-4" : "border-2"
+                  }`}
+                  style={{
+                    borderColor: borderColor,
+                  }}
+                >
+                  <Link href={item.href} prefetch={item.href !== '/admin/login'}>
+                    {item.name}
+                  </Link>
+                </Button>
+              );
+            })}
           </div>
 
           {/* Desktop Auth Button */}
@@ -128,22 +115,12 @@ const Navigation = memo(function Navigation() {
                 </Button>
               </div>
             ) : (
-              <div className="relative group">
-                <Button asChild className="rounded-full px-12 py-5 border-2 border-transparent hover:border-white/30 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden relative bg-gradient-to-r from-[#146C94] via-[#19A7CE] to-[#146C94] hover:from-[#0f4a61] hover:via-[#146C94] hover:to-[#0f4a61]">
-                  <Link href="/admin/login" prefetch={false} className="relative z-10 flex items-center">
-                    <User className="h-4 w-4 mr-2 text-white" />
-                    <span className="text-white font-medium">Admin</span>
-                  </Link>
-                </Button>
-                {/* Glass shine effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-full bg-gradient-to-b from-transparent via-white/40 to-transparent group-hover:w-full transition-all duration-700 ease-out skew-x-12"></div>
-                </div>
-                {/* Additional shine layer for more realistic glass effect */}
-                <div className="absolute inset-0 opacity-0 group-hover:opacity-60 transition-opacity duration-300">
-                  <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-white/20 to-transparent"></div>
-                </div>
-              </div>
+              <Button asChild className="rounded-3xl p-5 border-2 border-transparent hover:border-white/40 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden relative bg-gradient-to-r from-[#146C94] via-[#19A7CE] to-[#146C94] hover:from-[#19A7CE] hover:via-[#0f4a61] hover:to-[#19A7CE]">
+                <Link href="/admin/login" prefetch={false} className="relative z-10 flex items-center">
+                  <User className="h-4 w-4 mr-2 text-white" />
+                  <span className="text-white font-medium">Admin</span>
+                </Link>
+              </Button>
             )}
           </div>
 
@@ -155,27 +132,32 @@ const Navigation = memo(function Navigation() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white/95 backdrop-blur-lg border border-white/20">
+              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col space-y-4 mt-8">
-                {navigation.map((item) => (
-                  <Button
-                    key={item.name}
-                    variant="ghost"
-                    asChild
-                    className={`text-sm font-medium transition-all duration-300 justify-start rounded-full ${
-                      pathname === item.href
-                        ? "bg-white text-black border-2"
-                        : "bg-white/90 text-black hover:bg-white"
-                    }`}
-                    style={{
-                      borderColor: pathname === item.href && item.name === "Home" ? '#fbb70ef' : (pathname === item.href ? theme.primary : '#fbb70ef'),
-                    }}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    <Link href={item.href} prefetch={item.href !== '/admin/login'}>
-                      {item.name}
-                    </Link>
-                  </Button>
-                ))}
+                {navigation.map((item) => {
+                  const isActive = pathname === item.href;
+                  const colors = pageColors[item.href] || pageColors['/'];
+                  const borderColor = isActive ? colors.borderActive : colors.borderNormal;
+
+                  return (
+                    <Button
+                      key={item.name}
+                      variant="ghost"
+                      asChild
+                      className={`text-sm font-medium transition-all duration-300 justify-start rounded-3xl px-6 py-5 bg-white/90 text-black hover:bg-white shadow-md hover:shadow-lg ${
+                        isActive ? "border-4" : "border-2"
+                      }`}
+                      style={{
+                        borderColor: borderColor,
+                      }}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <Link href={item.href} prefetch={item.href !== '/admin/login'}>
+                        {item.name}
+                      </Link>
+                    </Button>
+                  );
+                })}
                 <div className="pt-4 border-t border-white/20">
                   {isLoggedIn ? (
                     <div className="flex flex-col space-y-2">
@@ -193,22 +175,12 @@ const Navigation = memo(function Navigation() {
                       </Button>
                     </div>
                   ) : (
-                    <div className="relative group">
-                      <Button asChild className="w-full rounded-full px-12 py-5 border-2 border-transparent hover:border-white/30 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden relative bg-gradient-to-r from-[#146C94] via-[#19A7CE] to-[#146C94] hover:from-[#0f4a61] hover:via-[#146C94] hover:to-[#0f4a61]">
-                        <Link href="/admin/login" prefetch={false} onClick={() => setIsOpen(false)} className="relative z-10 flex items-center">
-                          <User className="h-4 w-4 mr-2 text-white" />
-                          <span className="text-white font-medium">Admin</span>
-                        </Link>
-                      </Button>
-                      {/* Glass shine effect */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0 h-full bg-gradient-to-b from-transparent via-white/40 to-transparent group-hover:w-full transition-all duration-700 ease-out skew-x-12"></div>
-                      </div>
-                      {/* Additional shine layer for more realistic glass effect */}
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-60 transition-opacity duration-300">
-                        <div className="absolute top-0 left-0 w-full h-1/3 bg-gradient-to-b from-white/20 to-transparent"></div>
-                      </div>
-                    </div>
+                    <Button asChild className="w-full rounded-3xl p-5 border-2 border-transparent hover:border-white/40 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden relative bg-gradient-to-r from-[#146C94] via-[#19A7CE] to-[#146C94] hover:from-[#19A7CE] hover:via-[#0f4a61] hover:to-[#19A7CE]">
+                      <Link href="/admin/login" prefetch={false} onClick={() => setIsOpen(false)} className="relative z-10 flex items-center">
+                        <User className="h-4 w-4 mr-2 text-white" />
+                        <span className="text-white font-medium">Admin</span>
+                      </Link>
+                    </Button>
                   )}
                 </div>
               </div>

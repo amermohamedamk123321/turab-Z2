@@ -12,6 +12,8 @@ import { Play, ExternalLink, Calendar, Code, Video, ThumbsUp, ThumbsDown, Messag
 import Image from "next/image";
 import Link from "next/link";
 import DarkVeilLazy from "@/components/DarkVeilLazy";
+import DeferredComponent from "@/components/DeferredComponent";
+import { SkeletonLoader } from "@/components/SkeletonLoader";
 import { initialProjects, type Project, type Comment } from "@/data/projects";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 
@@ -196,14 +198,16 @@ export default function ProjectsPage() {
       {/* Hero Section with DarkVeil */}
       <section className="relative h-screen">
         <div style={{ width: '100%', height: '100%', position: 'relative' }}>
-          <DarkVeilLazy 
-            hueShift={60}
-            noiseIntensity={0}
-            scanlineIntensity={0}
-            speed={1}
-            scanlineFrequency={5}
-            warpAmount={5}
-          />
+          <DeferredComponent fallback={<SkeletonLoader className="w-full h-full bg-slate-900" />}>
+            <DarkVeilLazy
+              hueShift={60}
+              noiseIntensity={0}
+              scanlineIntensity={0}
+              speed={1}
+              scanlineFrequency={5}
+              warpAmount={5}
+            />
+          </DeferredComponent>
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-center z-10">

@@ -31,7 +31,9 @@ import {
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { BackgroundGradient } from "@/components/BackgroundGradient";
-import Orb from "@/components/Orb";
+import OrbLazy from "@/components/OrbLazy";
+import DeferredComponent from "@/components/DeferredComponent";
+import { SkeletonLoader } from "@/components/SkeletonLoader";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -90,22 +92,19 @@ export default function ContactPage() {
     {
       icon: Mail,
       title: "Email Us",
-      details: ["hello@softwareco.com", "support@softwareco.com"],
-      description: "We'll respond within 24 hours",
+      details: ["turabacademy96@gmail.com"],
       gradient: "from-[#B33791] to-[#C562AF]"
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"],
-      description: "Mon-Fri 9AM-6PM EST",
+      details: ["+93 767 101 001", "+93 792 502 101"],
       gradient: "from-[#C562AF] to-[#DB8DD0]"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["123 Tech Street", "Silicon Valley, CA 94025"],
-      description: "By appointment only",
+      details: ["Kabul , Afghanistan", "Dasht-e-Barchi , Hussainzada Market,\nfourth floor, office number 208"],
       gradient: "from-[#DB8DD0] to-[#FEC5F6]"
     }
   ];
@@ -121,23 +120,23 @@ export default function ContactPage() {
 
   const faqData = [
     {
-      question: "How long does a typical project take?",
-      answer: "Project timelines vary depending on complexity and scope. A simple website might take 2-4 weeks, while a complex web application could take 2-6 months.",
+      question: "Who are these services for and what are the benefits ?",
+      answer: "Turab Root serves shops, clinics, restaurants and multi-branch companies with powerful and advanced systems to bring control, clarity and management .",
       icon: Clock
     },
     {
       question: "What is your pricing structure?",
-      answer: "We offer flexible pricing models including fixed-price projects, hourly rates, and retainer agreements. Contact us for a customized quote based on your needs.",
+      answer: "Cost depends on users, complexity , data migrations and chosen SLA . The more advanced the system is the more they get premium tags. ",
       icon: Star
     },
     {
-      question: "Do you provide ongoing support?",
+      question: "Do you provide ongoing support and updates ?",
       answer: "Yes, we offer comprehensive support and maintenance packages to ensure your software continues to perform optimally after launch.",
       icon: Zap
     },
     {
-      question: "Can you work with existing systems?",
-      answer: "Absolutely! We have experience integrating with and enhancing existing systems, databases, and third-party APIs.",
+      question: "Are your systems  Offline and/or  Online ?",
+      answer: "The systems are either offline or online. They are based on you needs and requirements . We also make websites for your businesses too. ",
       icon: Sparkles
     }
   ];
@@ -153,12 +152,14 @@ export default function ContactPage() {
             <div className="text-center max-w-4xl mx-auto h-full flex flex-col justify-center">
               {/* Orb Component */}
               <div className="w-full h-[600px] relative mb-8">
-                <Orb
-                  hoverIntensity={0.5}
-                  rotateOnHover={true}
-                  hue={280}
-                  forceHoverState={false}
-                />
+                <DeferredComponent fallback={<SkeletonLoader className="w-full h-full rounded-full" />}>
+                  <OrbLazy
+                    hoverIntensity={0.5}
+                    rotateOnHover={true}
+                    hue={280}
+                    forceHoverState={false}
+                  />
+                </DeferredComponent>
               </div>
               
               {/* Title */}
@@ -621,9 +622,6 @@ export default function ContactPage() {
                                     </motion.p>
                                   ))}
                                 </div>
-                                <p className="text-xs text-gray-500/70 mt-2">
-                                  {info.description}
-                                </p>
                               </div>
                             </div>
                           </CardContent>
@@ -649,9 +647,8 @@ export default function ContactPage() {
                     <CardContent className="p-5">
                       <div className="space-y-3">
                         {[
-                          { days: "Monday - Friday", hours: "9:00 AM - 6:00 PM", color: "text-[#FEC5F6]/80" },
-                          { days: "Saturday", hours: "10:00 AM - 4:00 PM", color: "text-[#DB8DD0]/80" },
-                          { days: "Sunday", hours: "Closed", color: "text-gray-400/60" }
+                          { days: "Saturday - Friday", hours: "9:00 AM - 6:00 PM", color: "text-[#FEC5F6]/80" },
+                          { days: "Friday", hours: "Closed", color: "text-gray-400/60" }
                         ].map((item, index) => (
                           <motion.div 
                             key={index}

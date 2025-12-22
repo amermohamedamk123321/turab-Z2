@@ -5,8 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Code, Smartphone, Monitor, Headphones, Shield, MessageCircle, Facebook, Mail } from "lucide-react";
 import Link from "next/link";
-import LaserFlow from "@/components/LaserFlow";
-import { Meteors } from "@/components/Meteors";
+import LaserFlowLazy from "@/components/LaserFlowLazy";
+import MeteorsLazy from "@/components/MeteorsLazy";
 
 export default function Home() {
   const services = [
@@ -63,12 +63,12 @@ export default function Home() {
         <div style={{ width: '100%', height: '100vh', position: 'relative' }}>
         {/* LaserFlow background */}
         <div className="absolute inset-0 z-0">
-          <LaserFlow
-            style={{ 
-              position: 'absolute', 
-              top: 0, 
-              left: 0, 
-              width: '100%', 
+          <LaserFlowLazy
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
               height: '100%',
               opacity: 1,
               visibility: 'visible',

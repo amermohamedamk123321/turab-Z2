@@ -29,7 +29,7 @@ export default function AdminLoginPage() {
       await new Promise(resolve => setTimeout(resolve, 1500));
       
       // Validate against specific admin credentials
-      if (formData.username === "TurabAcademy99" && formData.password === "shahroot$369") {
+      if (formData.username === "TurabAcademy99" && formData.password === "TurabAcademy99") {
         // Simulate successful login
         localStorage.setItem("isAdminLoggedIn", "true");
         localStorage.setItem("adminUser", JSON.stringify({
@@ -70,10 +70,10 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-md relative z-10">
         {/* Back to home button */}
         <div className="mb-6">
-          <Button 
-            variant="ghost" 
+          <Button
+            variant="ghost"
             onClick={() => router.push("/")}
-            className="group text-[#146C94]/70 hover:text-[#19A7CE] hover:bg-white/30 hover:shadow-sm hover:scale-105 backdrop-blur-sm border border-[#146C94]/20 rounded-full px-6 py-3 transition-all duration-300 ease-in-out transform hover:border-[#19A7CE]/20"
+            className="group text-[#146C94]/80 hover:text-white hover:bg-gradient-to-r hover:from-[#146C94]/60 hover:to-[#19A7CE]/60 hover:shadow-lg hover:scale-105 backdrop-blur-sm border border-[#146C94]/30 rounded-3xl px-6 py-3 transition-all duration-300 ease-in-out transform hover:border-[#19A7CE]/40"
           >
             <Home className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
             <span className="font-medium">Back to Home</span>
@@ -154,20 +154,6 @@ export default function AdminLoginPage() {
                 )}
               </Button>
             </form>
-            
-            <div className="mt-6 text-center">
-              <div className="bg-[#F6F1F1] backdrop-blur-sm rounded-lg p-3 border border-[#AFD3E2]/30">
-                <p className="text-sm text-[#146C94]/70">
-                  <span className="font-medium text-[#146C94]/90">Demo Credentials:</span>
-                </p>
-                <p className="text-xs text-[#146C94]/60 mt-1">
-                  Username: TurabAcademy99
-                </p>
-                <p className="text-xs text-[#146C94]/60">
-                  Password: shahroot$369
-                </p>
-              </div>
-            </div>
           </CardContent>
         </Card>
       </div>
