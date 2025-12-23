@@ -486,11 +486,11 @@ export default function AdminDashboard() {
           {/* Logo and Header */}
           <div className="mb-12">
             <div className="flex items-center space-x-4 mb-6">
-              <div className="w-12 h-12 bg-gradient-to-br from-[adminLogin-primary] to-[adminLogin-secondary] rounded-lg flex items-center justify-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-adminLogin-primary to-adminLogin-secondary rounded-lg flex items-center justify-center">
                 <Building className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-[adminLogin-primary] to-[adminLogin-secondary] bg-clip-text text-transparent">
+                <h1 className="text-2xl font-bold bg-gradient-to-r from-adminLogin-primary to-adminLogin-secondary bg-clip-text text-transparent">
                   Admin Panel
                 </h1>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Turab Root</p>
@@ -571,7 +571,7 @@ export default function AdminDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle className="text-xl text-gray-900 dark:text-white flex items-center">
-                    <MessageSquare className="w-6 h-6 mr-3 text-[adminLogin-primary]" />
+                    <MessageSquare className="w-6 h-6 mr-3 text-adminLogin-primary" />
                     Contact Messages
                   </CardTitle>
                   <CardDescription className="text-gray-600 dark:text-gray-400 mt-1">
@@ -583,12 +583,12 @@ export default function AdminDashboard() {
             <CardContent>
               <div className="space-y-4">
                 {contactMessages.map((message) => (
-                  <Card key={message.id} className={`${!message.read ? 'border-[adminLogin-primary]/20 bg-[adminLogin-primary]/5' : ''} border-gray-200/50 dark:border-gray-700/50 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all duration-200`}>
+                  <Card key={message.id} className={`${!message.read ? 'border-adminLogin-primary/20 bg-adminLogin-primary/5' : ''} border-gray-200/50 dark:border-gray-700/50 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all duration-200`}>
                     <CardContent className="p-6">
                       <div className="flex items-start justify-between">
                         <div className="flex-1">
                           <div className="flex items-center space-x-3 mb-3">
-                            <div className="w-10 h-10 bg-gradient-to-br from-[adminLogin-primary] to-[adminLogin-secondary] rounded-full flex items-center justify-center">
+                            <div className="w-10 h-10 bg-gradient-to-br from-adminLogin-primary to-adminLogin-secondary rounded-full flex items-center justify-center">
                               <span className="text-white font-semibold text-sm">
                                 {message.name.charAt(0)}
                               </span>
@@ -599,7 +599,7 @@ export default function AdminDashboard() {
                                 {message.email} • {new Date(message.createdAt).toLocaleDateString()}
                               </p>
                             </div>
-                            <Badge variant={message.read ? "secondary" : "default"} className={message.read ? "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300" : "bg-[adminLogin-primary] text-white"}>
+                            <Badge variant={message.read ? "secondary" : "default"} className={message.read ? "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300" : "bg-adminLogin-primary text-white"}>
                               {message.read ? "Read" : "New"}
                             </Badge>
                           </div>
@@ -643,7 +643,7 @@ export default function AdminDashboard() {
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle className="text-xl text-gray-900 dark:text-white flex items-center">
-                    <FolderOpen className="w-6 h-6 mr-3 text-[adminLogin-primary]" />
+                    <FolderOpen className="w-6 h-6 mr-3 text-adminLogin-primary" />
                     Projects
                   </CardTitle>
                   <CardDescription className="text-gray-600 dark:text-gray-400 mt-1">
@@ -652,7 +652,7 @@ export default function AdminDashboard() {
                 </div>
                 <Dialog open={isUploadModalOpen} onOpenChange={setIsUploadModalOpen}>
                   <DialogTrigger asChild>
-                    <Button className="bg-[adminLogin-primary] hover:bg-[adminLogin-secondary] text-white px-6 py-3 transition-colors duration-300">
+                    <Button className="bg-adminLogin-primary hover:bg-adminLogin-secondary text-white px-6 py-3 transition-colors duration-300">
                       <Plus className="w-5 h-5 mr-2" />
                       Add Project
                     </Button>
@@ -672,7 +672,7 @@ export default function AdminDashboard() {
                               id="title"
                               value={uploadForm.title}
                               onChange={(e) => handleUploadFormChange('title', e.target.value)}
-                              className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-[adminLogin-primary]/50 focus:border-[adminLogin-primary]/50 transition-colors duration-300"
+                              className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
                               required
                             />
                           </div>
@@ -699,7 +699,7 @@ export default function AdminDashboard() {
                             id="description"
                             value={uploadForm.description}
                             onChange={(e) => handleUploadFormChange('description', e.target.value)}
-                            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-[adminLogin-primary]/50 focus:border-[adminLogin-primary]/50 transition-colors duration-300"
+                            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
                             rows={3}
                             required
                           />
@@ -711,7 +711,7 @@ export default function AdminDashboard() {
                             id="technologies"
                             value={uploadForm.technologies}
                             onChange={(e) => handleUploadFormChange('technologies', e.target.value)}
-                            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-[adminLogin-primary]/50 focus:border-[adminLogin-primary]/50 transition-colors duration-300"
+                            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
                             placeholder="React, Node.js, MongoDB"
                           />
                         </div>
@@ -723,7 +723,7 @@ export default function AdminDashboard() {
                             type="file"
                             accept="video/*"
                             onChange={handleVideoFileChange}
-                            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-[adminLogin-primary]/50 focus:border-[adminLogin-primary]/50 transition-colors duration-300"
+                            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
                           />
                           {uploadForm.videoFile && (
                             <p className="text-sm text-gray-600 dark:text-gray-400">
@@ -739,7 +739,7 @@ export default function AdminDashboard() {
                             type="url"
                             value={uploadForm.projectLink}
                             onChange={(e) => handleUploadFormChange('projectLink', e.target.value)}
-                            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-[adminLogin-primary]/50 focus:border-[adminLogin-primary]/50 transition-colors duration-300"
+                            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
                             placeholder="https://example.com"
                           />
                         </div>
@@ -751,7 +751,7 @@ export default function AdminDashboard() {
                               id="featured"
                               checked={uploadForm.featured}
                               onChange={(e) => handleUploadFormChange('featured', e.target.checked)}
-                              className="rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-[adminLogin-primary] focus:ring-[adminLogin-primary]/50 transition-colors duration-300"
+                              className="rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-adminLogin-primary focus:ring-adminLogin-primary/50 transition-colors duration-300"
                             />
                             <Label htmlFor="featured" className="text-gray-900 dark:text-white">Featured Project</Label>
                           </div>
@@ -761,7 +761,7 @@ export default function AdminDashboard() {
                               id="published"
                               checked={uploadForm.published}
                               onChange={(e) => handleUploadFormChange('published', e.target.checked)}
-                              className="rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-[adminLogin-primary] focus:ring-[adminLogin-primary]/50 transition-colors duration-300"
+                              className="rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-adminLogin-primary focus:ring-adminLogin-primary/50 transition-colors duration-300"
                             />
                             <Label htmlFor="published" className="text-gray-900 dark:text-white">Published</Label>
                           </div>
@@ -778,7 +778,7 @@ export default function AdminDashboard() {
                           </Button>
                           <Button 
                             type="submit" 
-                            className="bg-[adminLogin-primary] hover:bg-[adminLogin-secondary] text-white transition-colors duration-300"
+                            className="bg-adminLogin-primary hover:bg-adminLogin-secondary text-white transition-colors duration-300"
                             disabled={isUploading}
                           >
                             {isUploading ? "Uploading..." : "Upload Project"}
@@ -798,17 +798,17 @@ export default function AdminDashboard() {
                           <div className="flex-1">
                             <div className="flex items-center space-x-2 mb-2">
                               <h4 className="font-semibold text-gray-900 dark:text-white">{project.title}</h4>
-                              <Badge variant="outline" className="capitalize border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-[adminLogin-primary]/50 hover:text-[adminLogin-primary]/80 transition-colors duration-300">
+                              <Badge variant="outline" className="capitalize border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-adminLogin-primary/50 hover:text-adminLogin-primary/80 transition-colors duration-300">
                                 {project.category}
                               </Badge>
                               {project.featured && (
-                                <Badge variant="default" className="bg-[adminLogin-primary] hover:bg-[adminLogin-secondary] text-white transition-colors duration-300">Featured</Badge>
+                                <Badge variant="default" className="bg-adminLogin-primary hover:bg-adminLogin-secondary text-white transition-colors duration-300">Featured</Badge>
                               )}
                               {project.published && (
                                 <Badge variant="secondary" className="bg-gray-200 hover:bg-gray-300 text-gray-700 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-gray-300 transition-colors duration-300">Published</Badge>
                               )}
                               {project.video && (
-                                <Badge variant="outline" className="border-[adminLogin-primary] hover:border-[adminLogin-secondary] text-[adminLogin-primary] hover:text-[adminLogin-secondary] dark:border-[adminLogin-primary]/50 dark:hover:border-[adminLogin-primary]/70 dark:text-[adminLogin-primary]/80 dark:hover:text-[adminLogin-primary]/100 transition-colors duration-300">
+                                <Badge variant="outline" className="border-adminLogin-primary hover:border-adminLogin-secondary text-adminLogin-primary hover:text-adminLogin-secondary dark:border-adminLogin-primary/50 dark:hover:border-adminLogin-primary/70 dark:text-adminLogin-primary/80 dark:hover:text-adminLogin-primary/100 transition-colors duration-300">
                                   <Video className="h-3 w-3 mr-1" />
                                   Video
                                 </Badge>
@@ -841,13 +841,13 @@ export default function AdminDashboard() {
                               variant={project.featured ? "default" : "outline"}
                               onClick={() => toggleProjectFeatured(project.id)}
                               className={project.featured 
-                                ? "bg-[adminLogin-primary] hover:bg-[adminLogin-secondary] text-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105" 
-                                : "border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-[adminLogin-primary]/10 hover:border-[adminLogin-primary]/50 hover:text-[adminLogin-primary] dark:hover:bg-[adminLogin-primary]/20 transition-all duration-300 transform hover:scale-105"
+                                ? "bg-adminLogin-primary hover:bg-adminLogin-secondary text-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105" 
+                                : "border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-adminLogin-primary/10 hover:border-adminLogin-primary/50 hover:text-adminLogin-primary dark:hover:bg-adminLogin-primary/20 transition-all duration-300 transform hover:scale-105"
                               }
                             >
                               <TrendingUp className="h-4 w-4" />
                             </Button>
-                            <Button size="sm" variant="outline" className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-[adminLogin-primary]/10 hover:border-[adminLogin-primary]/50 hover:text-[adminLogin-primary] dark:hover:bg-[adminLogin-primary]/20 transition-all duration-300 transform hover:scale-105" onClick={() => openEditModal(project)}>
+                            <Button size="sm" variant="outline" className="border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-adminLogin-primary/10 hover:border-adminLogin-primary/50 hover:text-adminLogin-primary dark:hover:bg-adminLogin-primary/20 transition-all duration-300 transform hover:scale-105" onClick={() => openEditModal(project)}>
                               <Edit className="h-4 w-4" />
                             </Button>
                             <Button 
@@ -887,7 +887,7 @@ export default function AdminDashboard() {
                       id="edit-title"
                       value={editForm.title}
                       onChange={(e) => handleEditFormChange('title', e.target.value)}
-                      className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-[adminLogin-primary]/50 focus:border-[adminLogin-primary]/50 transition-colors duration-300"
+                      className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
                       required
                     />
                   </div>
@@ -914,7 +914,7 @@ export default function AdminDashboard() {
                     id="edit-description"
                     value={editForm.description}
                     onChange={(e) => handleEditFormChange('description', e.target.value)}
-                    className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-[adminLogin-primary]/50 focus:border-[adminLogin-primary]/50 transition-colors duration-300"
+                    className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
                     rows={3}
                     required
                   />
@@ -926,7 +926,7 @@ export default function AdminDashboard() {
                     id="edit-technologies"
                     value={editForm.technologies}
                     onChange={(e) => handleEditFormChange('technologies', e.target.value)}
-                    className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-[adminLogin-primary]/50 focus:border-[adminLogin-primary]/50 transition-colors duration-300"
+                    className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
                     placeholder="React, Node.js, MongoDB"
                   />
                 </div>
@@ -938,7 +938,7 @@ export default function AdminDashboard() {
                     type="url"
                     value={editForm.projectLink}
                     onChange={(e) => handleEditFormChange('projectLink', e.target.value)}
-                    className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-[adminLogin-primary]/50 focus:border-[adminLogin-primary]/50 transition-colors duration-300"
+                    className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
                     placeholder="https://example.com"
                   />
                 </div>
@@ -950,7 +950,7 @@ export default function AdminDashboard() {
                       id="edit-featured"
                       checked={editForm.featured}
                       onChange={(e) => handleEditFormChange('featured', e.target.checked)}
-                      className="rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-[adminLogin-primary] focus:ring-[adminLogin-primary]/50 transition-colors duration-300"
+                      className="rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-adminLogin-primary focus:ring-adminLogin-primary/50 transition-colors duration-300"
                     />
                     <Label htmlFor="edit-featured" className="text-gray-900 dark:text-white">Featured Project</Label>
                   </div>
@@ -960,7 +960,7 @@ export default function AdminDashboard() {
                       id="edit-published"
                       checked={editForm.published}
                       onChange={(e) => handleEditFormChange('published', e.target.checked)}
-                      className="rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-[adminLogin-primary] focus:ring-[adminLogin-primary]/50 transition-colors duration-300"
+                      className="rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-adminLogin-primary focus:ring-adminLogin-primary/50 transition-colors duration-300"
                     />
                     <Label htmlFor="edit-published" className="text-gray-900 dark:text-white">Published</Label>
                   </div>
@@ -977,7 +977,7 @@ export default function AdminDashboard() {
                   </Button>
                   <Button 
                     type="submit" 
-                    className="bg-[adminLogin-primary] hover:bg-[adminLogin-secondary] text-white transition-colors duration-300"
+                    className="bg-adminLogin-primary hover:bg-adminLogin-secondary text-white transition-colors duration-300"
                     disabled={isEditing}
                   >
                     {isEditing ? "Saving..." : "Save Changes"}
@@ -993,7 +993,7 @@ export default function AdminDashboard() {
               <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
                 <CardHeader className="text-center py-8">
                   <CardTitle className="flex items-center justify-center text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                    <PieChart className="h-10 w-10 mr-4 text-[adminLogin-primary]" />
+                    <PieChart className="h-10 w-10 mr-4 text-adminLogin-primary" />
                     Project Analytics
                   </CardTitle>
                   <CardDescription className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -1018,7 +1018,7 @@ export default function AdminDashboard() {
                               </h4>
                               <div className="flex items-center space-x-2">
                                 <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Engagement:</span>
-                                <span className="text-lg font-bold text-[adminLogin-primary] dark:text-[adminLogin-primary]">
+                                <span className="text-lg font-bold text-adminLogin-primary dark:text-adminLogin-primary">
                                   {project.likes + project.dislikes > 0 
                                     ? `${Math.round((project.likes / (project.likes + project.dislikes)) * 100)}% positive` 
                                     : 'No engagement'}
@@ -1082,7 +1082,7 @@ export default function AdminDashboard() {
             <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
               <CardHeader>
                 <CardTitle className="flex items-center text-gray-900 dark:text-white">
-                  <Settings className="h-6 w-6 mr-3 text-[adminLogin-primary]" />
+                  <Settings className="h-6 w-6 mr-3 text-adminLogin-primary" />
                   Settings
                 </CardTitle>
                 <CardDescription className="text-gray-600 dark:text-gray-400">
@@ -1166,11 +1166,11 @@ function NavItem({ icon, label, active, onClick }: {
       onClick={onClick}
       className={`w-full flex items-center space-x-4 px-6 py-4 rounded-xl transition-all duration-200 text-left ${
         active 
-          ? 'bg-[adminLogin-primary]/20 border border-[adminLogin-primary]/30 text-gray-900 dark:text-white' 
+          ? 'bg-adminLogin-primary/20 border border-adminLogin-primary/30 text-gray-900 dark:text-white' 
           : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200/50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-white'
       }`}
     >
-      <div className={`${active ? 'text-[adminLogin-primary]' : 'text-gray-500 dark:text-gray-500'}`}>
+      <div className={`${active ? 'text-adminLogin-primary' : 'text-gray-500 dark:text-gray-500'}`}>
         {icon}
       </div>
       <span className={`font-medium ${active ? 'text-gray-900 dark:text-white' : 'text-gray-600 dark:text-gray-400'}`}>
