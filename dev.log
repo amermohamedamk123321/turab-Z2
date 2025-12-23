@@ -292,3 +292,14 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 76ms
  GET / 200 in 90ms
  GET / 200 in 91ms
+ GET / 200 in 85ms
+ GET / 200 in 86ms
+ GET / 200 in 85ms
+ GET /?reload=1766523766598 200 in 90ms
+ GET / 200 in 101ms
+ GET / 200 in 88ms
+ GET / 200 in 84ms
+ GET / 200 in 88ms
+ GET / 200 in 78ms
+ GET / 200 in 81ms
+ GET / 200 in 76ms
