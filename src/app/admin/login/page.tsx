@@ -59,13 +59,13 @@ export default function AdminLoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#F6F1F1] p-4 relative overflow-hidden">
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#F6F1F1] via-[#AFD3E2] to-[#19A7CE] opacity-30"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#F6F1F1] via-adminLogin-tertiary to-adminLogin-primary opacity-30"></div>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#F6F1F1]/50 to-[#F6F1F1]"></div>
-      
+
       {/* Decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#19A7CE]/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-[#146C94]/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#AFD3E2]/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-adminLogin-primary/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-adminLogin-secondary/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-adminLogin-tertiary/10 rounded-full blur-3xl"></div>
 
       <div className="w-full max-w-md relative z-10">
         {/* Back to home button */}
@@ -73,7 +73,7 @@ export default function AdminLoginPage() {
           <Button
             variant="ghost"
             onClick={() => router.push("/")}
-            className="group text-[#146C94]/80 hover:text-white hover:bg-gradient-to-r hover:from-[#146C94]/60 hover:to-[#19A7CE]/60 hover:shadow-lg hover:scale-105 backdrop-blur-sm border border-[#146C94]/30 rounded-3xl px-6 py-3 transition-all duration-300 ease-in-out transform hover:border-[#19A7CE]/40"
+            className="group text-adminLogin-secondary/80 hover:text-white hover:bg-gradient-to-r hover:from-adminLogin-secondary/60 hover:to-adminLogin-primary/60 hover:shadow-lg hover:scale-105 backdrop-blur-sm border border-adminLogin-secondary/30 rounded-3xl px-6 py-3 transition-all duration-300 ease-in-out transform hover:border-adminLogin-primary/40"
           >
             <Home className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
             <span className="font-medium">Back to Home</span>
@@ -81,9 +81,9 @@ export default function AdminLoginPage() {
         </div>
 
         {/* Login Card with light theme */}
-        <Card className="border-0 bg-white/90 backdrop-blur-xl shadow-2xl border border-[#AFD3E2]/30">
+        <Card className="border-0 bg-white/90 backdrop-blur-xl shadow-2xl border border-adminLogin-tertiary/30">
           <CardHeader className="space-y-1 text-center">
-            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-[#19A7CE] via-[#146C94] to-[#146C94] bg-clip-text text-transparent">
+            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-adminLogin-primary via-adminLogin-secondary to-adminLogin-secondary bg-clip-text text-transparent">
               Admin Login
             </CardTitle>
           </CardHeader>
@@ -97,7 +97,7 @@ export default function AdminLoginPage() {
               )}
               
               <div className="space-y-2">
-                <Label htmlFor="username" className="text-[#146C94] font-medium">Username</Label>
+                <Label htmlFor="username" className="text-adminLogin-secondary font-medium">Username</Label>
                 <Input
                   id="username"
                   name="username"
@@ -106,12 +106,12 @@ export default function AdminLoginPage() {
                   required
                   value={formData.username}
                   onChange={handleChange}
-                  className="bg-[#F6F1F1] border-[#AFD3E2] text-[#146C94] placeholder-[#146C94]/50 backdrop-blur-sm focus:ring-2 focus:ring-[#19A7CE]/50 focus:border-[#19A7CE]/50 hover:bg-white/90 hover:border-[#19A7CE]/30"
+                  className="bg-[#F6F1F1] border-adminLogin-tertiary text-adminLogin-secondary placeholder-adminLogin-secondary/50 backdrop-blur-sm focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 hover:bg-white/90 hover:border-adminLogin-primary/30"
                 />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-[#146C94] font-medium">Password</Label>
+                <Label htmlFor="password" className="text-adminLogin-secondary font-medium">Password</Label>
                 <div className="relative">
                   <Input
                     id="password"
@@ -121,13 +121,13 @@ export default function AdminLoginPage() {
                     required
                     value={formData.password}
                     onChange={handleChange}
-                    className="bg-[#F6F1F1] border-[#AFD3E2] text-[#146C94] placeholder-[#146C94]/50 backdrop-blur-sm pr-12 focus:ring-2 focus:ring-[#19A7CE]/50 focus:border-[#19A7CE]/50 hover:bg-white/90 hover:border-[#19A7CE]/30"
+                    className="bg-[#F6F1F1] border-adminLogin-tertiary text-adminLogin-secondary placeholder-adminLogin-secondary/50 backdrop-blur-sm pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 hover:bg-white/90 hover:border-adminLogin-primary/30"
                   />
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent text-[#146C94]/50 hover:text-[#146C94]"
+                    className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent text-adminLogin-secondary/50 hover:text-adminLogin-secondary"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
@@ -139,9 +139,9 @@ export default function AdminLoginPage() {
                 </div>
               </div>
               
-              <Button 
-                type="submit" 
-                className="w-full bg-gradient-to-r from-[#19A7CE] via-[#146C94] to-[#146C94] hover:from-[#146C94] hover:via-[#146C94] hover:to-[#19A7CE] text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
+              <Button
+                type="submit"
+                className="w-full bg-gradient-to-r from-adminLogin-primary via-adminLogin-secondary to-adminLogin-secondary hover:from-adminLogin-secondary hover:via-adminLogin-secondary hover:to-adminLogin-primary text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
                 disabled={isLoading}
               >
                 {isLoading ? (
