@@ -358,3 +358,5 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 83ms
  GET / 200 in 84ms
  GET / 200 in 83ms
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 84ms
+ GET / 200 in 79ms
