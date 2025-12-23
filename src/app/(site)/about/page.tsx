@@ -73,7 +73,7 @@ export default function AboutPage() {
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className="bg-gradient-to-br from-[#3674B5] to-[#A1E3F9] py-4 bg-clip-text text-center text-3xl font-thin tracking-widest text-transparent md:text-5xl lg:text-6xl"
+                className="bg-gradient-to-br from-aboutHero-primary to-aboutHero-secondary py-4 bg-clip-text text-center text-3xl font-thin tracking-widest text-transparent md:text-5xl lg:text-6xl"
                 style={{ fontFamily: '"Poppins", "Inter", "Quicksand", "Nunito", "Rubik", sans-serif' }}
               >
                 Leading Innovator Software Company in Afghanistan
@@ -90,7 +90,7 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 max-w-4xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center flex flex-col items-center justify-center">
-                  <div className="text-5xl md:text-6xl font-bold text-[#3674B5] mb-4">
+                  <div className="text-5xl md:text-6xl font-bold text-aboutHero-primary mb-4">
                     {stat.number}
                   </div>
                   <p className="text-lg text-gray-300 font-medium">{stat.label}</p>
@@ -107,15 +107,15 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center mb-4">
-                <Target className="h-8 w-8 text-[#578FCA] mr-3" />
+                <Target className="h-8 w-8 text-adminDash-secondary mr-3" />
                 <h2 className="text-3xl font-bold text-white">Our Mission</h2>
               </div>
               <p className="text-lg text-gray-300 mb-6">
                 To empower businesses with innovative software solutions that drive growth, enhance efficiency, and create meaningful digital experiences. We strive to bridge the gap between complex technology requirements and practical business needs.
               </p>
-              
+
               <div className="flex items-center mb-4">
-                <Lightbulb className="h-8 w-8 text-[#578FCA] mr-3" />
+                <Lightbulb className="h-8 w-8 text-adminDash-secondary mr-3" />
                 <h2 className="text-3xl font-bold text-white">Our Vision</h2>
               </div>
               <p className="text-lg text-gray-300">
@@ -124,7 +124,7 @@ export default function AboutPage() {
             </div>
             
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-[#3674B5]/20 to-[#A1E3F9]/20 rounded-full flex items-center justify-center border border-gray-700 p-4">
+              <div className="aspect-square bg-gradient-to-br from-aboutHero-primary/20 to-aboutHero-secondary/20 rounded-full flex items-center justify-center border border-gray-700 p-4">
                 <div className="text-center">
                   <img 
                     src="/company-logo.png" 
@@ -176,8 +176,8 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-20 relative overflow-hidden">
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#3674B5] via-[#578FCA] to-[#A1E3F9]"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-[#D1F8EF] via-[#A1E3F9] to-[#578FCA] opacity-50"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-aboutHero-primary via-adminDash-secondary to-aboutHero-secondary"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-cyan-100 via-aboutHero-secondary to-adminDash-secondary opacity-50"></div>
         
         <div className="container mx-auto px-4 relative">
           <div className="text-center bg-white/5 backdrop-blur-2xl rounded-3xl p-16 border border-white/10 shadow-2xl">
@@ -186,12 +186,12 @@ export default function AboutPage() {
                 Partner With Innovation
               </h2>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-[#3674B5] to-[#578FCA] hover:from-[#3674B5]/90 hover:to-[#578FCA]/90 text-white rounded-full font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:rotate-1" asChild>
+                <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-aboutHero-primary to-adminDash-secondary hover:from-aboutHero-primary/90 hover:to-adminDash-secondary/90 text-white rounded-full font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:rotate-1" asChild>
                   <Link href="/contact" prefetch={true} className="flex items-center justify-center">
                     Start Your Project
                   </Link>
                 </Button>
-                <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-[#3674B5] to-[#578FCA] hover:from-[#3674B5]/90 hover:to-[#578FCA]/90 text-white rounded-full font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:-rotate-1" asChild>
+                <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-aboutHero-primary to-adminDash-secondary hover:from-aboutHero-primary/90 hover:to-adminDash-secondary/90 text-white rounded-full font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:-rotate-1" asChild>
                   <Link href="/projects" prefetch={true} className="flex items-center justify-center">
                     View Our Work
                   </Link>
