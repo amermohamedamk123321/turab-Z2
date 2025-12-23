@@ -55,6 +55,34 @@ const config: Config = {
                                 '3': 'hsl(var(--chart-3))',
                                 '4': 'hsl(var(--chart-4))',
                                 '5': 'hsl(var(--chart-5))'
+                        },
+                        // Custom gradient colors for Tailwind content detection
+                        aboutHero: {
+                                primary: '#3674B5',
+                                secondary: '#A1E3F9',
+                        },
+                        contactCard: {
+                                card1Start: '#B33791',
+                                card1End: '#C562AF',
+                                card2Start: '#C562AF',
+                                card2End: '#DB8DD0',
+                                card3Start: '#DB8DD0',
+                                card3End: '#FEC5F6',
+                        },
+                        adminNav: {
+                                primary: '#146C94',
+                                secondary: '#19A7CE',
+                                accent: '#0f4a61',
+                        },
+                        adminLogin: {
+                                primary: '#19A7CE',
+                                secondary: '#146C94',
+                                tertiary: '#AFD3E2',
+                        },
+                        adminDash: {
+                                primary: '#3674B5',
+                                secondary: '#578FCA',
+                                tertiary: '#A1E3F9',
                         }
                 },
                 borderRadius: {
