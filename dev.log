@@ -304,3 +304,4 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 81ms
  GET / 200 in 76ms
  GET / 200 in 112ms
+ GET / 200 in 91ms
