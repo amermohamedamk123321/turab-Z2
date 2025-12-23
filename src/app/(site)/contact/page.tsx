@@ -93,19 +93,19 @@ export default function ContactPage() {
       icon: Mail,
       title: "Email Us",
       details: ["turabacademy96@gmail.com"],
-      gradient: "from-[#B33791] to-[#C562AF]"
+      gradient: "from-contactCard-card1Start to-contactCard-card1End"
     },
     {
       icon: Phone,
       title: "Call Us",
       details: ["+93 767 101 001", "+93 792 502 101"],
-      gradient: "from-[#C562AF] to-[#DB8DD0]"
+      gradient: "from-contactCard-card2Start to-contactCard-card2End"
     },
     {
       icon: MapPin,
       title: "Visit Us",
       details: ["Kabul , Afghanistan", "Dasht-e-Barchi , Hussainzada Market,\nfourth floor, office number 208"],
-      gradient: "from-[#DB8DD0] to-[#FEC5F6]"
+      gradient: "from-contactCard-card3Start to-contactCard-card3End"
     }
   ];
 
@@ -167,7 +167,7 @@ export default function ContactPage() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-thin mb-6 bg-gradient-to-r from-[#B33791] via-[#C562AF] to-[#FEC5F6] bg-clip-text text-transparent leading-tight tracking-normal"
+                className="text-5xl md:text-6xl lg:text-7xl font-thin mb-6 bg-gradient-to-r from-contactCard-card1Start via-contactCard-card1End to-contactCard-card3End bg-clip-text text-transparent leading-tight tracking-normal"
                 style={{ fontFamily: '"Poppins", "Inter", "Quicksand", "Nunito", "Rubik", sans-serif', marginTop: '-15px' }}
               >
                 Tell us about Your Project
@@ -206,7 +206,7 @@ export default function ContactPage() {
                       className="flex items-center"
                     >
                       <div className="relative">
-                        <MessageCircle className="h-7 w-7 text-[#FEC5F6]/80" />
+                        <MessageCircle className="h-7 w-7 text-contactCard-card3End/80" />
                         <motion.div 
                           className="absolute -top-1 -right-1 w-2 h-2 bg-[#FEC5F6]/60 rounded-full"
                           animate={{ scale: [1, 1.2, 1] }}
@@ -581,7 +581,7 @@ export default function ContactPage() {
                 transition={{ delay: 0.2 }}
               >
                 <h2 className="text-3xl font-bold mb-8 flex items-center text-white">
-                  <Building className="h-8 w-8 mr-4 text-[#FEC5F6]" />
+                  <Building className="h-8 w-8 mr-4 text-contactCard-card3End" />
                   Contact Information
                 </h2>
                 
