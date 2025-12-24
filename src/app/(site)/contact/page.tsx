@@ -163,11 +163,11 @@ export default function ContactPage() {
               </div>
               
               {/* Title */}
-              <motion.h1 
+              <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-thin mb-6 bg-gradient-to-r from-contactCard-card1Start via-contactCard-card1End to-contactCard-card3End bg-clip-text text-transparent leading-tight tracking-normal"
+                className="text-5xl md:text-6xl lg:text-7xl font-thin mb-6 text-white leading-tight tracking-normal"
                 style={{ fontFamily: '"Poppins", "Inter", "Quicksand", "Nunito", "Rubik", sans-serif', marginTop: '-15px' }}
               >
                 Tell us about Your Project
