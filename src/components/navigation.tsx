@@ -133,7 +133,7 @@ const Navigation = memo(function Navigation() {
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[350px] md:w-[400px] bg-white/80 backdrop-blur-xl border border-white/30 shadow-2xl">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              <div className="flex flex-col space-y-4 mt-8">
+              <div className="flex flex-col space-y-3 mt-8">
                 {navigation.map((item) => {
                   const isActive = pathname === item.href;
                   const colors = pageColors[item.href] || pageColors['/'];
@@ -144,7 +144,7 @@ const Navigation = memo(function Navigation() {
                       key={item.name}
                       variant="ghost"
                       asChild
-                      className={`text-sm font-medium transition-all duration-300 justify-start rounded-3xl px-6 py-5 bg-white/90 text-black hover:bg-white shadow-md hover:shadow-lg ${
+                      className={`text-sm md:text-base font-medium transition-all duration-300 justify-start rounded-2xl md:rounded-3xl px-4 md:px-6 py-4 md:py-5 bg-white/90 text-black hover:bg-white shadow-md hover:shadow-lg ${
                         isActive ? "border-4" : "border-2"
                       }`}
                       style={{
@@ -158,16 +158,16 @@ const Navigation = memo(function Navigation() {
                     </Button>
                   );
                 })}
-                <div className="pt-4 border-t border-white/20">
+                <div className="pt-3 md:pt-4 border-t border-white/30">
                   {isLoggedIn ? (
                     <div className="flex flex-col space-y-2">
-                      <Button variant="ghost" className="justify-start text-black hover:text-black hover:bg-white/20 bg-white/90 border border-white/30 rounded-full">
+                      <Button variant="ghost" className="justify-start text-sm md:text-base text-black hover:text-black hover:bg-white/20 bg-white/90 border border-white/30 rounded-2xl md:rounded-full px-4 md:px-6 py-3 md:py-2">
                         <User className="h-4 w-4 mr-2" />
                         Dashboard
                       </Button>
-                      <Button 
-                        variant="outline" 
-                        className="justify-start border-gray-300 text-black hover:bg-white/90 bg-white/90 rounded-full"
+                      <Button
+                        variant="outline"
+                        className="justify-start text-sm md:text-base border-gray-300 text-black hover:bg-white/90 bg-white/90 rounded-2xl md:rounded-full px-4 md:px-6 py-3 md:py-2"
                         onClick={() => setIsLoggedIn(false)}
                       >
                         <LogOut className="h-4 w-4 mr-2" />
@@ -175,10 +175,10 @@ const Navigation = memo(function Navigation() {
                       </Button>
                     </div>
                   ) : (
-                    <Button asChild className="w-full rounded-3xl px-6 py-5 border-2 border-transparent transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden relative bg-gradient-to-r from-[#7C3AED] via-[#06B6D4] to-[#EC4899] hover:from-[#06B6D4] hover:via-[#EC4899] hover:to-[#7C3AED]">
+                    <Button asChild className="w-full rounded-2xl md:rounded-3xl px-4 md:px-6 py-4 md:py-5 border-2 border-transparent transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl overflow-hidden relative bg-gradient-to-r from-[#7C3AED] via-[#06B6D4] to-[#EC4899] hover:from-[#06B6D4] hover:via-[#EC4899] hover:to-[#7C3AED]">
                       <Link href="/admin/login" prefetch={false} onClick={() => setIsOpen(false)} className="relative z-10 flex items-center">
                         <User className="h-4 w-4 mr-2 text-white" />
-                        <span className="text-white font-semibold">Admin</span>
+                        <span className="text-sm md:text-base text-white font-semibold">Admin</span>
                       </Link>
                     </Button>
                   )}
