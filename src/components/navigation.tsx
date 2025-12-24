@@ -70,7 +70,7 @@ const Navigation = memo(function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {navigation.map((item) => {
               const isActive = pathname === item.href;
               const colors = pageColors[item.href] || pageColors['/'];
@@ -81,7 +81,7 @@ const Navigation = memo(function Navigation() {
                   key={item.name}
                   variant="ghost"
                   asChild
-                  className={`text-sm font-medium transition-all duration-300 hover:scale-105 rounded-3xl px-6 py-5 bg-white/90 text-black hover:bg-white shadow-md hover:shadow-lg ${
+                  className={`text-xs md:text-sm lg:text-base font-medium transition-all duration-300 hover:scale-105 rounded-2xl md:rounded-3xl px-3 md:px-5 lg:px-6 py-4 md:py-5 bg-white/90 text-black hover:bg-white shadow-md hover:shadow-lg ${
                     isActive ? "border-4" : "border-2"
                   }`}
                   style={{
@@ -97,28 +97,28 @@ const Navigation = memo(function Navigation() {
           </div>
 
           {/* Desktop Auth Button */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
             {isLoggedIn ? (
-              <div className="flex items-center space-x-2">
-                <Button variant="ghost" size="sm" className="text-black hover:text-black hover:bg-white/20 bg-white/90 border border-white/30 rounded-full">
-                  <User className="h-4 w-4 mr-2" />
-                  Dashboard
+              <div className="flex items-center space-x-1 lg:space-x-2">
+                <Button variant="ghost" size="sm" className="text-xs lg:text-sm text-black hover:text-black hover:bg-white/20 bg-white/90 border border-white/30 rounded-2xl md:rounded-full px-2 md:px-4 lg:px-6">
+                  <User className="h-3 md:h-4 w-3 md:w-4 mr-1 md:mr-2" />
+                  <span className="hidden lg:inline">Dashboard</span>
                 </Button>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   size="sm"
                   onClick={() => setIsLoggedIn(false)}
-                  className="border-gray-300 text-white hover:bg-white/90 bg-white/90 rounded-full"
+                  className="text-xs lg:text-sm border-gray-300 text-black hover:bg-white/90 bg-white/90 rounded-2xl md:rounded-full px-2 md:px-4 lg:px-6"
                 >
-                  <LogOut className="h-4 w-4 mr-2" />
-                  Logout
+                  <LogOut className="h-3 md:h-4 w-3 md:w-4 mr-1 md:mr-2" />
+                  <span className="hidden lg:inline">Logout</span>
                 </Button>
               </div>
             ) : (
-              <Button asChild className="rounded-3xl px-6 py-5 border-2 border-transparent transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl overflow-hidden relative bg-gradient-to-r from-[#7C3AED] via-[#06B6D4] to-[#EC4899] hover:from-[#06B6D4] hover:via-[#EC4899] hover:to-[#7C3AED]">
+              <Button asChild className="rounded-2xl md:rounded-3xl px-3 md:px-5 lg:px-6 py-4 md:py-5 border-2 border-transparent transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl overflow-hidden relative bg-gradient-to-r from-[#7C3AED] via-[#06B6D4] to-[#EC4899] hover:from-[#06B6D4] hover:via-[#EC4899] hover:to-[#7C3AED]">
                 <Link href="/admin/login" prefetch={false} className="relative z-10 flex items-center">
-                  <User className="h-4 w-4 mr-2 text-white" />
-                  <span className="text-white font-semibold">Admin</span>
+                  <User className="h-3 md:h-4 w-3 md:w-4 mr-1 md:mr-2 text-white" />
+                  <span className="text-xs md:text-sm lg:text-base text-white font-semibold">Admin</span>
                 </Link>
               </Button>
             )}
