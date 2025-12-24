@@ -131,7 +131,7 @@ const Navigation = memo(function Navigation() {
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-white/95 backdrop-blur-lg border border-white/20">
+            <SheetContent side="right" className="w-[280px] sm:w-[350px] md:w-[400px] bg-white/80 backdrop-blur-xl border border-white/30 shadow-2xl">
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col space-y-4 mt-8">
                 {navigation.map((item) => {
