@@ -223,21 +223,21 @@ export default function ProjectsPage() {
 
       {/* Top Best Projects */}
       {featuredProjects.length > 0 && (
-        <section className="px-4 py-20">
+        <section className="px-4 py-16 md:py-20">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#f8fafc' }}>
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4" style={{ color: '#f8fafc' }}>
                 Top Best Projects
               </h2>
-              <div className="w-24 h-1 mx-auto" style={{ backgroundColor: '#328e6e' }}></div>
+              <div className="w-20 sm:w-24 h-1 mx-auto" style={{ backgroundColor: '#328e6e' }}></div>
             </div>
-            <div className="grid gap-12 md:gap-16">
+            <div className="grid gap-8 md:gap-12 lg:gap-16">
               {featuredProjects.map((project) => (
                 <div key={project.id} className="group">
-                  <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center">
+                  <div className="flex flex-col lg:flex-row gap-6 md:gap-8 lg:gap-12 items-center">
                     {/* Left side - Video/Image */}
-                    <div className="lg:w-1/2 relative">
-                      <div className="aspect-video rounded-2xl overflow-hidden bg-gray-800 relative">
+                    <div className="w-full lg:w-1/2 relative">
+                      <div className="aspect-video rounded-lg md:rounded-2xl overflow-hidden bg-gray-800 relative">
                         <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundColor: '#90c67c' }}>
                           <div className="text-center text-white">
                             <div className="text-6xl mb-4">🎬</div>
@@ -274,28 +274,28 @@ export default function ProjectsPage() {
                     </div>
 
                     {/* Right side - Details */}
-                    <div className="lg:w-1/2 space-y-6">
-                      <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-4" style={{ color: '#f8fafc' }}>
+                    <div className="w-full lg:w-1/2 space-y-4 md:space-y-6">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight mb-3 md:mb-4" style={{ color: '#f8fafc' }}>
                         {project.title}
                       </h3>
 
-                      <div className="flex flex-wrap gap-3">
-                        <Badge className="capitalize px-4 py-2 text-base" style={{ backgroundColor: '#328e6e', color: '#f8fafc', border: 'none' }}>
+                      <div className="flex flex-wrap gap-2 md:gap-3">
+                        <Badge className="capitalize px-3 md:px-4 py-1 md:py-2 text-sm md:text-base" style={{ backgroundColor: '#328e6e', color: '#f8fafc', border: 'none' }}>
                           {project.category}
                         </Badge>
                         {project.featured && (
-                          <Badge className="bg-yellow-500 text-black border-none px-4 py-2 text-base font-semibold">
+                          <Badge className="bg-yellow-500 text-black border-none px-3 md:px-4 py-1 md:py-2 text-sm md:text-base font-semibold">
                             Best
                           </Badge>
                         )}
                       </div>
 
-                      <p className="text-gray-300 leading-relaxed text-lg">
+                      <p className="text-gray-300 leading-relaxed text-sm md:text-lg">
                         {project.description}
                       </p>
 
                       {/* Like, Dislike, and Comment Buttons */}
-                      <div className="flex items-center gap-4 pt-2">
+                      <div className="flex flex-wrap items-center gap-2 md:gap-4 pt-2">
                         <Button
                           variant="outline"
                           size="sm"
