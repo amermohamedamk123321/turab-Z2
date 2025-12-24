@@ -57,15 +57,15 @@ export default function AdminLoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F6F1F1] p-4 relative overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#F6F1F1] via-adminLogin-tertiary to-adminLogin-primary opacity-30"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-[#F6F1F1]/50 to-[#F6F1F1]"></div>
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 p-4 relative overflow-hidden">
+      {/* Animated background pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-cyan-900/20 to-pink-900/20"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-gray-900/50"></div>
 
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-adminLogin-primary/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-adminLogin-secondary/10 rounded-full blur-3xl"></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-adminLogin-tertiary/10 rounded-full blur-3xl"></div>
+      {/* Decorative glowing elements */}
+      <div className="absolute top-1/4 left-1/4 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-pink-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 
       <div className="w-full max-w-md relative z-10">
         {/* Back to home button */}
@@ -73,31 +73,31 @@ export default function AdminLoginPage() {
           <Button
             variant="ghost"
             onClick={() => router.push("/")}
-            className="group text-adminLogin-secondary/80 hover:text-white hover:bg-gradient-to-r hover:from-adminLogin-secondary/60 hover:to-adminLogin-primary/60 hover:shadow-lg hover:scale-105 backdrop-blur-sm border border-adminLogin-secondary/30 rounded-3xl px-6 py-3 transition-all duration-300 ease-in-out transform hover:border-adminLogin-primary/40"
+            className="group text-cyan-400 hover:text-white hover:bg-gradient-to-r hover:from-cyan-600 hover:to-purple-600 hover:shadow-lg hover:shadow-cyan-500/50 hover:scale-105 backdrop-blur-sm border border-cyan-500/40 rounded-3xl px-6 py-3 transition-all duration-300 ease-in-out transform hover:border-purple-500/40"
           >
             <Home className="h-4 w-4 mr-2 group-hover:rotate-12 transition-transform duration-300" />
             <span className="font-medium">Back to Home</span>
           </Button>
         </div>
 
-        {/* Login Card with light theme */}
-        <Card className="border-0 bg-white/90 backdrop-blur-xl shadow-2xl border border-adminLogin-tertiary/30">
+        {/* Login Card with dark theme */}
+        <Card className="border-0 bg-gray-800/80 backdrop-blur-xl shadow-2xl border border-cyan-500/30 rounded-2xl">
           <CardHeader className="space-y-1 text-center">
-            <CardTitle className="text-3xl font-bold bg-gradient-to-r from-adminLogin-primary via-adminLogin-secondary to-adminLogin-secondary bg-clip-text text-transparent">
+            <CardTitle className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Admin Login
             </CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
               {error && (
-                <Alert variant="destructive" className="border-red-200 bg-red-50 backdrop-blur-sm">
-                  <AlertCircle className="h-4 w-4" />
-                  <AlertDescription className="text-red-700">{error}</AlertDescription>
+                <Alert variant="destructive" className="border-red-500/50 bg-red-900/40 backdrop-blur-sm">
+                  <AlertCircle className="h-4 w-4 text-red-400" />
+                  <AlertDescription className="text-red-300">{error}</AlertDescription>
                 </Alert>
               )}
-              
+
               <div className="space-y-2">
-                <Label htmlFor="username" className="text-adminLogin-secondary font-medium">Username</Label>
+                <Label htmlFor="username" className="text-cyan-400 font-semibold text-sm">Username</Label>
                 <Input
                   id="username"
                   name="username"
@@ -106,12 +106,12 @@ export default function AdminLoginPage() {
                   required
                   value={formData.username}
                   onChange={handleChange}
-                  className="bg-[#F6F1F1] border-adminLogin-tertiary text-adminLogin-secondary placeholder-adminLogin-secondary/50 backdrop-blur-sm focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 hover:bg-white/90 hover:border-adminLogin-primary/30"
+                  className="bg-gray-700/50 border-cyan-500/30 text-white placeholder-cyan-400/50 backdrop-blur-sm focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 hover:bg-gray-700/70 hover:border-cyan-500/50 transition-all duration-300"
                 />
               </div>
-              
+
               <div className="space-y-2">
-                <Label htmlFor="password" className="text-adminLogin-secondary font-medium">Password</Label>
+                <Label htmlFor="password" className="text-cyan-400 font-semibold text-sm">Password</Label>
                 <div className="relative">
                   <Input
                     id="password"
@@ -121,13 +121,13 @@ export default function AdminLoginPage() {
                     required
                     value={formData.password}
                     onChange={handleChange}
-                    className="bg-[#F6F1F1] border-adminLogin-tertiary text-adminLogin-secondary placeholder-adminLogin-secondary/50 backdrop-blur-sm pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 hover:bg-white/90 hover:border-adminLogin-primary/30"
+                    className="bg-gray-700/50 border-cyan-500/30 text-white placeholder-cyan-400/50 backdrop-blur-sm pr-12 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 hover:bg-gray-700/70 hover:border-cyan-500/50 transition-all duration-300"
                   />
                   <Button
                     type="button"
                     variant="ghost"
                     size="sm"
-                    className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent text-adminLogin-secondary/50 hover:text-adminLogin-secondary"
+                    className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent text-cyan-400/60 hover:text-cyan-300 transition-colors duration-300"
                     onClick={() => setShowPassword(!showPassword)}
                   >
                     {showPassword ? (
@@ -138,10 +138,10 @@ export default function AdminLoginPage() {
                   </Button>
                 </div>
               </div>
-              
+
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-adminLogin-primary via-adminLogin-secondary to-adminLogin-secondary hover:from-adminLogin-secondary hover:via-adminLogin-secondary hover:to-adminLogin-primary text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
+                className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
                 disabled={isLoading}
               >
                 {isLoading ? (
