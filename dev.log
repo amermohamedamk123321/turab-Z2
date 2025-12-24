@@ -129,3 +129,70 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
 [32m[nodemon] starting `npx tsx server.ts`[39m
 > Ready on http://0.0.0.0:3000
 > Socket.IO server running at ws://0.0.0.0:3000/api/socketio
+ ○ Compiling /admin/login ...
+ ✓ Compiled / in 8.5s (1834 modules)
+ GET /admin/login?reload=1766570990344 200 in 9254ms
+ GET /admin/login?reload=1766570995318 200 in 4204ms
+ GET / 200 in 8109ms
+ GET / 200 in 101ms
+ GET / 200 in 266ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 13ms
+ GET / 200 in 103ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 1246ms (1865 modules)
+ GET /about 200 in 1366ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 166ms
+ GET / 200 in 130ms
+ GET / 200 in 95ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 48ms
+ GET / 200 in 87ms
+ GET / 200 in 78ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 1320ms (2056 modules)
+ GET /contact 200 in 1572ms
+ GET / 200 in 1010ms
+ GET / 200 in 105ms
+ GET / 200 in 86ms
+ GET / 200 in 82ms
+ GET / 200 in 84ms
+ GET / 200 in 89ms
+ GET / 200 in 98ms
+ GET / 200 in 90ms
+ GET / 200 in 89ms
+ GET / 200 in 84ms
+ GET / 200 in 90ms
+ GET / 200 in 101ms
+ GET / 200 in 113ms
+ GET / 200 in 106ms
+ GET / 200 in 111ms
+ GET / 200 in 110ms
+ GET / 200 in 100ms
+ GET / 200 in 84ms
+ GET / 200 in 80ms
+ GET / 200 in 79ms
+ GET / 200 in 80ms
+ GET / 200 in 91ms
+ GET / 200 in 86ms
+ GET / 200 in 83ms
+ GET / 200 in 82ms
+ GET / 200 in 80ms
+ GET / 200 in 97ms
+ GET / 200 in 89ms
+ GET / 200 in 83ms
+ GET / 200 in 81ms
+ GET / 200 in 85ms
+ GET / 200 in 95ms
+ GET / 200 in 185ms
+ GET / 200 in 86ms
+ GET / 200 in 83ms
+ GET / 200 in 86ms
+ GET / 200 in 88ms
+ GET / 200 in 82ms
+ GET / 200 in 82ms
+ GET / 200 in 83ms
+ GET / 200 in 85ms
+ GET / 200 in 82ms
+ GET / 200 in 81ms
+ GET / 200 in 91ms
