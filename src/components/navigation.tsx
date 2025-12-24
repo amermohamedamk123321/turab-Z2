@@ -127,7 +127,7 @@ const Navigation = memo(function Navigation() {
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="sm" className="text-black hover:text-black hover:bg-white/20 bg-white/90 border border-white/30 rounded-2xl px-4 py-4">
+              <Button variant="ghost" size="sm" className="text-black hover:text-black hover:bg-white font-medium transition-all duration-300 hover:scale-105 bg-white/90 border-2 border-white/80 rounded-2xl px-4 py-4 shadow-md hover:shadow-lg">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
