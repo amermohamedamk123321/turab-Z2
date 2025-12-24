@@ -9,3 +9,111 @@
  ✓ Compiled / in 10.3s (1829 modules)
  GET / 200 in 11612ms
  GET / 200 in 536ms
+ GET /?reload=1766570470079 200 in 104ms
+ GET /?reload=1766570457339 200 in 194ms
+ GET /?reload=1766570471448 200 in 102ms
+ GET / 200 in 101ms
+ GET / 200 in 107ms
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 84ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 88ms
+ GET / 200 in 87ms
+ ○ Compiling /admin/login ...
+[Error: Cannot apply unknown utility class `bg-background`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive]
+ ✓ Compiled /admin/login in 1199ms (1848 modules)
+ GET /admin/login 200 in 1308ms
+ GET / 200 in 222ms
+ GET / 200 in 95ms
+ GET / 200 in 10ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 860ms (1865 modules)
+ GET /about 200 in 944ms
+ GET / 200 in 189ms
+ GET / 200 in 93ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 1683ms (2056 modules)
+ GET /contact 200 in 1920ms
+ GET / 200 in 422ms
+ GET / 200 in 96ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 1409ms (2081 modules)
+ GET /projects 200 in 1614ms
+ GET / 200 in 1600ms
+ GET / 200 in 105ms
+ GET / 200 in 81ms
+ GET / 200 in 9ms
+ GET / 200 in 115ms
+ GET / 200 in 112ms
+ GET /about 200 in 20ms
+ GET /admin/login 200 in 25ms
+ GET / 200 in 99ms
+ GET / 200 in 10ms
+ GET / 200 in 87ms
+ GET / 200 in 85ms
+ GET / 200 in 86ms
+ GET / 200 in 84ms
+ GET / 200 in 82ms
+ GET / 200 in 101ms
+ GET / 200 in 99ms
+ GET / 200 in 96ms
+ GET / 200 in 117ms
+ GET / 200 in 113ms
+ GET / 200 in 103ms
+ GET / 200 in 90ms
+ GET / 200 in 91ms
+ GET /about 200 in 13ms
+ GET / 200 in 89ms
+ GET / 200 in 92ms
+ GET / 200 in 99ms
+ GET / 200 in 82ms
+ GET / 200 in 79ms
+ GET / 200 in 80ms
+ GET / 200 in 86ms
+ GET / 200 in 93ms
+ GET / 200 in 84ms
+ GET / 200 in 90ms
+ GET / 200 in 88ms
+ GET / 200 in 82ms
+ GET / 200 in 86ms
+ GET / 200 in 83ms
+ GET / 200 in 97ms
+ GET / 200 in 85ms
+ GET / 200 in 87ms
+ GET / 200 in 89ms
+ GET / 200 in 92ms
+ GET / 200 in 116ms
+ GET / 200 in 92ms
+ GET / 200 in 82ms
+ GET / 200 in 82ms
+ GET / 200 in 91ms
+ GET / 200 in 79ms
+ GET / 200 in 86ms
+ GET / 200 in 81ms
+ GET / 200 in 86ms
+ GET / 200 in 87ms
+ GET / 200 in 90ms
+ GET / 200 in 84ms
+ GET /contact 200 in 22ms
+ GET / 200 in 78ms
+ GET / 200 in 84ms
+ GET / 200 in 82ms
+ GET / 200 in 80ms
+ GET / 200 in 82ms
+ GET / 200 in 84ms
+ GET / 200 in 87ms
+ GET / 200 in 79ms
+ GET / 200 in 96ms
+ GET / 200 in 81ms
+ GET / 200 in 79ms
+ GET / 200 in 85ms
+ GET / 200 in 142ms
+ GET / 200 in 98ms
+ GET /admin/login 200 in 13ms
+ GET / 200 in 87ms
+ GET / 200 in 87ms
+ GET / 200 in 86ms
+ GET / 200 in 80ms
+ GET / 200 in 80ms
+ GET / 200 in 81ms
+ GET / 200 in 79ms
