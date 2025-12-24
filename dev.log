@@ -762,3 +762,57 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 82ms
  GET / 200 in 87ms
  GET /projects 200 in 24ms
+ GET / 200 in 80ms
+ GET /about 200 in 19ms
+ GET / 200 in 74ms
+ GET / 200 in 77ms
+ GET / 200 in 83ms
+ GET / 200 in 81ms
+ GET /contact 200 in 24ms
+ GET / 200 in 86ms
+ GET / 200 in 157ms
+ GET / 200 in 90ms
+ GET / 200 in 84ms
+ GET / 200 in 86ms
+ GET / 200 in 82ms
+ GET / 200 in 81ms
+ GET / 200 in 80ms
+ GET / 200 in 79ms
+ GET / 200 in 91ms
+ GET / 200 in 82ms
+ GET / 200 in 86ms
+ GET / 200 in 83ms
+ GET / 200 in 82ms
+ GET / 200 in 108ms
+ GET / 200 in 88ms
+ GET / 200 in 89ms
+ GET / 200 in 75ms
+ GET / 200 in 92ms
+ GET / 200 in 81ms
+ GET / 200 in 83ms
+ GET / 200 in 76ms
+ GET / 200 in 202ms
+ GET / 200 in 87ms
+ GET / 200 in 83ms
+ GET / 200 in 80ms
+ GET / 200 in 80ms
+ GET / 200 in 83ms
+ GET / 200 in 86ms
+ GET / 200 in 80ms
+ GET / 200 in 81ms
+ GET / 200 in 76ms
+ GET / 200 in 80ms
+ GET / 200 in 81ms
+ GET / 200 in 79ms
+ GET / 200 in 89ms
+ GET / 200 in 80ms
+ GET / 200 in 79ms
+ GET / 200 in 83ms
+ GET /?reload=0 200 in 76ms
+ GET / 200 in 82ms
+ GET / 200 in 89ms
+ GET / 200 in 87ms
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 80ms
+ GET / 200 in 81ms
+ GET / 200 in 76ms
+[32m[nodemon] restarting due to changes...[39m

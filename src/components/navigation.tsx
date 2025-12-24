@@ -127,11 +127,27 @@ const Navigation = memo(function Navigation() {
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="sm" className="text-black hover:text-black hover:bg-white/20 bg-white/90 border border-white/30 rounded-full">
+              <Button variant="ghost" size="sm" className="text-black hover:text-black hover:bg-white/20 bg-white/90 border border-white/30 rounded-2xl px-4 py-4">
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[280px] sm:w-[350px] md:w-[400px] bg-white/80 backdrop-blur-xl border border-white/30 shadow-2xl">
+            <SheetContent side="right" className="w-[280px] sm:w-[350px] md:w-[400px] bg-white/80 backdrop-blur-xl border border-white/30 shadow-2xl p-4">
+              <style jsx>{`
+                [role="dialog"] button[aria-label="Close"] {
+                  color: #000000 !important;
+                  background-color: rgba(255, 255, 255, 0.9) !important;
+                  border: 2px solid rgba(255, 255, 255, 0.3) !important;
+                  border-radius: 0.5rem !important;
+                  width: 40px !important;
+                  height: 40px !important;
+                  padding: 0 !important;
+                  top: 1rem !important;
+                  right: 1rem !important;
+                }
+                [role="dialog"] button[aria-label="Close"]:hover {
+                  background-color: white !important;
+                }
+              `}</style>
               <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
               <div className="flex flex-col space-y-3 mt-8">
                 {navigation.map((item) => {
