@@ -115,10 +115,10 @@ const Navigation = memo(function Navigation() {
                 </Button>
               </div>
             ) : (
-              <Button asChild className="rounded-3xl p-5 border-2 border-transparent hover:border-white/40 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl overflow-hidden relative bg-gradient-to-r from-adminNav-primary via-adminNav-secondary to-adminNav-primary hover:from-adminNav-secondary hover:via-adminNav-accent hover:to-adminNav-secondary">
+              <Button asChild className="rounded-3xl px-6 py-5 border-2 border-transparent transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl overflow-hidden relative bg-gradient-to-r from-[#7C3AED] via-[#06B6D4] to-[#EC4899] hover:from-[#06B6D4] hover:via-[#EC4899] hover:to-[#7C3AED]">
                 <Link href="/admin/login" prefetch={false} className="relative z-10 flex items-center">
                   <User className="h-4 w-4 mr-2 text-white" />
-                  <span className="text-white font-medium">Admin</span>
+                  <span className="text-white font-semibold">Admin</span>
                 </Link>
               </Button>
             )}
