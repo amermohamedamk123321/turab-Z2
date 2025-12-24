@@ -313,7 +313,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 relative overflow-hidden" style={{ 
+      <section className="py-16 md:py-20 relative overflow-hidden" style={{
         background: 'linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 25%, rgba(251, 183, 14, 0.1) 40%, rgba(237, 148, 85, 0.1) 50%, rgba(251, 183, 14, 0.1) 60%, rgba(254, 201, 239, 0.08) 75%, rgba(0, 0, 0, 0.8) 90%, rgba(0, 0, 0, 0.9) 100%)',
         backgroundSize: '400% 400%',
         animation: 'gradientShift 15s ease-in-out infinite'
@@ -332,26 +332,26 @@ export default function Home() {
             100% { background-position: 0% 50%; }
           }
         `}</style>
-        
+
         <div className="absolute inset-0 bg-black/40"></div>
         {/* Enhanced animated background effects */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[rgba(251, 183, 14, 0.15)] to-[rgba(254, 201, 239, 0.1)] rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[rgba(237, 148, 85, 0.15)] to-[rgba(251, 183, 14, 0.1)] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-[rgba(251, 183, 14, 0.12)] to-[rgba(254, 201, 239, 0.08)] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
-          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-[rgba(251, 183, 14, 0.1)] to-[rgba(237, 148, 85, 0.08)] rounded-full blur-2xl animate-pulse" style={{ animationDelay: '6s' }}></div>
-          <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-tr from-[rgba(237, 148, 85, 0.12)] to-[rgba(254, 201, 239, 0.08)] rounded-full blur-2xl"></div>
-          <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-gradient-to-bl from-[rgba(251, 183, 14, 0.1)] to-[rgba(237, 148, 85, 0.06)] rounded-full blur-2xl"></div>
-          <div className="absolute bottom-1/3 right-1/3 w-56 h-56 bg-gradient-to-t from-[rgba(254, 201, 239, 0.1)] to-[rgba(237, 148, 85, 0.08)] rounded-full blur-xl"></div>
+          <div className="absolute top-0 left-0 w-64 md:w-96 h-64 md:h-96 bg-gradient-to-br from-[rgba(251, 183, 14, 0.15)] to-[rgba(254, 201, 239, 0.1)] rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-0 right-0 w-64 md:w-96 h-64 md:h-96 bg-gradient-to-tl from-[rgba(237, 148, 85, 0.15)] to-[rgba(251, 183, 14, 0.1)] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 md:w-96 h-64 md:h-96 bg-gradient-to-r from-[rgba(251, 183, 14, 0.12)] to-[rgba(254, 201, 239, 0.08)] rounded-full blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+          <div className="hidden md:block absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-[rgba(251, 183, 14, 0.1)] to-[rgba(237, 148, 85, 0.08)] rounded-full blur-2xl animate-pulse" style={{ animationDelay: '6s' }}></div>
+          <div className="hidden md:block absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-tr from-[rgba(237, 148, 85, 0.12)] to-[rgba(254, 201, 239, 0.08)] rounded-full blur-2xl"></div>
+          <div className="hidden lg:block absolute top-1/3 left-1/4 w-72 h-72 bg-gradient-to-bl from-[rgba(251, 183, 14, 0.1)] to-[rgba(237, 148, 85, 0.06)] rounded-full blur-2xl"></div>
+          <div className="hidden lg:block absolute bottom-1/3 right-1/3 w-56 h-56 bg-gradient-to-t from-[rgba(254, 201, 239, 0.1)] to-[rgba(237, 148, 85, 0.08)] rounded-full blur-xl"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 drop-shadow-2xl animate-pulse" style={{ color: '#ffffff' }}>Ready to start your project?</h2>
-          
-          <Button 
-            size="lg" 
-            className="text-lg px-12 py-6 bg-[#fbb70ef] rounded-full font-semibold text-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-500 ease-out border-2 border-[#ed9455] relative overflow-hidden group" 
-            style={{ 
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-6 md:mb-8 drop-shadow-2xl animate-pulse" style={{ color: '#ffffff' }}>Ready to start your project?</h2>
+
+          <Button
+            size="lg"
+            className="text-base sm:text-lg px-6 sm:px-10 md:px-12 py-4 sm:py-5 md:py-6 bg-[#fbb70ef] rounded-full font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-500 ease-out border-2 border-[#ed9455] relative overflow-hidden group"
+            style={{
               color: '#ffffff',
               boxShadow: '0 20px 40px -15px rgba(251, 183, 14, 0.4), 0 0 0 1px rgba(237, 148, 85, 0.3)'
             }}
@@ -371,7 +371,8 @@ export default function Home() {
           >
             <Link href="/contact" prefetch={true}>
               {/* Default text */}
-              <span className="relative z-10" style={{ color: '#ffffff' }}>Get in Touch with Us</span>
+              <span className="relative z-10 inline sm:hidden" style={{ color: '#ffffff' }}>Get in Touch</span>
+              <span className="relative z-10 hidden sm:inline" style={{ color: '#ffffff' }}>Get in Touch with Us</span>
               {/* Hover text - appears in middle */}
               <span className="absolute inset-0 flex items-center justify-center relative z-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-2 transition-all duration-300 ease-out" style={{ color: '#ffffff' }}>Get a Quote</span>
             </Link>
