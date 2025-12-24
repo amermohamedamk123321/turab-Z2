@@ -73,7 +73,7 @@ export default function AboutPage() {
                   duration: 0.8,
                   ease: "easeInOut",
                 }}
-                className="bg-gradient-to-br from-aboutHero-primary to-aboutHero-secondary py-4 bg-clip-text text-center text-3xl font-thin tracking-widest text-transparent md:text-5xl lg:text-6xl"
+                className="py-4 text-center text-3xl font-thin tracking-widest text-white md:text-5xl lg:text-6xl"
                 style={{ fontFamily: '"Poppins", "Inter", "Quicksand", "Nunito", "Rubik", sans-serif' }}
               >
                 Leading Innovator Software Company in Afghanistan
@@ -186,12 +186,12 @@ export default function AboutPage() {
                 Partner With Innovation
               </h2>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-aboutHero-primary to-adminDash-secondary hover:from-aboutHero-primary/90 hover:to-adminDash-secondary/90 text-white rounded-full font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:rotate-1" asChild>
+                <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-aboutHero-primary to-adminDash-secondary hover:from-[#1e5a8e] hover:to-[#2b5f9e] text-white rounded-full font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:rotate-1" asChild>
                   <Link href="/contact" prefetch={true} className="flex items-center justify-center">
                     Start Your Project
                   </Link>
                 </Button>
-                <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-aboutHero-primary to-adminDash-secondary hover:from-aboutHero-primary/90 hover:to-adminDash-secondary/90 text-white rounded-full font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:-rotate-1" asChild>
+                <Button size="lg" className="text-lg px-12 py-6 bg-gradient-to-r from-aboutHero-primary to-adminDash-secondary hover:from-[#1e5a8e] hover:to-[#2b5f9e] text-white rounded-full font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 hover:-rotate-1" asChild>
                   <Link href="/projects" prefetch={true} className="flex items-center justify-center">
                     View Our Work
                   </Link>
