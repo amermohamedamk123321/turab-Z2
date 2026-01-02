@@ -742,3 +742,37 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
   'http://127.0.0.1:3000',
   'http://127.0.0.1:3001'
 ]
+
+╔════════════════════════════════════════════════════════════╗
+║         🚀 Secure Next.js Server Started                   ║
+╚════════════════════════════════════════════════════════════╝
+
+📍 HTTP Server:
+   URL: http://0.0.0.0:3000
+
+🔌 Socket.IO Server:
+   Path: ws://0.0.0.0:3000/api/socketio
+   CORS Origins: http://localhost:3000, http://localhost:3001, http://127.0.0.1:3000, http://127.0.0.1:3001
+   Authentication: REQUIRED (NextAuth token)
+
+🔒 Security Status:
+   Environment: DEVELOPMENT
+   ⚠️  Development mode: CORS is open (localhost only)
+   ✅ Socket.IO requires authentication
+   ✅ Connection timeout: 45 seconds
+   ✅ Ping/Pong interval: 25 seconds
+   ✅ Max buffer size: 1MB
+
+📝 Note: In production, update ALLOWED_SOCKET_IO_ORIGINS in server.ts
+        or set ALLOWED_SOCKET_IO_ORIGINS environment variable
+
+      
+ ○ Compiling / ...
+ ✓ Compiled / in 4.6s (1811 modules)
+ GET / 200 in 5366ms
+ GET / 200 in 134ms
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 115ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 105ms
+[32m[nodemon] restarting due to changes...[39m
