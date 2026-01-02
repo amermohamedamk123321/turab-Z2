@@ -842,3 +842,10 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
         or set ALLOWED_SOCKET_IO_ORIGINS environment variable
 
       
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 1287ms (207 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 5s (1811 modules)
+ GET / 200 in 5734ms
+ GET / 200 in 154ms
+[32m[nodemon] restarting due to changes...[39m
