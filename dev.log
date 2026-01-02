@@ -713,3 +713,11 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 128ms
  GET / 200 in 117ms
  GET / 200 in 133ms
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 131ms
+ ⚠ Cross origin request detected from 0.0.0.0 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / 200 in 131ms
+ GET / 200 in 117ms
+ GET / 200 in 113ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
