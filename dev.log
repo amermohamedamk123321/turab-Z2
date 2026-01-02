@@ -658,3 +658,7 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 79ms
  GET / 200 in 75ms
  GET / 200 in 77ms
+ GET / 200 in 81ms
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 73ms
+ GET / 200 in 86ms
+[32m[nodemon] restarting due to changes...[39m
