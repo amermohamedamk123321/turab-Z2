@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import { signIn } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -11,13 +12,15 @@ import { Eye, EyeOff, AlertCircle, Home } from "lucide-react";
 
 export default function AdminLoginPage() {
   const [formData, setFormData] = useState({
-    username: "",
+    email: "",
     password: ""
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get("callbackUrl") || "/admin/dashboard";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -25,25 +28,34 @@ export default function AdminLoginPage() {
     setError("");
 
     try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Validate against specific admin credentials
-      if (formData.username === "TurabAcademy99" && formData.password === "TurabAcademy99") {
-        // Simulate successful login
-        localStorage.setItem("isAdminLoggedIn", "true");
-        localStorage.setItem("adminUser", JSON.stringify({
-          username: formData.username,
-          name: "Turab Admin"
-        }));
-        
-        // Redirect to admin dashboard
-        router.push("/admin/dashboard");
-      } else {
-        setError("Invalid username or password");
+      // Server-side authentication via NextAuth
+      // Credentials are validated against database with bcrypt comparison
+      const result = await signIn("credentials", {
+        email: formData.email,
+        password: formData.password,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        // NextAuth returns specific error messages
+        if (result.error === "Invalid email or password") {
+          setError("Invalid email or password. Please try again.");
+        } else if (result.error === "Account is disabled") {
+          setError("Your account has been disabled. Contact administrator.");
+        } else if (result.error === "Insufficient permissions") {
+          setError("Your account does not have admin access.");
+        } else if (result.error === "Email and password are required") {
+          setError("Please enter both email and password.");
+        } else {
+          setError(result.error || "Authentication failed. Please try again.");
+        }
+      } else if (result?.ok) {
+        // Successful authentication
+        router.push(callbackUrl);
       }
     } catch (err) {
-      setError("Login failed. Please try again.");
+      setError("An unexpected error occurred. Please try again.");
+      console.error("Login error:", err);
     } finally {
       setIsLoading(false);
     }
@@ -86,6 +98,9 @@ export default function AdminLoginPage() {
             <CardTitle className="text-4xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Admin Login
             </CardTitle>
+            <CardDescription className="text-cyan-400/70">
+              Secure server-side authentication
+            </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -97,16 +112,17 @@ export default function AdminLoginPage() {
               )}
 
               <div className="space-y-2">
-                <Label htmlFor="username" className="text-cyan-400 font-semibold text-sm">Username</Label>
+                <Label htmlFor="email" className="text-cyan-400 font-semibold text-sm">Email Address</Label>
                 <Input
-                  id="username"
-                  name="username"
-                  type="text"
-                  placeholder="Enter your username"
+                  id="email"
+                  name="email"
+                  type="email"
+                  placeholder="admin@example.com"
                   required
-                  value={formData.username}
+                  value={formData.email}
                   onChange={handleChange}
                   className="bg-gray-700/50 border-cyan-500/30 text-white placeholder-cyan-400/50 backdrop-blur-sm focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 hover:bg-gray-700/70 hover:border-cyan-500/50 transition-all duration-300"
+                  disabled={isLoading}
                 />
               </div>
 
@@ -122,6 +138,7 @@ export default function AdminLoginPage() {
                     value={formData.password}
                     onChange={handleChange}
                     className="bg-gray-700/50 border-cyan-500/30 text-white placeholder-cyan-400/50 backdrop-blur-sm pr-12 focus:ring-2 focus:ring-cyan-500/50 focus:border-cyan-500 hover:bg-gray-700/70 hover:border-cyan-500/50 transition-all duration-300"
+                    disabled={isLoading}
                   />
                   <Button
                     type="button"
@@ -129,6 +146,7 @@ export default function AdminLoginPage() {
                     size="sm"
                     className="absolute right-0 top-0 h-full px-3 py-2 hover:bg-transparent text-cyan-400/60 hover:text-cyan-300 transition-colors duration-300"
                     onClick={() => setShowPassword(!showPassword)}
+                    disabled={isLoading}
                   >
                     {showPassword ? (
                       <EyeOff className="h-4 w-4" />
@@ -141,24 +159,28 @@ export default function AdminLoginPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
+                className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 text-white font-semibold py-3 rounded-xl shadow-lg hover:shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm disabled:opacity-50 disabled:cursor-not-allowed"
                 disabled={isLoading}
               >
                 {isLoading ? (
                   <div className="flex items-center justify-center">
                     <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                    Signing in...
+                    Authenticating...
                   </div>
                 ) : (
                   "Sign In"
                 )}
               </Button>
+
+              <div className="text-center pt-4">
+                <p className="text-gray-400 text-sm">
+                  Credentials are securely validated on the server using bcrypt
+                </p>
+              </div>
             </form>
           </CardContent>
         </Card>
       </div>
-
-
     </div>
   );
 }
