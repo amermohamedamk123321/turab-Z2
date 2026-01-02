@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { useSession, signOut } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -39,11 +40,6 @@ import {
   MessageCircle
 } from "lucide-react";
 
-interface AdminUser {
-  email: string;
-  name: string;
-}
-
 interface ContactMessage {
   id: string;
   name: string;
@@ -80,8 +76,8 @@ interface Project {
 
 export default function AdminDashboard() {
   const router = useRouter();
-  const pathname = usePathname();
-  const [adminUser, setAdminUser] = useState<AdminUser | null>(null);
+  // SECURITY: Use NextAuth session instead of localStorage
+  const { data: session, status } = useSession();
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState("messages");
 
@@ -239,25 +235,27 @@ export default function AdminDashboard() {
   const [selectedProjectForComments, setSelectedProjectForComments] = useState<Project | null>(null);
 
   useEffect(() => {
-    // Check if user is logged in
-    const isLoggedIn = localStorage.getItem("isAdminLoggedIn");
-    const userData = localStorage.getItem("adminUser");
-    
-    if (!isLoggedIn || !userData) {
+    // SECURITY: Check NextAuth session instead of localStorage
+    if (status === "loading") {
+      return;
+    }
+
+    if (status === "unauthenticated" || !session?.user) {
+      // No valid session - redirect to login
       router.push("/admin/login");
       return;
     }
-    
-    try {
-      const user = JSON.parse(userData);
-      setAdminUser(user);
-    } catch (error) {
-      console.error("Error parsing user data:", error);
-      router.push("/admin/login");
+
+    // Check if user has admin role
+    const userRole = (session.user as any)?.role;
+    if (userRole !== "admin") {
+      // Not an admin - redirect to home
+      router.push("/");
+      return;
     }
-    
+
     setIsLoading(false);
-  }, [router]);
+  }, [session, status, router]);
 
   // Sync projects data with localStorage
   useEffect(() => {
@@ -302,10 +300,11 @@ export default function AdminDashboard() {
     return () => clearInterval(interval);
   }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem("isAdminLoggedIn");
-    localStorage.removeItem("adminUser");
-    router.push("/admin/login");
+  const handleLogout = async () => {
+    // SECURITY: Use NextAuth signOut instead of localStorage
+    await signOut({
+      callbackUrl: "/admin/login",
+    });
   };
 
   const markMessageAsRead = (messageId: string) => {
@@ -463,7 +462,7 @@ export default function AdminDashboard() {
     setViewCommentsDialogOpen(true);
   };
 
-  if (isLoading) {
+  if (isLoading || status === "loading") {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -493,7 +492,9 @@ export default function AdminDashboard() {
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-adminLogin-primary to-adminLogin-secondary bg-clip-text text-transparent">
                   Admin Panel
                 </h1>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Turab Root</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {session?.user?.email || "Admin"}
+                </p>
               </div>
             </div>
           </div>
@@ -562,9 +563,7 @@ export default function AdminDashboard() {
           </p>
         </div>
         
-        {/* Stats Cards - REMOVED AS REQUESTED */}
-
-        {/* Content Area */}
+        {/* Content Area - Messages Tab */}
         {activeTab === "messages" && (
           <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
             <CardHeader className="pb-6">
@@ -813,11 +812,6 @@ export default function AdminDashboard() {
                                   Video
                                 </Badge>
                               )}
-                              {project.projectLink && (
-                                <Badge variant="outline" className="border-green-600 hover:border-green-500 text-green-600 hover:text-green-500 dark:border-green-500 dark:hover:border-green-400 dark:text-green-400 dark:hover:text-green-300 transition-colors duration-300">
-                                  Live
-                                </Badge>
-                              )}
                             </div>
                             <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">
                               {project.description}
@@ -989,7 +983,6 @@ export default function AdminDashboard() {
 
         {activeTab === "analytics" && (
             <div className="space-y-6">
-              {/* Project Analytics Section */}
               <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
                 <CardHeader className="text-center py-8">
                   <CardTitle className="flex items-center justify-center text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -1004,14 +997,12 @@ export default function AdminDashboard() {
                   <div className="space-y-1">
                     {projects.map((project, index) => (
                       <div key={project.id} className="relative">
-                        {/* Add line between rows except for the last one */}
                         {index < projects.length - 1 && (
                           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300/50 to-transparent dark:via-gray-600/50"></div>
                         )}
                         
                         <div className="bg-gray-100/50 dark:bg-gray-800/20 rounded-lg p-6 transition-colors duration-300 hover:bg-gray-200/50 dark:hover:bg-gray-800/30">
                           <div className="flex flex-col space-y-4">
-                            {/* Project Name and Engagement Rate */}
                             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
                               <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-0">
                                 {project.title}
@@ -1026,7 +1017,6 @@ export default function AdminDashboard() {
                               </div>
                             </div>
                             
-                            {/* Feedback Indicators in the Middle */}
                             <div className="flex flex-col items-center justify-center py-4">
                               <div className="flex items-center justify-center space-x-8">
                                 <div className="flex flex-col items-center space-y-1">
@@ -1055,7 +1045,6 @@ export default function AdminDashboard() {
                               </div>
                             </div>
                             
-                            {/* View Comments Button */}
                             <div className="flex justify-center">
                               <Button
                                 variant="outline"
