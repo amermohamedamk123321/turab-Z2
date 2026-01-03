@@ -538,3 +538,93 @@ Node.js v22.16.0
  GET / 200 in 112ms
  GET / 200 in 124ms
  GET / 200 in 131ms
+ GET / 200 in 100ms
+ GET /?reload=1767468958485 200 in 95ms
+ GET / 200 in 94ms
+ GET / 200 in 225ms
+ ○ Compiling /admin/login ...
+[Error: Cannot apply unknown utility class `bg-background`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive]
+ ✓ Compiled /admin/login in 2.3s (1926 modules)
+ GET /admin/login 200 in 2474ms
+ GET / 200 in 255ms
+ GET / 200 in 110ms
+ GET / 200 in 13ms
+ GET / 200 in 122ms
+ ○ Compiling /projects ...
+ ✓ Compiled /projects in 715ms (2073 modules)
+ GET /projects 200 in 776ms
+ GET / 200 in 202ms
+ GET / 200 in 114ms
+ GET / 200 in 170ms
+ GET /admin/login 200 in 25ms
+ GET / 200 in 113ms
+ GET / 200 in 132ms
+ GET / 200 in 11ms
+ GET / 200 in 123ms
+ ○ Compiling /about ...
+ ✓ Compiled /about in 920ms (2100 modules)
+ GET /about 200 in 1010ms
+ GET / 200 in 185ms
+ GET / 200 in 116ms
+ GET / 200 in 117ms
+ ○ Compiling /contact ...
+ ✓ Compiled /contact in 690ms (2159 modules)
+ GET /contact 200 in 921ms
+ GET /contact 200 in 14ms
+ GET / 200 in 213ms
+ GET / 200 in 119ms
+ GET /projects 200 in 27ms
+ GET / 200 in 133ms
+ GET / 200 in 122ms
+ GET / 200 in 100ms
+ GET / 200 in 97ms
+ GET / 200 in 90ms
+ GET / 200 in 101ms
+ GET / 200 in 95ms
+ GET /admin/login 200 in 24ms
+ GET / 200 in 88ms
+ GET / 200 in 12ms
+ GET /contact 200 in 23ms
+ GET /about 200 in 19ms
+ GET / 200 in 112ms
+ GET /projects 200 in 14ms
+ GET /contact 200 in 9ms
+ GET / 200 in 118ms
+ GET /about 200 in 11ms
+ GET / 200 in 95ms
+ GET / 200 in 88ms
+ GET / 200 in 88ms
+ GET / 200 in 85ms
+ GET / 200 in 110ms
+ GET / 200 in 82ms
+ GET / 200 in 84ms
+ GET / 200 in 81ms
+ GET / 200 in 79ms
+ GET / 200 in 79ms
+ GET / 200 in 86ms
+ GET / 200 in 79ms
+ GET / 200 in 88ms
+ GET / 200 in 90ms
+ GET / 200 in 84ms
+ GET / 200 in 78ms
+ GET / 200 in 84ms
+ GET / 200 in 81ms
+ GET / 200 in 84ms
+ GET / 200 in 81ms
+ GET / 200 in 81ms
+ GET / 200 in 79ms
+ GET / 200 in 77ms
+ GET / 200 in 81ms
+ GET / 200 in 80ms
+ GET / 200 in 83ms
+ GET / 200 in 85ms
+ GET / 200 in 83ms
+ GET / 200 in 84ms
+ GET / 200 in 79ms
+ GET / 200 in 81ms
+ GET / 200 in 79ms
+ GET / 200 in 84ms
+ GET / 200 in 82ms
+ GET / 200 in 78ms
+ GET / 200 in 78ms
+ GET / 200 in 77ms
