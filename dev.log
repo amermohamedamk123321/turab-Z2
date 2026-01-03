@@ -915,3 +915,38 @@ Node.js v22.16.0
  ✓ Compiled /middleware in 456ms (207 modules)
 [32m[nodemon] restarting due to changes...[39m
 [32m[nodemon] starting `npx tsx server.ts`[39m
+[Server] Allowed Socket.IO origins: [
+  'http://localhost:3000',
+  'http://localhost:3001',
+  'http://127.0.0.1:3000',
+  'http://127.0.0.1:3001'
+]
+
+╔════════════════════════════════════════════════════════════╗
+║         🚀 Secure Next.js Server Started                   ║
+╚════════════════════════════════════════════════════════════╝
+
+📍 HTTP Server:
+   URL: http://0.0.0.0:3000
+
+🔌 Socket.IO Server:
+   Path: ws://0.0.0.0:3000/api/socketio
+   CORS Origins: http://localhost:3000, http://localhost:3001, http://127.0.0.1:3000, http://127.0.0.1:3001
+   Authentication: REQUIRED (NextAuth token)
+
+🔒 Security Status:
+   Environment: DEVELOPMENT
+   ⚠️  Development mode: CORS is open (localhost only)
+   ✅ Socket.IO requires authentication
+   ✅ Connection timeout: 45 seconds
+   ✅ Ping/Pong interval: 25 seconds
+   ✅ Max buffer size: 1MB
+
+📝 Note: In production, update ALLOWED_SOCKET_IO_ORIGINS in server.ts
+        or set ALLOWED_SOCKET_IO_ORIGINS environment variable
+
+      
+ ✓ Compiled /middleware in 402ms (207 modules)
+ ○ Compiling / ...
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m

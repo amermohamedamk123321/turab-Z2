@@ -630,30 +630,30 @@ export default function AdminDashboard() {
                 {contactMessages.map((message) => (
                   <Card key={message.id} className={`${!message.read ? 'border-adminLogin-primary/20 bg-adminLogin-primary/5' : ''} border-gray-200/50 dark:border-gray-700/50 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all duration-200`}>
                     <CardContent className="p-6">
-                      <div className="flex items-start justify-between">
-                        <div className="flex-1">
-                          <div className="flex items-center space-x-3 mb-3">
-                            <div className="w-10 h-10 bg-gradient-to-br from-adminLogin-primary to-adminLogin-secondary rounded-full flex items-center justify-center">
+                      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-start space-x-3 mb-3">
+                            <div className="w-10 h-10 bg-gradient-to-br from-adminLogin-primary to-adminLogin-secondary rounded-full flex items-center justify-center flex-shrink-0">
                               <span className="text-white font-semibold text-sm">
                                 {message.name.charAt(0)}
                               </span>
                             </div>
-                            <div>
-                              <h4 className="font-semibold text-gray-900 dark:text-white text-lg">{message.name}</h4>
-                              <p className="text-sm text-gray-600 dark:text-gray-400">
+                            <div className="flex-1 min-w-0">
+                              <h4 className="font-semibold text-gray-900 dark:text-white text-base truncate">{message.name}</h4>
+                              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 truncate">
                                 {message.email} • {new Date(message.createdAt).toLocaleDateString()}
                               </p>
                             </div>
-                            <Badge variant={message.read ? "secondary" : "default"} className={message.read ? "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300" : "bg-adminLogin-primary text-white"}>
+                            <Badge variant={message.read ? "secondary" : "default"} className={`${message.read ? "bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-300" : "bg-adminLogin-primary text-white"} text-xs whitespace-nowrap`}>
                               {message.read ? "Read" : "New"}
                             </Badge>
                           </div>
-                          <p className="font-medium mb-2 text-gray-900 dark:text-white">{message.subject}</p>
-                          <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                          <p className="font-medium mb-2 text-gray-900 dark:text-white text-sm">{message.subject}</p>
+                          <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                             {message.message}
                           </p>
                         </div>
-                        <div className="flex space-x-2 ml-6">
+                        <div className="flex space-x-2 flex-shrink-0">
                           {!message.read && (
                             <Button
                               size="sm"
