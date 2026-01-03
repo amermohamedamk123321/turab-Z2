@@ -709,8 +709,8 @@ export default function AdminDashboard() {
                           Add a new project with video and information
                         </DialogDescription>
                       </DialogHeader>
-                      <form onSubmit={handleProjectUpload} className="space-y-4">
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <form onSubmit={handleProjectUpload} className="space-y-4 px-2 sm:px-0">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                           <div className="space-y-2">
                             <Label htmlFor="title" className="text-gray-900 dark:text-white">Project Title</Label>
                             <Input
