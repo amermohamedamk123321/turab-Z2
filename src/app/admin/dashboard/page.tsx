@@ -1068,23 +1068,84 @@ export default function AdminDashboard() {
           )}
 
         {activeTab === "settings" && (
-            <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
-              <CardHeader>
-                <CardTitle className="flex items-center text-gray-900 dark:text-white">
-                  <Settings className="h-6 w-6 mr-3 text-adminLogin-primary" />
-                  Settings
-                </CardTitle>
-                <CardDescription className="text-gray-600 dark:text-gray-400">
-                  Configure your admin panel settings
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="text-center py-12">
-                  <Settings className="h-20 w-20 text-gray-400 dark:text-gray-500 mx-auto mb-4" />
-                  <p className="text-gray-600 dark:text-gray-400">Settings panel would be configured here</p>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="space-y-6 pb-12">
+              {/* Account Settings Card */}
+              <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center text-gray-900 dark:text-white">
+                    <Users className="h-6 w-6 mr-3 text-adminLogin-primary" />
+                    Account Settings
+                  </CardTitle>
+                  <CardDescription className="text-gray-600 dark:text-gray-400">
+                    Current admin account: <span className="font-semibold">{session?.user?.email}</span>
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <PasswordChangeForm userEmail={session?.user?.email as string} />
+                </CardContent>
+              </Card>
+
+              {/* Security Settings Card */}
+              <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center text-gray-900 dark:text-white">
+                    <Activity className="h-6 w-6 mr-3 text-adminLogin-primary" />
+                    Security
+                  </CardTitle>
+                  <CardDescription className="text-gray-600 dark:text-gray-400">
+                    Manage your account security settings
+                  </CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800/50 rounded-lg">
+                      <h4 className="font-semibold text-blue-900 dark:text-blue-100 mb-2 flex items-center">
+                        <Activity className="h-5 w-5 mr-2" />
+                        Password Security
+                      </h4>
+                      <ul className="text-sm text-blue-800 dark:text-blue-200 space-y-1">
+                        <li>✓ Minimum 12 characters required</li>
+                        <li>✓ Must contain uppercase (A-Z) and lowercase (a-z) letters</li>
+                        <li>✓ Must contain at least one number (0-9)</li>
+                        <li>✓ All passwords are encrypted using bcrypt</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* System Information Card */}
+              <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center text-gray-900 dark:text-white">
+                    <Database className="h-6 w-6 mr-3 text-adminLogin-primary" />
+                    System Information
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
+                      <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Admin Email</p>
+                      <p className="font-semibold text-gray-900 dark:text-white break-all">{session?.user?.email}</p>
+                    </div>
+                    <div className="p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
+                      <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Admin Role</p>
+                      <p className="font-semibold text-gray-900 dark:text-white capitalize">Administrator</p>
+                    </div>
+                    <div className="p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
+                      <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Last Login</p>
+                      <p className="font-semibold text-gray-900 dark:text-white">
+                        {new Date().toLocaleDateString()}
+                      </p>
+                    </div>
+                    <div className="p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
+                      <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Session Duration</p>
+                      <p className="font-semibold text-gray-900 dark:text-white">24 hours</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           )}
 
       </main>
