@@ -1047,24 +1047,24 @@ export default function AdminDashboard() {
                           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300/50 to-transparent dark:via-gray-600/50"></div>
                         )}
                         
-                        <div className="bg-gray-100/50 dark:bg-gray-800/20 rounded-lg p-6 transition-colors duration-300 hover:bg-gray-200/50 dark:hover:bg-gray-800/30">
+                        <div className="bg-gray-100/50 dark:bg-gray-800/20 rounded-lg p-4 sm:p-6 transition-colors duration-300 hover:bg-gray-200/50 dark:hover:bg-gray-800/30">
                           <div className="flex flex-col space-y-4">
-                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between">
-                              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-0">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                              <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white truncate">
                                 {project.title}
                               </h4>
-                              <div className="flex items-center space-x-2">
-                                <span className="text-sm font-medium text-gray-600 dark:text-gray-400">Engagement:</span>
-                                <span className="text-lg font-bold text-adminLogin-primary dark:text-adminLogin-primary">
-                                  {project.likes + project.dislikes > 0 
-                                    ? `${Math.round((project.likes / (project.likes + project.dislikes)) * 100)}% positive` 
+                              <div className="flex items-center space-x-2 text-xs sm:text-sm">
+                                <span className="font-medium text-gray-600 dark:text-gray-400">Engagement:</span>
+                                <span className="font-bold text-adminLogin-primary dark:text-adminLogin-primary whitespace-nowrap">
+                                  {project.likes + project.dislikes > 0
+                                    ? `${Math.round((project.likes / (project.likes + project.dislikes)) * 100)}% positive`
                                     : 'No engagement'}
                                 </span>
                               </div>
                             </div>
-                            
-                            <div className="flex flex-col items-center justify-center py-4">
-                              <div className="flex items-center justify-center space-x-8">
+
+                            <div className="flex flex-col items-center justify-center py-3 sm:py-4">
+                              <div className="flex items-center justify-center gap-4 sm:gap-8 flex-wrap">
                                 <div className="flex flex-col items-center space-y-1">
                                   <div className="flex items-center space-x-2">
                                     <ThumbsUp className="h-6 w-6 text-green-500" />
