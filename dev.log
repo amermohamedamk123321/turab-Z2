@@ -1267,3 +1267,7 @@ Import trace for requested module:
  POST /api/auth/_log 500 in 22ms
  GET /api/auth/error 500 in 28ms
  GET /admin/login 500 in 13ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 500 in 12ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 500 in 528ms
+ GET / 500 in 530ms
+ GET / 500 in 52ms
