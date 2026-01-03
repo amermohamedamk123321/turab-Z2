@@ -34,3 +34,6 @@
         or set ALLOWED_SOCKET_IO_ORIGINS environment variable
 
       
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 3.9s (207 modules)
+ ○ Compiling / ...
