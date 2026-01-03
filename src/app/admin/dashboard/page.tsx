@@ -477,10 +477,34 @@ export default function AdminDashboard() {
   const featuredProjects = projects.filter(p => p.featured).length;
   const publishedProjects = projects.filter(p => p.published).length;
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+      {/* Mobile Menu Button */}
+      <div className="fixed top-0 left-0 right-0 z-50 lg:hidden flex items-center justify-between px-4 py-4 bg-white/90 dark:bg-gray-900/90 border-b border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm">
+        <div className="flex items-center space-x-3">
+          <div className="w-10 h-10 bg-gradient-to-br from-adminLogin-primary to-adminLogin-secondary rounded-lg flex items-center justify-center">
+            <Building className="w-6 h-6 text-white" />
+          </div>
+          <h1 className="text-lg font-bold bg-gradient-to-r from-adminLogin-primary to-adminLogin-secondary bg-clip-text text-transparent">
+            Admin
+          </h1>
+        </div>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="lg:hidden text-gray-900 dark:text-white"
+        >
+          <Menu className="w-6 h-6" />
+        </Button>
+      </div>
+
       {/* Sidebar Navigation */}
-      <div className="fixed left-0 top-0 h-full w-80 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-r border-gray-200/50 dark:border-gray-700/50 z-10 transition-colors duration-300">
+      <div className={`fixed left-0 top-0 h-full w-80 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-r border-gray-200/50 dark:border-gray-700/50 z-40 transition-transform duration-300 ease-in-out ${
+        isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+      } lg:relative lg:z-10`}>
         <div className="flex flex-col h-full p-8">
           {/* Logo and Header */}
           <div className="mb-12">
