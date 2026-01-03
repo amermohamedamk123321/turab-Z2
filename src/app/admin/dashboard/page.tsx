@@ -527,29 +527,41 @@ export default function AdminDashboard() {
           
           {/* Navigation Menu */}
           <nav className="flex-1 space-y-3">
-            <NavItem 
-              icon={<MessageSquare className="w-6 h-6" />} 
-              label="Messages" 
+            <NavItem
+              icon={<MessageSquare className="w-6 h-6" />}
+              label="Messages"
               active={activeTab === "messages"}
-              onClick={() => setActiveTab("messages")}
+              onClick={() => {
+                setActiveTab("messages");
+                setIsMobileMenuOpen(false);
+              }}
             />
-            <NavItem 
-              icon={<FileText className="w-6 h-6" />} 
-              label="Projects" 
+            <NavItem
+              icon={<FileText className="w-6 h-6" />}
+              label="Projects"
               active={activeTab === "projects"}
-              onClick={() => setActiveTab("projects")}
+              onClick={() => {
+                setActiveTab("projects");
+                setIsMobileMenuOpen(false);
+              }}
             />
-            <NavItem 
-              icon={<PieChart className="w-6 h-6" />} 
-              label="Analytics" 
+            <NavItem
+              icon={<PieChart className="w-6 h-6" />}
+              label="Analytics"
               active={activeTab === "analytics"}
-              onClick={() => setActiveTab("analytics")}
+              onClick={() => {
+                setActiveTab("analytics");
+                setIsMobileMenuOpen(false);
+              }}
             />
-            <NavItem 
-              icon={<Database className="w-6 h-6" />} 
-              label="Settings" 
+            <NavItem
+              icon={<Database className="w-6 h-6" />}
+              label="Settings"
               active={activeTab === "settings"}
-              onClick={() => setActiveTab("settings")}
+              onClick={() => {
+                setActiveTab("settings");
+                setIsMobileMenuOpen(false);
+              }}
             />
           </nav>
           
