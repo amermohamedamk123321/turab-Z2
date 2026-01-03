@@ -1194,3 +1194,76 @@ Node.js v22.16.0
  GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 111ms
  GET / 200 in 281ms
  GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 171ms
+ GET / 200 in 101ms
+ GET /about?reload=1767469488591 200 in 80ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 83ms
+ GET / 200 in 83ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 74ms
+ GET / 200 in 82ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 81ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 73ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 72ms
+ GET / 200 in 77ms
+ GET / 200 in 84ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 80ms
+ GET / 200 in 81ms
+ ○ Compiling /admin/login ...
+[Error: Cannot apply unknown utility class `bg-background`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive]
+ ✓ Compiled /admin/login in 1799ms (1957 modules)
+ GET /admin/login 200 in 2469ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 1619ms
+ GET / 200 in 1248ms
+ GET / 200 in 110ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 102ms
+ GET / 200 in 115ms
+ GET / 200 in 133ms
+ ○ Compiling /api/auth/[...nextauth] ...
+ ⨯ ./src/lib/auth.ts:3:1
+Module not found: Can't resolve '@next-auth/prisma-adapter'
+  1 | import { type NextAuthOptions } from "next-auth";
+  2 | import CredentialsProvider from "next-auth/providers/credentials";
+> 3 | import { PrismaAdapter } from "@next-auth/prisma-adapter";
+    | ^
+  4 | import { db } from "./db";
+  5 | import { compare, hash } from "bcryptjs";
+  6 | import { type Session } from "next-auth";
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/api/auth/[...nextauth]/route.ts
+ ⨯ ./src/lib/auth.ts:3:1
+Module not found: Can't resolve '@next-auth/prisma-adapter'
+  1 | import { type NextAuthOptions } from "next-auth";
+  2 | import CredentialsProvider from "next-auth/providers/credentials";
+> 3 | import { PrismaAdapter } from "@next-auth/prisma-adapter";
+    | ^
+  4 | import { db } from "./db";
+  5 | import { compare, hash } from "bcryptjs";
+  6 | import { type Session } from "next-auth";
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/api/auth/[...nextauth]/route.ts
+ ⨯ ./src/lib/auth.ts:3:1
+Module not found: Can't resolve '@next-auth/prisma-adapter'
+  1 | import { type NextAuthOptions } from "next-auth";
+  2 | import CredentialsProvider from "next-auth/providers/credentials";
+> 3 | import { PrismaAdapter } from "@next-auth/prisma-adapter";
+    | ^
+  4 | import { db } from "./db";
+  5 | import { compare, hash } from "bcryptjs";
+  6 | import { type Session } from "next-auth";
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./src/app/api/auth/[...nextauth]/route.ts
+ GET / 500 in 12884ms
+ GET /api/auth/providers 500 in 15345ms
+ GET /admin/login 500 in 2110ms
+ GET / 500 in 16ms
+ POST /api/auth/_log 500 in 22ms
+ GET /api/auth/error 500 in 28ms
+ GET /admin/login 500 in 13ms
