@@ -533,3 +533,4 @@ Node.js v22.16.0
  GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 6516ms
  GET / 200 in 5335ms
  GET / 200 in 196ms
+ GET / 200 in 114ms
