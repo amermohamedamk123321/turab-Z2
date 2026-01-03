@@ -594,14 +594,14 @@ export default function AdminDashboard() {
       {/* Main Content */}
       <main className="lg:ml-80 pt-20 lg:pt-0 px-4 sm:px-6 lg:px-8 py-6 lg:py-8">
         {/* Page Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-2 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent transition-colors duration-300">
+        <div className="mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2 bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-300 bg-clip-text text-transparent transition-colors duration-300">
             {activeTab === "messages" && "Contact Messages"}
             {activeTab === "projects" && "Project Management"}
             {activeTab === "analytics" && "Analytics Dashboard"}
             {activeTab === "settings" && "Settings"}
           </h1>
-          <p className="text-gray-600 dark:text-gray-400 text-lg transition-colors duration-300">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-400 transition-colors duration-300">
             {activeTab === "messages" && "Manage and respond to contact form submissions"}
             {activeTab === "projects" && "Manage your portfolio projects and uploads"}
             {activeTab === "analytics" && "Monitor your website performance and user engagement"}
