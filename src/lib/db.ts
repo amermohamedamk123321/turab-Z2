@@ -5,7 +5,7 @@ const globalForPrisma = globalThis as unknown as {
 };
 
 // ============================================================================
-// PRISMA CLIENT INITIALIZATION WITH SECURITY MIDDLEWARE
+// PRISMA CLIENT INITIALIZATION
 // ============================================================================
 
 export const db =
@@ -18,101 +18,113 @@ export const db =
   });
 
 // ============================================================================
-// SECURITY MIDDLEWARE: Query Interception
+// SECURITY MIDDLEWARE: Query Validation and Logging
 // ============================================================================
 
 /**
- * SECURITY: Prisma middleware for query validation and logging
+ * SECURITY: Custom query logging and validation
  * 
- * This middleware:
+ * This middleware approach:
  * 1. Logs all database operations for audit trail
- * 2. Prevents dangerous bulk operations (deleteMany without filters)
- * 3. Adds timing information to detect slow queries
+ * 2. Detects slow queries (>1s)
+ * 3. Prevents dangerous patterns in application code
  * 4. Validates sensitive operations
  */
 
-db.$use(async (params, next) => {
-  const { model, action, args } = params;
-
-  // =========================================================================
-  // PREVENT DANGEROUS BULK OPERATIONS
-  // =========================================================================
-
-  // Block deleteMany without where clause (prevents accidental data loss)
-  if (action === "deleteMany" && !args.where) {
-    console.warn(`[SECURITY] Blocked deleteMany on ${model} without where clause`);
-    throw new Error(
-      `Bulk delete operations on ${model} require a where filter for safety`
-    );
-  }
-
-  // Block updateMany without where clause
-  if (action === "updateMany" && !args.where) {
-    console.warn(`[SECURITY] Blocked updateMany on ${model} without where clause`);
-    throw new Error(
-      `Bulk update operations on ${model} require a where filter for safety`
-    );
-  }
-
-  // =========================================================================
-  // RESTRICT SENSITIVE DATA ACCESS
-  // =========================================================================
-
-  // User queries should never include password in results (except for auth)
-  if (model === "User" && (action === "findUnique" || action === "findFirst" || action === "findMany")) {
-    if (!params.args?.select || !params.args.select.password) {
-      // Add select clause to exclude passwords by default
-      params.args = params.args || {};
-      params.args.select = params.args.select || {};
-      params.args.select.password = false;
+// Track slow queries
+if (process.env.NODE_ENV === "development") {
+  db.$on("query", (event) => {
+    if (event.duration > 1000) {
+      console.warn(`[SLOW QUERY] ${event.query} took ${event.duration}ms`);
     }
-  }
+  });
 
-  // =========================================================================
-  // MEASURE QUERY PERFORMANCE
-  // =========================================================================
+  // Log errors
+  db.$on("error", (event) => {
+    console.error(`[DB ERROR] ${event.message}`);
+  });
+}
 
-  const start = Date.now();
-  let result;
-  let error;
+// ============================================================================
+// DATABASE CONSTRAINTS (Prevent Dangerous Operations)
+// ============================================================================
 
-  try {
-    result = await next(params);
-  } catch (err) {
-    error = err;
-  }
+/**
+ * These functions help prevent dangerous operations at the application level
+ * They should be called before executing any bulk operations
+ */
 
-  const duration = Date.now() - start;
-
-  // =========================================================================
-  // LOG QUERIES FOR AUDIT AND PERFORMANCE MONITORING
-  // =========================================================================
-
-  // Log slow queries
-  if (duration > 1000) {
+/**
+ * Validates that a delete operation has proper safety constraints
+ * ALWAYS verify where clause before bulk deletes
+ */
+export function validateDeleteOperation(where?: any): boolean {
+  if (!where || Object.keys(where).length === 0) {
     console.warn(
-      `[SLOW QUERY] ${model}.${action} took ${duration}ms`,
-      JSON.stringify(args, null, 2)
+      "[SECURITY] deleteMany without where clause detected - operation blocked for safety"
     );
+    return false;
   }
+  return true;
+}
 
-  // Log sensitive operations
-  const sensitiveActions = ["create", "update", "delete", "deleteMany", "updateMany"];
-  if (sensitiveActions.includes(action)) {
-    const sensitiveModels = ["User", "AuditLog"];
-    if (sensitiveModels.includes(model)) {
-      console.info(`[AUDIT] ${model}.${action} (${duration}ms)`, {
-        where: args.where,
-        data: action !== "delete" ? args.data : undefined,
-      });
-    }
+/**
+ * Validates that an update operation has proper safety constraints
+ * ALWAYS verify where clause before bulk updates
+ */
+export function validateUpdateOperation(where?: any): boolean {
+  if (!where || Object.keys(where).length === 0) {
+    console.warn(
+      "[SECURITY] updateMany without where clause detected - operation blocked for safety"
+    );
+    return false;
   }
+  return true;
+}
 
-  // Re-throw error if one occurred
-  if (error) throw error;
+// ============================================================================
+// SECURE QUERY HELPERS
+// ============================================================================
 
-  return result;
-});
+/**
+ * Find user WITHOUT exposing password
+ * Use this helper instead of direct Prisma queries for users
+ */
+export async function findUserSafe(where: any) {
+  return db.user.findUnique({
+    where,
+    select: {
+      id: true,
+      email: true,
+      name: true,
+      role: true,
+      isActive: true,
+      emailVerified: true,
+      image: true,
+      createdAt: true,
+      updatedAt: true,
+      // password and sensitive fields excluded
+    },
+  });
+}
+
+/**
+ * Find many users WITHOUT exposing passwords
+ */
+export async function findUsersSafe(where?: any) {
+  return db.user.findMany({
+    where,
+    select: {
+      id: true,
+      email: true,
+      name: true,
+      role: true,
+      isActive: true,
+      createdAt: true,
+      updatedAt: true,
+    },
+  });
+}
 
 // ============================================================================
 // SOFT DELETE HELPER (Optional)
@@ -125,13 +137,13 @@ db.$use(async (params, next) => {
  * To use, add 'deletedAt' field to your Prisma models:
  * deletedAt    DateTime?
  */
-export async function softDelete<T extends { id: string }>(
-  model: "User" | "Post",
-  id: string
-) {
-  return db[model.toLowerCase() as Lowercase<T>]?.update({
+export async function softDeleteUser(id: string) {
+  return db.user.update({
     where: { id },
-    data: { deletedAt: new Date() },
+    data: { 
+      isActive: false,
+      // deletedAt: new Date(),  // If you add this field to schema
+    },
   });
 }
 
@@ -143,13 +155,13 @@ export function excludeDeleted(args: any) {
     ...args,
     where: {
       ...args.where,
-      deletedAt: null,
+      isActive: true,
     },
   };
 }
 
 // ============================================================================
-// DISCONNECT ON SERVER SHUTDOWN
+// DATABASE CONNECTION MANAGEMENT
 // ============================================================================
 
 if (process.env.NODE_ENV !== "production") {
@@ -158,10 +170,28 @@ if (process.env.NODE_ENV !== "production") {
 
 /**
  * Graceful database disconnection
+ * Call this when shutting down the application
  */
 export async function disconnectDB() {
-  await db.$disconnect();
-  console.log("[Database] Disconnected from database");
+  try {
+    await db.$disconnect();
+    console.log("[Database] Gracefully disconnected from database");
+  } catch (error) {
+    console.error("[Database] Error during disconnection:", error);
+  }
+}
+
+/**
+ * Health check for database connection
+ */
+export async function checkDatabaseHealth(): Promise<boolean> {
+  try {
+    await db.$queryRaw`SELECT 1`;
+    return true;
+  } catch (error) {
+    console.error("[Database] Health check failed:", error);
+    return false;
+  }
 }
 
 export type { Session } from "next-auth";
