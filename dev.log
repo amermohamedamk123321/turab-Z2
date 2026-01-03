@@ -631,3 +631,5 @@ Node.js v22.16.0
  GET / 200 in 83ms
  GET / 200 in 80ms
  GET / 200 in 91ms
+ GET / 200 in 82ms
+[32m[nodemon] restarting due to changes...[39m
