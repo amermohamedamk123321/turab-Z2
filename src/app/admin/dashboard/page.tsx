@@ -13,12 +13,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { 
-  Building, 
-  Users, 
-  MessageSquare, 
-  FolderOpen, 
-  LogOut, 
+import {
+  Building,
+  Users,
+  MessageSquare,
+  FolderOpen,
+  LogOut,
   Settings,
   TrendingUp,
   Eye,
@@ -37,7 +37,9 @@ import {
   Database,
   ThumbsUp,
   ThumbsDown,
-  MessageCircle
+  MessageCircle,
+  Menu,
+  EyeOff
 } from "lucide-react";
 
 interface ContactMessage {
