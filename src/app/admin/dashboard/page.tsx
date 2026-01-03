@@ -1204,19 +1204,296 @@ export default function AdminDashboard() {
   );
 }
 
+// Password Change Form Component
+function PasswordChangeForm({ userEmail }: { userEmail: string }) {
+  const [formData, setFormData] = useState({
+    oldPassword: "",
+    newPassword: "",
+    confirmPassword: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
+  const [showPasswords, setShowPasswords] = useState({
+    old: false,
+    new: false,
+    confirm: false,
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setMessage(null);
+    setIsLoading(true);
+
+    // Client-side validation
+    if (!formData.oldPassword || !formData.newPassword || !formData.confirmPassword) {
+      setMessage({
+        type: "error",
+        text: "All fields are required"
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    if (formData.newPassword !== formData.confirmPassword) {
+      setMessage({
+        type: "error",
+        text: "New passwords do not match"
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    if (formData.newPassword.length < 12) {
+      setMessage({
+        type: "error",
+        text: "Password must be at least 12 characters long"
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    if (!/[A-Z]/.test(formData.newPassword)) {
+      setMessage({
+        type: "error",
+        text: "Password must contain at least one uppercase letter"
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    if (!/[a-z]/.test(formData.newPassword)) {
+      setMessage({
+        type: "error",
+        text: "Password must contain at least one lowercase letter"
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    if (!/\d/.test(formData.newPassword)) {
+      setMessage({
+        type: "error",
+        text: "Password must contain at least one number"
+      });
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      const response = await fetch("/api/admin/setup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          action: "change-password",
+          email: userEmail,
+          oldPassword: formData.oldPassword,
+          newPassword: formData.newPassword
+        })
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setMessage({
+          type: "error",
+          text: data.error || "Failed to update password"
+        });
+        return;
+      }
+
+      setMessage({
+        type: "success",
+        text: "Password updated successfully!"
+      });
+      setFormData({
+        oldPassword: "",
+        newPassword: "",
+        confirmPassword: ""
+      });
+    } catch (error) {
+      setMessage({
+        type: "error",
+        text: "An error occurred. Please try again."
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const passwordStrength = {
+    length: formData.newPassword.length >= 12,
+    uppercase: /[A-Z]/.test(formData.newPassword),
+    lowercase: /[a-z]/.test(formData.newPassword),
+    number: /\d/.test(formData.newPassword),
+  };
+
+  const isPasswordStrong = Object.values(passwordStrength).every(v => v);
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-6 max-w-2xl">
+      {message && (
+        <div className={`p-4 rounded-lg border ${
+          message.type === "success"
+            ? "bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800/50 text-green-700 dark:text-green-200"
+            : "bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800/50 text-red-700 dark:text-red-200"
+        }`}>
+          {message.text}
+        </div>
+      )}
+
+      {/* Current Password */}
+      <div className="space-y-2">
+        <Label htmlFor="oldPassword" className="text-gray-900 dark:text-white font-semibold">
+          Current Password
+        </Label>
+        <div className="relative">
+          <Input
+            id="oldPassword"
+            name="oldPassword"
+            type={showPasswords.old ? "text" : "password"}
+            value={formData.oldPassword}
+            onChange={handleChange}
+            placeholder="Enter your current password"
+            disabled={isLoading}
+            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
+          />
+          <button
+            type="button"
+            onClick={() => setShowPasswords(prev => ({ ...prev, old: !prev.old }))}
+            className="absolute right-3 top-2.5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+            disabled={isLoading}
+          >
+            {showPasswords.old ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+          </button>
+        </div>
+      </div>
+
+      {/* New Password */}
+      <div className="space-y-2">
+        <Label htmlFor="newPassword" className="text-gray-900 dark:text-white font-semibold">
+          New Password
+        </Label>
+        <div className="relative">
+          <Input
+            id="newPassword"
+            name="newPassword"
+            type={showPasswords.new ? "text" : "password"}
+            value={formData.newPassword}
+            onChange={handleChange}
+            placeholder="Enter your new password (min 12 characters)"
+            disabled={isLoading}
+            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
+          />
+          <button
+            type="button"
+            onClick={() => setShowPasswords(prev => ({ ...prev, new: !prev.new }))}
+            className="absolute right-3 top-2.5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+            disabled={isLoading}
+          >
+            {showPasswords.new ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+          </button>
+        </div>
+
+        {/* Password Strength Indicator */}
+        {formData.newPassword && (
+          <div className="mt-3 p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg space-y-2">
+            <p className="text-xs font-semibold text-gray-700 dark:text-gray-300">Password Requirements:</p>
+            <div className="space-y-1 text-xs">
+              <div className={`flex items-center ${passwordStrength.length ? 'text-green-600 dark:text-green-400' : 'text-gray-600 dark:text-gray-400'}`}>
+                <span className={`mr-2 ${passwordStrength.length ? '✓' : '○'}`}></span>
+                At least 12 characters
+              </div>
+              <div className={`flex items-center ${passwordStrength.uppercase ? 'text-green-600 dark:text-green-400' : 'text-gray-600 dark:text-gray-400'}`}>
+                <span className={`mr-2 ${passwordStrength.uppercase ? '✓' : '○'}`}></span>
+                Contains uppercase letter (A-Z)
+              </div>
+              <div className={`flex items-center ${passwordStrength.lowercase ? 'text-green-600 dark:text-green-400' : 'text-gray-600 dark:text-gray-400'}`}>
+                <span className={`mr-2 ${passwordStrength.lowercase ? '✓' : '○'}`}></span>
+                Contains lowercase letter (a-z)
+              </div>
+              <div className={`flex items-center ${passwordStrength.number ? 'text-green-600 dark:text-green-400' : 'text-gray-600 dark:text-gray-400'}`}>
+                <span className={`mr-2 ${passwordStrength.number ? '✓' : '○'}`}></span>
+                Contains number (0-9)
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Confirm Password */}
+      <div className="space-y-2">
+        <Label htmlFor="confirmPassword" className="text-gray-900 dark:text-white font-semibold">
+          Confirm New Password
+        </Label>
+        <div className="relative">
+          <Input
+            id="confirmPassword"
+            name="confirmPassword"
+            type={showPasswords.confirm ? "text" : "password"}
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            placeholder="Re-enter your new password"
+            disabled={isLoading}
+            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
+          />
+          <button
+            type="button"
+            onClick={() => setShowPasswords(prev => ({ ...prev, confirm: !prev.confirm }))}
+            className="absolute right-3 top-2.5 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors"
+            disabled={isLoading}
+          >
+            {showPasswords.confirm ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
+          </button>
+        </div>
+        {formData.newPassword && formData.confirmPassword && formData.newPassword !== formData.confirmPassword && (
+          <p className="text-sm text-red-600 dark:text-red-400">Passwords do not match</p>
+        )}
+      </div>
+
+      {/* Submit Button */}
+      <Button
+        type="submit"
+        disabled={isLoading || !isPasswordStrong || formData.newPassword !== formData.confirmPassword}
+        className={`w-full sm:w-auto bg-adminLogin-primary hover:bg-adminLogin-secondary text-white font-semibold py-2 px-6 rounded-lg transition-all duration-300 ${
+          isLoading || !isPasswordStrong ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg'
+        }`}
+      >
+        {isLoading ? (
+          <div className="flex items-center">
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+            Updating...
+          </div>
+        ) : (
+          "Update Password"
+        )}
+      </Button>
+    </form>
+  );
+}
+
 // Navigation Item Component
-function NavItem({ icon, label, active, onClick }: { 
-  icon: React.ReactNode; 
-  label: string; 
-  active: boolean; 
-  onClick: () => void; 
+function NavItem({ icon, label, active, onClick }: {
+  icon: React.ReactNode;
+  label: string;
+  active: boolean;
+  onClick: () => void;
 }) {
   return (
     <button
       onClick={onClick}
       className={`w-full flex items-center space-x-4 px-6 py-4 rounded-xl transition-all duration-200 text-left ${
-        active 
-          ? 'bg-adminLogin-primary/20 border border-adminLogin-primary/30 text-gray-900 dark:text-white' 
+        active
+          ? 'bg-adminLogin-primary/20 border border-adminLogin-primary/30 text-gray-900 dark:text-white'
           : 'text-gray-600 dark:text-gray-400 hover:bg-gray-200/50 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-white'
       }`}
     >
