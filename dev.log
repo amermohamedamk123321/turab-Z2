@@ -1158,3 +1158,39 @@ Node.js v22.16.0
   'http://127.0.0.1:3000',
   'http://127.0.0.1:3001'
 ]
+
+╔════════════════════════════════════════════════════════════╗
+║         🚀 Secure Next.js Server Started                   ║
+╚════════════════════════════════════════════════════════════╝
+
+📍 HTTP Server:
+   URL: http://0.0.0.0:3000
+
+🔌 Socket.IO Server:
+   Path: ws://0.0.0.0:3000/api/socketio
+   CORS Origins: http://localhost:3000, http://localhost:3001, http://127.0.0.1:3000, http://127.0.0.1:3001
+   Authentication: REQUIRED (NextAuth token)
+
+🔒 Security Status:
+   Environment: DEVELOPMENT
+   ⚠️  Development mode: CORS is open (localhost only)
+   ✅ Socket.IO requires authentication
+   ✅ Connection timeout: 45 seconds
+   ✅ Ping/Pong interval: 25 seconds
+   ✅ Max buffer size: 1MB
+
+📝 Note: In production, update ALLOWED_SOCKET_IO_ORIGINS in server.ts
+        or set ALLOWED_SOCKET_IO_ORIGINS environment variable
+
+      
+ ✓ Compiled /middleware in 411ms (207 modules)
+ ○ Compiling /about ...
+ ✓ Compiled / in 9.1s (1828 modules)
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 10190ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 10193ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 4789ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 2267ms
+ GET / 200 in 6023ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 111ms
+ GET / 200 in 281ms
+ GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 171ms
