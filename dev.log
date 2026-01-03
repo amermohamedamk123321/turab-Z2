@@ -1272,3 +1272,4 @@ Import trace for requested module:
  GET / 500 in 530ms
  GET / 500 in 52ms
  GET / 500 in 15ms
+ GET / 500 in 13ms
