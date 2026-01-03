@@ -529,3 +529,6 @@ Node.js v22.16.0
       
  ✓ Compiled /middleware in 402ms (207 modules)
  ○ Compiling / ...
+ ✓ Compiled / in 5.8s (1811 modules)
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 6516ms
+ GET / 200 in 5335ms
