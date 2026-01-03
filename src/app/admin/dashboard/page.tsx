@@ -684,14 +684,14 @@ export default function AdminDashboard() {
 
         {activeTab === "projects" && (
           <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
-            <CardHeader className="pb-6">
-              <div className="flex items-center justify-between">
-                <div>
-                  <CardTitle className="text-xl text-gray-900 dark:text-white flex items-center">
-                    <FolderOpen className="w-6 h-6 mr-3 text-adminLogin-primary" />
-                    Projects
+            <CardHeader className="pb-4 sm:pb-6">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="min-w-0">
+                  <CardTitle className="text-lg sm:text-xl text-gray-900 dark:text-white flex items-center">
+                    <FolderOpen className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-adminLogin-primary flex-shrink-0" />
+                    <span className="truncate">Projects</span>
                   </CardTitle>
-                  <CardDescription className="text-gray-600 dark:text-gray-400 mt-1">
+                  <CardDescription className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 mt-1">
                     {projects.length} total projects ({publishedProjects} published, {featuredProjects} featured)
                   </CardDescription>
                 </div>
