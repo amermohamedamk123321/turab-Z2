@@ -532,3 +532,4 @@ Node.js v22.16.0
  ✓ Compiled / in 5.8s (1811 modules)
  GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 6516ms
  GET / 200 in 5335ms
+ GET / 200 in 196ms
