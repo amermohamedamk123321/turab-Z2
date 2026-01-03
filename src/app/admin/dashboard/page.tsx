@@ -1030,12 +1030,12 @@ export default function AdminDashboard() {
         {activeTab === "analytics" && (
             <div className="space-y-6">
               <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
-                <CardHeader className="text-center py-8">
-                  <CardTitle className="flex items-center justify-center text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                    <PieChart className="h-10 w-10 mr-4 text-adminLogin-primary" />
-                    Project Analytics
+                <CardHeader className="text-center py-6 sm:py-8">
+                  <CardTitle className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
+                    <PieChart className="h-8 w-8 sm:h-10 sm:w-10 mr-0 sm:mr-4 mb-2 sm:mb-0 text-adminLogin-primary" />
+                    <span>Project Analytics</span>
                   </CardTitle>
-                  <CardDescription className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                  <CardDescription className="text-sm sm:text-base lg:text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                     Track likes, dislikes, and comments for each project
                   </CardDescription>
                 </CardHeader>
