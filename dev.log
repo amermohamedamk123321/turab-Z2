@@ -493,3 +493,6 @@ Node.js v22.16.0
  GET / 200 in 78ms
  GET / 200 in 78ms
  GET / 200 in 79ms
+ GET / 200 in 83ms
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `npx tsx server.ts`[39m
