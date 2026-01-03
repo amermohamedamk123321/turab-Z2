@@ -1271,3 +1271,4 @@ Import trace for requested module:
  GET /about?_screenshot_tool_allow=true&builder.lazyLoadImages=false 500 in 528ms
  GET / 500 in 530ms
  GET / 500 in 52ms
+ GET / 500 in 15ms
