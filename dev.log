@@ -128,3 +128,15 @@ Node.js v22.16.0
         or set ALLOWED_SOCKET_IO_ORIGINS environment variable
 
       
+ ✓ Compiled /middleware in 428ms (207 modules)
+ ○ Compiling / ...
+ ✓ Compiled / in 4.8s (1811 modules)
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 5711ms
+ GET / 200 in 1280ms
+ GET / 200 in 130ms
+ GET / 200 in 124ms
+ GET /?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 110ms
+ GET / 200 in 109ms
+ GET / 200 in 115ms
+ GET / 200 in 91ms
+ GET / 200 in 92ms
