@@ -24,3 +24,9 @@ Node.js v22.16.0
 [31m[nodemon] app crashed - waiting for file changes before starting...[39m
 [32m[nodemon] restarting due to changes...[39m
 [32m[nodemon] starting `npx tsx server.ts`[39m
+[Server] Allowed Socket.IO origins: [
+  'http://localhost:3000',
+  'http://localhost:3001',
+  'http://127.0.0.1:3000',
+  'http://127.0.0.1:3001'
+]
