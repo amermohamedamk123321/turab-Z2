@@ -45,3 +45,9 @@ prisma:query INSERT INTO `main`.`User` (`id`, `email`, `name`, `password`, `role
  GET / 200 in 8013ms
  GET / 200 in 180ms
  ○ Compiling /admin/login ...
+ ✓ Compiled /admin/login in 3.8s (1949 modules)
+ GET /admin/login?callbackUrl=%2Fadmin%2Fdashboard&reload=1767492281147 200 in 4046ms
+ GET /admin/login?callbackUrl=%2Fadmin%2Fdashboard&reload=1767492269847 200 in 4115ms
+ GET / 200 in 149ms
+ GET / 200 in 119ms
+[32m[nodemon] restarting due to changes...[39m
