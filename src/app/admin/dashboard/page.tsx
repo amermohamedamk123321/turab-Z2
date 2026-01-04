@@ -1411,7 +1411,7 @@ function PasswordChangeForm({ userEmail }: { userEmail: string }) {
             onChange={handleChange}
             placeholder="Enter your current password"
             disabled={isLoading}
-            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
+            className="bg-blue-100 dark:bg-gray-800 border-blue-300 dark:border-gray-600 text-gray-900 dark:text-white pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
           />
           <button
             type="button"
@@ -1438,7 +1438,7 @@ function PasswordChangeForm({ userEmail }: { userEmail: string }) {
             onChange={handleChange}
             placeholder="Enter your new password (min 12 characters)"
             disabled={isLoading}
-            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
+            className="bg-blue-100 dark:bg-gray-800 border-blue-300 dark:border-gray-600 text-gray-900 dark:text-white pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
           />
           <button
             type="button"
@@ -1452,7 +1452,7 @@ function PasswordChangeForm({ userEmail }: { userEmail: string }) {
 
         {/* Password Strength Indicator */}
         {formData.newPassword && (
-          <div className="mt-3 p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg space-y-2">
+          <div className="mt-3 p-3 bg-blue-100 dark:bg-gray-800/50 rounded-lg space-y-2">
             <p className="text-xs font-semibold text-gray-700 dark:text-gray-300">Password Requirements:</p>
             <div className="space-y-1 text-xs">
               <div className={`flex items-center ${passwordStrength.length ? 'text-green-600 dark:text-green-400' : 'text-gray-600 dark:text-gray-400'}`}>
@@ -1490,7 +1490,7 @@ function PasswordChangeForm({ userEmail }: { userEmail: string }) {
             onChange={handleChange}
             placeholder="Re-enter your new password"
             disabled={isLoading}
-            className="bg-gray-100 dark:bg-gray-800 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
+            className="bg-blue-100 dark:bg-gray-800 border-blue-300 dark:border-gray-600 text-gray-900 dark:text-white pr-12 focus:ring-2 focus:ring-adminLogin-primary/50 focus:border-adminLogin-primary/50 transition-colors duration-300"
           />
           <button
             type="button"
