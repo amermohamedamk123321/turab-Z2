@@ -1047,7 +1047,7 @@ export default function AdminDashboard() {
                           <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gray-300/50 to-transparent dark:via-gray-600/50"></div>
                         )}
                         
-                        <div className="bg-gray-100/50 dark:bg-gray-800/20 rounded-lg p-4 sm:p-6 transition-colors duration-300 hover:bg-gray-200/50 dark:hover:bg-gray-800/30">
+                        <div className="bg-blue-100/50 dark:bg-gray-800/20 rounded-lg p-4 sm:p-6 transition-colors duration-300 hover:bg-blue-100/70 dark:hover:bg-gray-800/30">
                           <div className="flex flex-col space-y-4">
                             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                               <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white truncate">
