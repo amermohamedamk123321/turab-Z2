@@ -1211,7 +1211,7 @@ export default function AdminDashboard() {
           <div className="space-y-4 max-h-[60vh] overflow-y-auto">
             {selectedProjectForComments && selectedProjectForComments.comments.length > 0 ? (
               selectedProjectForComments.comments.map((comment) => (
-                <div key={comment.id} className="bg-gray-100/50 dark:bg-gray-800/20 rounded-lg p-4 transition-colors duration-300">
+                <div key={comment.id} className="bg-blue-100/50 dark:bg-gray-800/20 rounded-lg p-4 transition-colors duration-300">
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="font-semibold text-gray-900 dark:text-white">{comment.name}</h4>
                     <span className="text-sm text-gray-600 dark:text-gray-400">{comment.createdAt}</span>
