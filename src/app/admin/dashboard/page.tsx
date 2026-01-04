@@ -837,7 +837,7 @@ export default function AdminDashboard() {
               <CardContent>
                 <div className="space-y-4">
                   {projects.map((project) => (
-                    <Card key={project.id} className="border-gray-200/50 dark:border-gray-700/50 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all duration-200">
+                    <Card key={project.id} className="border-blue-200/50 dark:border-gray-700/50 bg-blue-50/20 dark:bg-gray-800/20 backdrop-blur-sm hover:bg-blue-50/30 dark:hover:bg-gray-800/30 transition-all duration-200">
                       <CardContent className="p-6">
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
