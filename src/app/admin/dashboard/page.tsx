@@ -1198,7 +1198,7 @@ export default function AdminDashboard() {
 
       {/* Comments Dialog */}
       <Dialog open={viewCommentsDialogOpen} onOpenChange={setViewCommentsDialogOpen}>
-        <DialogContent className="bg-white dark:bg-gray-900 border border-gray-200/50 dark:border-gray-700/50 max-w-2xl max-h-[80vh] overflow-hidden">
+        <DialogContent className="bg-blue-50 dark:bg-gray-900 border border-blue-200/50 dark:border-gray-700/50 max-w-2xl max-h-[80vh] overflow-hidden">
           <DialogHeader>
             <DialogTitle className="flex items-center text-gray-900 dark:text-white">
               <MessageCircle className="h-5 w-5 mr-2 text-blue-500" />
