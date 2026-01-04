@@ -1029,7 +1029,7 @@ export default function AdminDashboard() {
 
         {activeTab === "analytics" && (
             <div className="space-y-6">
-              <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
+              <Card className="border-blue-200/50 dark:border-gray-700/50 bg-blue-50/40 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
                 <CardHeader className="text-center py-6 sm:py-8">
                   <CardTitle className="flex flex-col sm:flex-row items-center justify-center text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                     <PieChart className="h-8 w-8 sm:h-10 sm:w-10 mr-0 sm:mr-4 mb-2 sm:mb-0 text-adminLogin-primary" />
