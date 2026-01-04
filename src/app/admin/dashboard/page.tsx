@@ -1170,7 +1170,7 @@ export default function AdminDashboard() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-                    <div className="p-3 bg-gray-100 dark:bg-gray-800/50 rounded-lg">
+                    <div className="p-3 bg-blue-100 dark:bg-gray-800/50 rounded-lg">
                       <p className="text-xs text-gray-600 dark:text-gray-400 mb-1">Admin Email</p>
                       <p className="font-semibold text-gray-900 dark:text-white break-all text-sm">{session?.user?.email}</p>
                     </div>
