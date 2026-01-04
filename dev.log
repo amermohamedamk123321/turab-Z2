@@ -481,3 +481,26 @@ prisma:query INSERT INTO `main`.`User` (`id`, `email`, `name`, `password`, `role
  ✓ Compiled /middleware in 458ms (207 modules)
  ○ Compiling / ...
 [Error: Cannot apply unknown utility class `bg-background`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive]
+ ✓ Compiled / in 10s (1912 modules)
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 11952ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 10367ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 5796ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 2866ms
+ GET /admin/login?callbackUrl=%2Fadmin%2Fdashboard&reload=1767492397174 200 in 2734ms
+ GET / 200 in 11611ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 987ms
+ GET / 200 in 1270ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 441ms
+ GET / 200 in 126ms
+ GET / 200 in 117ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 47ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 47ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 53ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 54ms
+ GET / 200 in 143ms
+ GET / 200 in 90ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 50ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 50ms
+ GET / 200 in 80ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 41ms
+ GET / 200 in 93ms
