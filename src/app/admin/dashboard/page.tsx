@@ -482,7 +482,7 @@ export default function AdminDashboard() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-blue-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
       {/* Mobile Menu Button */}
       <div className="fixed top-0 left-0 right-0 z-50 lg:hidden flex items-center justify-between px-4 py-4 bg-white/90 dark:bg-gray-900/90 border-b border-gray-200/50 dark:border-gray-700/50 backdrop-blur-sm">
         <div className="flex items-center space-x-3">
