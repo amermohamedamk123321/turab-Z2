@@ -628,7 +628,7 @@ export default function AdminDashboard() {
             <CardContent>
               <div className="space-y-4">
                 {contactMessages.map((message) => (
-                  <Card key={message.id} className={`${!message.read ? 'border-adminLogin-primary/20 bg-adminLogin-primary/5' : ''} border-gray-200/50 dark:border-gray-700/50 bg-white/20 dark:bg-gray-800/20 backdrop-blur-sm hover:bg-white/30 dark:hover:bg-gray-800/30 transition-all duration-200`}>
+                  <Card key={message.id} className={`${!message.read ? 'border-adminLogin-primary/20 bg-adminLogin-primary/5' : ''} border-blue-200/50 dark:border-gray-700/50 bg-blue-50/20 dark:bg-gray-800/20 backdrop-blur-sm hover:bg-blue-50/30 dark:hover:bg-gray-800/30 transition-all duration-200`}>
                     <CardContent className="p-6">
                       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
                         <div className="flex-1 min-w-0">
