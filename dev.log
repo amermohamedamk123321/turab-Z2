@@ -480,3 +480,4 @@ prisma:query INSERT INTO `main`.`User` (`id`, `email`, `name`, `password`, `role
       
  ✓ Compiled /middleware in 458ms (207 modules)
  ○ Compiling / ...
+[Error: Cannot apply unknown utility class `bg-background`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive]
