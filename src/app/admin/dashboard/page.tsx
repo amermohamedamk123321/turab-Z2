@@ -1116,7 +1116,7 @@ export default function AdminDashboard() {
         {activeTab === "settings" && (
             <div className="space-y-6 pb-12">
               {/* Account Settings Card */}
-              <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
+              <Card className="border-blue-200/50 dark:border-gray-700/50 bg-blue-50/40 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
                 <CardHeader>
                   <CardTitle className="flex items-center text-gray-900 dark:text-white">
                     <Users className="h-6 w-6 mr-3 text-adminLogin-primary" />
