@@ -611,7 +611,7 @@ export default function AdminDashboard() {
         
         {/* Content Area - Messages Tab */}
         {activeTab === "messages" && (
-          <Card className="border-gray-200/50 dark:border-gray-700/50 bg-white/30 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
+          <Card className="border-blue-200/50 dark:border-gray-700/50 bg-blue-50/40 dark:bg-gray-800/30 backdrop-blur-sm transition-colors duration-300">
             <CardHeader className="pb-4 sm:pb-6">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div className="min-w-0">
