@@ -132,3 +132,4 @@ Unknown argument `role`. Did you mean `name`? Available options are marked with 
  ✓ Compiled /admin/login in 1274ms (1935 modules)
  GET /admin/login?callbackUrl=%2Fadmin%2Fdashboard&reload=1767492247809 200 in 1590ms
  GET /admin/login?callbackUrl=%2Fadmin%2Fdashboard&reload=1767492144245 200 in 1594ms
+ GET / 200 in 153ms
