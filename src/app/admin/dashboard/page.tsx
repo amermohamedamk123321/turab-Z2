@@ -912,7 +912,7 @@ export default function AdminDashboard() {
 
           {/* Edit Project Modal */}
           <Dialog open={isEditModalOpen} onOpenChange={setIsEditModalOpen}>
-            <DialogContent className="bg-white dark:bg-gray-900 border-gray-200/50 dark:border-gray-700/50 text-gray-900 dark:text-white max-w-2xl max-h-[90vh] overflow-y-auto transition-colors duration-300">
+            <DialogContent className="bg-blue-50 dark:bg-gray-900 border-blue-200/50 dark:border-gray-700/50 text-gray-900 dark:text-white max-w-2xl max-h-[90vh] overflow-y-auto transition-colors duration-300">
               <DialogHeader>
                 <DialogTitle className="text-gray-900 dark:text-white">Edit Project</DialogTitle>
                 <DialogDescription className="text-gray-600 dark:text-gray-400">
