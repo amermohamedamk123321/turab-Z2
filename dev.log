@@ -133,3 +133,5 @@ Unknown argument `role`. Did you mean `name`? Available options are marked with 
  GET /admin/login?callbackUrl=%2Fadmin%2Fdashboard&reload=1767492247809 200 in 1590ms
  GET /admin/login?callbackUrl=%2Fadmin%2Fdashboard&reload=1767492144245 200 in 1594ms
  GET / 200 in 153ms
+ GET / 200 in 141ms
+ GET /admin/login?_screenshot_tool_allow=true&builder.lazyLoadImages=false 200 in 65ms
