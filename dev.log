@@ -34,3 +34,14 @@
         or set ALLOWED_SOCKET_IO_ORIGINS environment variable
 
       
+ ○ Compiling /middleware ...
+ ✓ Compiled /middleware in 520ms (207 modules)
+ ○ Compiling / ...
+ ✓ Compiled /api/admin/setup in 5.9s (1820 modules)
+prisma:info Starting a sqlite pool with 5 connections.
+prisma:query SELECT `main`.`User`.`id`, `main`.`User`.`email`, `main`.`User`.`name`, `main`.`User`.`password`, `main`.`User`.`role`, `main`.`User`.`emailVerified`, `main`.`User`.`image`, `main`.`User`.`isActive`, `main`.`User`.`createdAt`, `main`.`User`.`updatedAt` FROM `main`.`User` WHERE `main`.`User`.`role` = ? LIMIT ? OFFSET ?
+prisma:query INSERT INTO `main`.`User` (`id`, `email`, `name`, `password`, `role`, `isActive`, `createdAt`, `updatedAt`) VALUES (?,?,?,?,?,?,?,?) RETURNING `id` AS `id`, `email` AS `email`, `name` AS `name`, `password` AS `password`, `role` AS `role`, `emailVerified` AS `emailVerified`, `image` AS `image`, `isActive` AS `isActive`, `createdAt` AS `createdAt`, `updatedAt` AS `updatedAt`
+ POST /api/admin/setup 201 in 4232ms
+ GET / 200 in 8013ms
+ GET / 200 in 180ms
+ ○ Compiling /admin/login ...
